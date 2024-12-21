@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pre-Annotating Trial</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="display.css">
+</head>
+
+<body>
+    <video class="video_style" controls autoplay muted loop>
+        <source src="{{ url_for('static', filename=video) }}" type="video/mp4">
+    </video>
+
+    <p class="input_prompt">Input Prompt: <br>{{text_prompt}}</p>
+    
+    <div class = "current_progress">
+        <p>Current progress: <br>{{ current_idx+1 }}/{{end_index+1 }} <br></p>
+    </div>
+
+    <div style="position:fixed; bottom: 1%; right:1%;">
+        {% if vid_name in answered_vid_list %}
+            <p class="answered">Answered. <br></p>
+            <div class="table_style">
+                ("3": Good, "1": Bad, others in this order,<br>"-1": reported as problematic.)<br></p>
+            <table>
+                <tr><td>aspect</td> <td>your answer</td><td>reference</td></tr>
+                <tr><td>visual/optical quality</td> <td>{{ current_answers[0] }}</td><td>{{ current_refs[0] }}</td></tr>
+                <tr><td>objects consistency</td> <td>{{ current_answers[1] }}</td><td>{{ current_refs[1] }}</td></tr>
+                <tr><td>dynamic degree</td> <td>{{ current_answers[2] }}</td><td>{{ current_refs[2] }}</td></tr>
+                <tr><td>motion smoothness</td><td>{{ current_answers[3] }}</td><td>{{ current_refs[3] }}</td></tr>
+                <tr><td>text-to-video alignment</td> <td>{{ current_answers[4] }}</td><td>{{ current_refs[4] }}</td></tr>
+                <tr><td>factual consistency</td><td>{{ current_answers[5] }}</td><td>{{ current_refs[5] }}</td></tr>
+                <tr><td>overall score</td> <td>{{ current_answers[6] }}</td><td></td></tr>
+            </table>
+            </div>
+            </p>
+            {% else %}
+            <p class="not-answered">Not answered.</p>
+            {% endif %}
+        
+    </div>
+
+    <div class="QA-text">
+        <form action="{{ url_for('navigate_pre_anno') }}" method="post">
+            <input type="hidden" name="current_idx" value="{{ current_idx }}">
+            <button type="submit" name="direction" class="button_last_next" value="last" >Last One</button>
+            <button type="submit" name="direction" class="button_last_next" value="next" >Next One</button>
+        </form>
+        (After answering each video question, you can click the "Last One" button 
+        to view your most recentanswers and the recommended options we provide.)
+    </div>
+    <br>
+
+    
+    <div class="QA-text">
+        <form action="{{ url_for('welcome') }}" method="post">
+            <input type="hidden" name="current_idx" value="{{ current_idx }}">
+            <input type="hidden" name="language" value="en">
+            <button type="submit" name="logout" style=" width: 160px; height: 40px; font-size: 16px;">Exit Pre-annotating</button>
+        </form>
+        (If you want to revisit the guidelines of each sub-score on welcome page, you can log out at any time.)
+    </div>
+    <br>
+
+    <form action="{{ url_for('pre_anno_submit') }}" method="post">
+        <input type="hidden" name="text_prompt" value="{{ text_prompt }}">
+        <input type="hidden" name="video" value="{{ video }}">
+        <input type="hidden" name="current_idx" value="{{ current_idx }}">
+        <div class="QA-text">
+            {{ before_start_anno | safe }}
+        </div>
+        
+        {% for que_idx in range(num_que) %}
+            <div class="QA-text">
+                {{ subscore_def[que_idx] | safe }}
+                <div class="choice_box">
+                    <p><label><input type="radio" name="q{{ que_idx+1 }}" value="3" {% if current_answers[que_idx] == '3' %} checked {% endif %}>Good</label>  
+                    <label><input type="radio" name="q{{ que_idx+1 }}" value="2" {% if current_answers[que_idx] == '2' %} checked {% endif %}>Average</label>  
+                    <label><input type="radio" name="q{{ que_idx+1 }}" value="1" {% if current_answers[que_idx] == '1' %} checked {% endif %}>Bad</label></p>
+                </div>
+                {% if vid_name in answered_vid_list %}
+                    <p class="ref-text">Reason: {{current_reasons[que_idx]}} </p>
+                {% endif %}
+                <br>
+            </div>       
+        {% endfor %}
+
+        </div>
+        <br>
+        <button type="submit" class="button_submit">Submit Answers</button>
+        <br>
+        <br>
+    </form>
+
+</body>
+</html>
+
+

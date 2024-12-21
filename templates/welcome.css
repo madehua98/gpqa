@@ -1,0 +1,74 @@
+.video-container {
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: flex-start; /* 左对齐 */
+    align-items: flex-start; /* 顶部对齐 */
+    gap: 8px; /* 减少项目之间的间隙 */
+    flex-wrap: wrap; /* 允许换行，以适应不同屏幕大小 */
+    padding: 8px; /* 减少内边距 */
+    background-color: #f9f9f9; /* 添加背景色以提升视觉效果 */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.text-container {
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column; /* 改为垂直方向排列 */
+    margin-bottom: 0px; /* 调整段落之间的间距 */
+    justify-content: flex-start; /* 左对齐 */
+    align-items: flex-start; /* 顶部对齐 */
+    gap: 0px; /* 减少项目之间的间隙 */
+    padding: 8px; /* 减少内边距 */
+    background-color: #f9f9f9; /* 添加背景色以提升视觉效果 */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.text-container p {
+    margin: 2px 0; /* 减小每个段落的上下间距 */
+    line-height: 2; /* 调整行间距，减少行间的间隙 */
+}
+
+.video-item, .image-item {
+    flex: 0 1 400px; /* 减小基础宽度为200px，允许缩小但不允许过度放大 */
+    box-sizing: border-box; /* 包括内边距和边框在内的宽度计算 */
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    max-width: 400px; /* 限制视频的最大宽度 */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* 白色背景 */
+    padding: 8px; /* 减少内边距 */
+    border: 1px solid #ddd; /* 边框 */
+    border-radius: 4px;
+    max-width: 400px; /* 限制图片容器的最大宽度 */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    max-width: 380px; /* 限制图片的最大宽度 */
+    border-radius: 4px;
+}
+
+.text-description {
+    width: 100%; /* 确保文本描述占满容器宽度 */
+    word-wrap: break-word;
+    margin: 6px 0; /* 减小上下外边距 */
+    font-size: 13px; /* 调整字体大小 */
+    color: #555; /* 字体颜色 */
+    text-align: center; /* 居中文本 */
+}
+
+.image-item p {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 14px; /* 调整标题字体大小 */
+}

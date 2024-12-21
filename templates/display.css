@@ -1,0 +1,367 @@
+/* 全局样式 */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* 容器设置 */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh; /* 视口高度 */
+    box-sizing: border-box;
+}
+
+
+/* 左侧栏样式 */
+.left-column {
+    flex: 2;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.left-column h2 {
+    text-align: center;
+    color: #333;
+}
+
+.QA-text {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.required {
+    color: red;
+    font-weight: bold; /* 可选：使星号更明显 */
+}
+
+/* 中间栏样式 */
+.center-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.video_style {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section {
+    width: 100%;
+    max-width: 400px;
+}
+
+#image-upload-container {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#image-upload-container.focused {
+    border-color: #007BFF;
+}
+
+#image-upload-container:hover {
+    border-color: #007BFF;
+}
+
+#image-upload {
+    display: none;
+}
+
+#image-upload-label {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+#image-upload-label:hover {
+    background-color: #0056b3;
+}
+
+#image-preview img.preview-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* 右侧栏样式 */
+.right-column {
+    flex: 3;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.submit-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+/* 禁用按钮的样式 */
+.button_submit:disabled,
+.button_delete:disabled,
+.button_copy:disabled {
+    background-color: #cccccc; /* 灰色背景 */
+    color: #666666; /* 灰色文本 */
+    cursor: not-allowed; /* 禁用状态的鼠标指针 */
+}
+
+.button_submit {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button_submit:hover {
+    background-color: #218838;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-fields label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-fields input[type="text"],
+.input-fields textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input-fields textarea {
+    resize: vertical;
+}
+
+.distractors {
+    display: flex;
+    flex-direction: column;
+}
+
+.distractors label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.distractors input[type="text"] {
+    margin-top: 5px;
+}
+
+/* 按钮组样式 */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.button-group .button-form {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.button-group .button-form button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 按钮具体样式 */
+.button_previous {
+    background-color: #6c757d;
+}
+
+.button_previous:hover {
+    background-color: #5a6268;
+}
+
+.button_next {
+    background-color: #007bff;
+}
+
+.button_next:hover {
+    background-color: #0069d9;
+}
+
+/* 当前进度样式 */
+.current_progress {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.navigate-form {
+    margin-top: 10px;
+}
+
+.idx_input_box {
+    padding: 5px;
+    width: 60px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Add this to make required options bold */
+.required {
+    font-weight: bold;
+    color: green
+}
+
+/* Optional: Style the '*' to make it more noticeable */
+.required::after {
+    content: "*";
+    color: red; /* Optional: Change color as needed */
+    margin-left: 4px; /* Optional: Add some spacing */
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button_delete, .button_copy {
+    background-color: #f44336; /* 红色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button_copy {
+    background-color: #4CAF50; /* 绿色 */
+}
+
+.button_submit {
+    background-color: #008CBA; /* 蓝色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button_delete:hover, .button_copy:hover, .button_submit:hover {
+    opacity: 0.8;
+}
+
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .center-column,
+    .right-column {
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .button-form {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #image-upload-label {
+        font-size: 14px;
+    }
+
+    .input_prompt {
+        font-size: 14px;
+    }
+
+    .current_progress {
+        font-size: 14px;
+    }
+
+    .QA-text {
+        font-size: 14px;
+    }
+
+    .button-group .button-form button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .button_submit {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .flashes {
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .flashes li {
+        background-color: #f0f8ff;
+        border: 1px solid #add8e6;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+    }
+}

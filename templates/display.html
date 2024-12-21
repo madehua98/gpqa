@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Annotating Videos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./templates/display.css"> <!-- 引入外部CSS文件 -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左侧栏 -->
+        <div class="left-column">
+            <div class="QA-text">
+                {{ multiple_anno | safe }}
+            </div>
+        </div>
+
+        <!-- 右侧栏 -->
+        <div class="right-column">
+            <!-- 提交表单 -->
+            <form id="submit-form" action="{{ url_for('submit') }}" method="post" enctype="multipart/form-data" class="main-form">
+                <!-- 隐藏字段 -->
+                <input type="hidden" name="source_page" value="display">
+                <input type="hidden" name="uuid" value="{{uuid}}">
+                <input type="hidden" name="current_idx" value="{{ current_idx }}">
+
+
+                <!-- 问题输入区域 -->
+                <div class="input-fields">
+                    <fieldset>
+                        <legend>需要检查的问题和选项:<span class="error" id="question-type-error"></span></legend>
+                        
+                        <!-- 在这里添加问题 -->
+                        <div class="question-text">
+                            <p>{{ question_dict.question }}</p>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <script>
+                                window.MathJax = {
+                                    tex: {
+                                        inlineMath: [['$', '$'], ['\\(', '\\)']]
+                                    }
+                                };
+                            </script>
+                            <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+                            
+                            <body>
+                                {% for option in question_dict.options %}
+                                <div>
+                                    <label>
+                                        <input type="checkbox" name="multiple" value="{{ option }}" {% if option in annotations %} checked {% endif %}>
+                                        <!-- Use LaTeX syntax in your 'value' if you like: "$X_A=3347256$" -->
+                                        <span class="markdown-content">{{ option }}</span>
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </body>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- 提交按钮和复制、删除按钮 -->
+                <div class="submit-button-container">
+                    <!-- 提交按钮，保留验证 -->
+                    <button type="submit" name="action" value="submit" class="button_submit">提交</button>
+                </div>
+            </form>
+
+            <!-- 跳转表单 -->
+            <form id="navigate-form" action="{{ url_for('submit') }}"  method="post" class="navigate-form">
+                <!-- 隐藏字段 -->
+                <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                <input type="hidden" name="source_page" value="display">
+
+                <p><b>Current progress</b>: <br>{{ current_idx + 1 }}/{{ end_index + 1 }}</p>
+                <label for="next_idx">Turn to:</label>
+                <input type="number" name="next_idx" placeholder="123" class="idx_input_box" min="1" max="{{ end_index + 1 }}" required>
+                <button type="submit" name="action" value="navigate" class="navigate-button">Enter</button>
+            </form>
+
+            <!-- 按钮组，紧跟着干扰项下方 -->
+            <div class="button-group">
+                <!-- 上一个按钮的表单 -->
+                <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
+                    <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                    <input type="hidden" name="direction" value="last">
+                    <button type="submit" class="button_previous">上一个</button>
+                </form>
+
+                <!-- 下一个按钮的表单 -->
+                <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
+                    <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                    <input type="hidden" name="direction" value="next">
+                    <button type="submit" class="button_next">下一个</button>
+                </form>
+            </div>
+
+            <!-- 显示Flash消息 -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="flashes">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <script>
+        // 处理图片上传的预览
+        const imageInput = document.getElementById('image-upload');
+        const imagePreview = document.getElementById('image-preview');
+        const uploadContainer = document.getElementById('image-upload-container');
+
+        // Function to display the image preview
+        function displayImage(file) {
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // 清除之前的预览
+                    imagePreview.innerHTML = '';
+                    const img = document.createElement('img');
+                    img.src = e.target.result;  // 设置图片的 data URL
+                    img.alt = "Image Preview";
+                    img.classList.add('preview-image');
+                    imagePreview.appendChild(img);  // 添加新的预览
+                };
+                reader.readAsDataURL(file);  // 读取图片文件
+            } else {
+                alert('请上传有效的图片文件。');
+            }
+        }
+
+        // Event listener for file input change
+        imageInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            displayImage(file);
+        });
+
+        // Event listener for paste events
+        uploadContainer.addEventListener('paste', function(event) {
+            const items = (event.clipboardData || event.originalEvent.clipboardData).items;
+            for (let index in items) {
+                const item = items[index];
+                if (item.kind === 'file' && item.type.startsWith('image/')) {
+                    const blob = item.getAsFile();
+                    displayImage(blob);
+                    // 设置文件输入的值为粘贴的图片
+                    const dataTransfer = new DataTransfer();
+                    // 添加新的文件
+                    dataTransfer.items.add(blob);
+                    imageInput.files = dataTransfer.files;
+                    break; // 只处理第一个图片
+                }
+            }
+        });
+
+        // 点击上传容器时聚焦，以便接收粘贴事件
+        uploadContainer.addEventListener('click', function() {
+            uploadContainer.focus();
+        });
+
+        // 焦点样式变化
+        uploadContainer.addEventListener('focus', function() {
+            uploadContainer.classList.add('focused');
+        });
+        uploadContainer.addEventListener('blur', function() {
+            uploadContainer.classList.remove('focused');
+        });
+    </script>
+</body>
+</html>

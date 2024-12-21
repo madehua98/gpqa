@@ -1,0 +1,14 @@
+<h3>1. Visual quality</h3>
+<b>Expected Case</b>:<br>
+(1) The video looks clear and normal on its appearance.<br>
+(2) The features like Brightness, Contrast, Color, etc, are appropriate and stable. <br> 
+<b>Error point</b>:<br>
+(a) local obvious unclear or blurry, <br>
+(b) too low resolution, <br>
+(c) some speckles or black patches, <br>
+(d) appearance of video is skewed and distorted, <br>
+(e) unstable optical property, such as brightness, contrast, saturation, exposure etc, <br> 
+(f) flickering color of main objects and background <br>
+<b>Note:</b><br>
+**Some videos have watermark, we can ignore that.<br>
+<br>

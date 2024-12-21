@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Annotating Videos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./templates/display.css"> <!-- 引入外部CSS文件 -->
+    <style>
+        /* 添加一些基本样式 */
+        .error {
+            color: red;
+            display: none;
+        }
+        .submit-button-container {
+            margin-top: 20px;
+        }
+        .button_submit {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .checkbox-group div {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左侧栏 -->
+        <div class="left-column">
+            <div class="QA-text">
+                {{ deduplication_anno | safe }}
+            </div>
+        </div>
+
+        <!-- 右侧栏 -->
+        <div class="right-column">
+            <!-- 提交表单 -->
+            <form id="submit-form" action="{{ url_for('submit') }}" method="post" enctype="multipart/form-data" class="main-form" onsubmit="return validateForm()">
+                <!-- 隐藏字段 -->
+                <input type="hidden" name="source_page" value="display_type">
+                <input type="hidden" name="group_id" value="{{group_id}}">
+                <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                <!-- 问题输入区域 -->
+                <div class="input-fields">
+                    <fieldset>
+                        <legend>需要检查的问题:<span class="error" id="question-type-error"></span></legend>
+                        <div class="checkbox-group">
+                            <script>
+                                window.MathJax = {
+                                  tex: {
+                                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                                  }
+                                };
+                              </script>
+                              <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+                            </head>
+                            <body>
+
+                              {% for key, value in question_dict.items() %}
+                              <div>
+                                <label>
+                                <!-- <p>{{ key }}</p> -->
+                                  <input type="checkbox" name="deduplication" value="{{ key }}" {% if key in selected_deduplications %} checked {% endif %}>
+                                  <!-- Use LaTeX syntax in your 'value' if you like: "$X_A=3347256$" -->
+                                  <span class="markdown-content">{{ value }}</span>
+                                </label>
+                              </div>
+                              {% endfor %}
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- 提交按钮和复制、删除按钮 -->
+                <div class="submit-button-container">
+                    <!-- 删除按钮，跳过验证，设置为无效 -->
+                    <button type="submit" name="action" value="delete" class="button_delete" formnovalidate disabled>删除</button>
+                    
+                    <!-- 提交按钮，保留验证 -->
+                    <button type="submit" name="action" value="submit" class="button_submit">提交</button>
+                    
+                    <!-- 复制按钮，跳过验证，设置为无效 -->
+                    <button type="submit" name="action" value="copy" class="button_copy" formnovalidate disabled>复制</button>
+                </div>
+            </form>
+
+            <!-- 跳转表单 -->
+            <form id="navigate-form" action="{{ url_for('submit') }}" method="post" class="navigate-form">
+                <!-- 隐藏字段 -->
+                <input type="hidden" name="video" value="{{ video }}">
+                <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                <input type="hidden" name="_is_val" value="{{ _is_val }}">
+                <input type="hidden" name="source_page" value="display_type"> <!-- 添加此行 -->
+
+                <p><b>Current progress</b>: <br>{{ current_idx+1 }}/{{ end_index+1 }}</p>
+                <label for="next_idx">Turn to:</label>
+                <input type="number" name="next_idx" placeholder="123" class="idx_input_box" min="1" max="{{ end_index + 1 }}" required>
+                <button type="submit" name="action" value="navigate" class="navigate-button">Enter</button>
+            </form>
+
+            <!-- 按钮组，紧跟着干扰项下方 -->
+            <div class="button-group">
+                <!-- 上一个按钮的表单 -->
+                <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
+                    <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                    <input type="hidden" name="direction" value="last">
+                    <input type="hidden" name="source_page" value="display_type"> <!-- 添加此行 -->
+                    <button type="submit" class="button_previous">上一个</button>
+                </form>
+
+                <!-- 下一个按钮的表单 -->
+                <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
+                    <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                    <input type="hidden" name="direction" value="next">
+                    <input type="hidden" name="source_page" value="display_type"> <!-- 添加此行 -->
+                    <button type="submit" class="button_next">下一个</button>
+                </form>
+            </div>
+
+            <!-- 显示Flash消息 -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="flashes">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <!-- 添加JavaScript进行表单验证 -->
+    <script>
+        function validateForm() {
+            const checkboxes = document.querySelectorAll('input[name="deduplication"]:checked');
+            const error = document.getElementById('question-type-error');
+            if (checkboxes.length === 0) {
+                error.style.display = 'inline';
+                return false;
+            } else {
+                error.style.display = 'none';
+                return true;
+            }
+        }
+
+        // 在用户选择复选框时隐藏错误信息
+        const checkboxes = document.querySelectorAll('input[name="deduplication"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const error = document.getElementById('question-type-error');
+                if (document.querySelectorAll('input[name="deduplication"]:checked').length > 0) {
+                    error.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video_Eval_Bench</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, auto); 
+            gap: 40px; 
+        }
+        input[type="radio"] {
+            transform: scale(2);
+            margin: 15px;
+        }
+        .not-answered {
+            font-weight: bold;
+            color:red;
+        }
+        .answered {
+            font-weight: bold;
+            color:green;
+        }
+        table {
+            border-collapse: collapse;
+            border: 2px solid black; /* 设置边框粗细和颜色 */
+        }
+        th, td {
+            border: 1px solid black; 
+            padding: 8px; 
+        }
+        .wrap-text {
+        max-width: 38%; 
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
+        }
+        .current_progress{
+        position:fixed; 
+        top: 2%; 
+        right:30%;
+        text-align: left;
+        word-wrap: break-word;
+        max-width: 20%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <video 
+    style="position: fixed; top:1%; right: 2%;"
+    height="256px" width="256px" controls autoplay muted loop>
+        <source src="{{ video }}" type="video/mp4">
+    </video>
+
+    <h4 class="wrap-text">Input Prompt: <br>{{text_prompt}}</h4>
+
+
+    <div class = "current_progress">
+        <p><b>Current progress</b>: <br>{{ current_idx+1 }}/{{end_index+1 }} <br></p>
+        <br>
+        <form action="{{ url_for('navigate_turn_val') }}" method="post">
+            <input type="hidden" name="current_idx" value="{{ current_idx }}">
+            <input type="hidden" name="_is_val" value="{{ _is_val }}">
+            <input type="hidden" name="admin" value="video_admin">
+            Turn to: <input type="text" name="next_idx" placeholder="123" class="idx_input_box">
+            <button type="submit" style="width: 60px; height: 30px; font-size: 13px;" value="turn"> Enter</button>
+            <br>
+        </form>
+    </div>
+
+    <form action="{{ url_for('navigate_val') }}" method="post">
+        <input type="hidden" name="current_idx" value="{{ current_idx }}">
+        <input type="hidden" name="_is_val" value="{{ _is_val }}">
+        <input type="hidden" name="admin" value="video_admin">
+        <button type="submit" name="direction" style="width: 80px; height: 40px; font-size: 13px;"
+            value="last" >Last One</button>
+        <button type="submit" name="direction" style="width: 80px; height: 40px; font-size: 13px;"
+            value="next" >Next One</button>
+    </form>
+    <br>
+
+    <form action="{{ url_for('welcome') }}" method="post">
+        <button 
+            type="submit" name="exit_validate" 
+            style=" width: 80px; height: 
+            40px; font-size: 15px;">Exit Validation</button>
+    </form>
+
+    <div>
+        <p><br> 
+        ("3" means Good, <br>
+        "1" means Bad, Others in this order):<br>
+    </div>
+    
+    <div>
+        <table style="position: fixed; bottom:10%; left: 1%;text-align: left;">
+            
+            <tr>
+            <td>visual/optical quality</td>
+              {% for col in range(num_colm) %}
+              <td> {{ current_answers_all[col][0] }}</td>
+              {% endfor %}
+            </tr>
+
+            <tr>
+                <td>objects consistency</td>
+                  {% for col in range(num_colm) %}
+                  <td> {{ current_answers_all[col][1] }}</td>
+                  {% endfor %}
+            </tr>
+            
+            <tr>
+                <td>dynamic degree</td>
+                  {% for col in range(num_colm) %}
+                  <td> {{ current_answers_all[col][2] }}</td>
+                  {% endfor %}
+            </tr>
+
+            <tr>
+                <td>motion smoothness</td>
+                  {% for col in range(num_colm) %}
+                  <td> {{ current_answers_all[col][3] }}</td>
+                  {% endfor %}
+            </tr>
+
+            <tr>
+                <td>text-to-video alignment</td>
+                  {% for col in range(num_colm) %}
+                  <td> {{ current_answers_all[col][4] }}</td>
+                  {% endfor %}
+            </tr>
+
+            <tr>
+                <td>factual consistency</td>
+                  {% for col in range(num_colm) %}
+                  <td> {{ current_answers_all[col][5] }}</td>
+                  {% endfor %}
+            </tr>
+
+            <tr>
+                <td>overall score</td>
+                  {% for col in range(num_colm) %}
+                  <td> {{ current_answers_all[col][6] }}</td>
+                  {% endfor %}
+            </tr>
+
+
+
+          </table>
+        </p>
+    </div>
+    
+
+
+</body>
+</html>
+
+
