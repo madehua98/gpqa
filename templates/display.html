@@ -30,9 +30,14 @@
                     <fieldset>
                         <legend>需要检查的问题和选项:<span class="error" id="question-type-error"></span></legend>
                         
-                        <!-- 在这里添加问题 -->
+                        <!-- 添加题目标注选项 -->
                         <div class="question-text">
-                            <p>{{ question_dict.question }}</p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="mark_question" value="marked_question" {% if "marked_question" in annotations %} checked {% endif %}>
+                                    <span>{{ question_dict.question }}</span>
+                                </label>
+                            </p>
                         </div>
                         
                         <div class="checkbox-group">

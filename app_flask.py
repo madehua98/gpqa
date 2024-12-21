@@ -201,7 +201,10 @@ def load_multiple_annotations(annotation_file, uuid):
             try:
                 video_annotations = json.loads(line)
                 if uuid == video_annotations["uuid"]:
-                    annotations = video_annotations["delete_options"]
+                    if video_annotations["marked_question"]:
+                        annotations = ['marked_question']
+                    else:
+                        annotations = video_annotations["delete_options"]
                     break
             except json.JSONDecodeError:
                 continue
@@ -401,7 +404,7 @@ def move_idx(
                 current_idx = slice_end_idx
                 annotations = load_annotations(
                     f"{res_dir}/ans_{session.get('username')}.jsonl",
-                    need_deduplication_datas[current_idx].split(".")[0],
+                    need_deduplication_datas[current_idx],
                 )
                 video_question_number = len(annotations)
                 video_question_idx = video_question_number - 1
@@ -419,15 +422,7 @@ def move_idx(
                 video_question_idx = 0
 
     session["current_idx"] = current_idx
-    session["video_question_idx"] = video_question_idx
-    print("current_idx after navigation ", session.get("current_idx", 0))
-    print(
-        "video_question_number after navigation ",
-        session.get("video_question_number", 1),
-    )
-    print("video_question_idx after navigation ", session.get("video_question_idx", 0))
 
-    print("navigation of display")
 
 
 def submit_success(
@@ -462,26 +457,50 @@ def submit_success(
     print("*" * 100)
 
 
-def update_annotation_file(ans_file, uuid, annotations):
-
+def update_annotation_file(ans_file, uuid, marked_question, annotations):
     annotation_dict = {}
+
+    # 读取现有的注释文件
     if os.path.exists(ans_file):
         with open(ans_file, "r", encoding="utf-8") as f:
-            has_flag = 0
             for line in f:
                 try:
                     annotation = json.loads(line)
-                    annotation_dict.update({annotation["uuid"]:annotation["delete_options"]})
+                    current_uuid = annotation.get("uuid")
+                    if current_uuid:
+                        if current_uuid == uuid:
+                            # 更新指定的 uuid
+                            if marked_question:
+                                annotation_dict[current_uuid] = {
+                                    "marked_question": True,
+                                    "delete_options": 'all'
+                                }
+                            else:
+                                annotation_dict[current_uuid] = {
+                                    "marked_question": False,
+                                    "delete_options": annotations
+                                }
+                        else:
+                            # 保持其他 uuid 的原有状态
+                            annotation_dict[current_uuid] = {
+                                "marked_question": annotation.get("marked_question", False),
+                                "delete_options": annotation.get("delete_options", [])
+                            }
                 except json.JSONDecodeError:
                     continue
 
-    annotation_dict[uuid] = annotations
+    # 如果文件不存在或 uuid 不在文件中，则添加新的注释
+    if uuid not in annotation_dict:
+        annotation_dict[uuid] = {
+            "marked_question": marked_question,
+            "delete_options": 'all' if marked_question else annotations
+        }
+
     # 写回 ans_file
     with open(ans_file, "w", encoding="utf-8") as f:
-        for uuid, datas in annotation_dict.items():
-            json.dump({"uuid": uuid, "delete_options": datas}, f, ensure_ascii=False)
+        for uid, data in annotation_dict.items():
+            json.dump({"uuid": uid, **data}, f, ensure_ascii=False)
             f.write("\n")
-
 
 @app.route("/submit", methods=["POST"])
 def submit():
@@ -568,10 +587,14 @@ def submit():
         current_idx = int(request.form.get("current_idx", 0))
         uuid = request.form.get("uuid", "")
         text = request.form.get("question", "")
+        print(request.form)
+        marked_question = 'mark_question' in request.form
+        print(marked_question)
         curr_multiple= request.form.getlist("multiple")
         print(f"curr_multiple is {curr_multiple}")
         annotations = curr_multiple
-        update_annotation_file(multiple_file, uuid, annotations)
+
+        update_annotation_file(multiple_file, uuid, marked_question, annotations)
 
         # 更新 video_question_idx 如果需要
         submit_success(
