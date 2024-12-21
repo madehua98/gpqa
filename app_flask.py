@@ -24,8 +24,16 @@ login_manager.login_view = "welcome"
 
 local_video_dir = "./examples/youtube_sampled"
 res_dir = "./outputs"
+# 检查目录是否存在，如果不存在则创建
+if not os.path.exists(res_dir):
+    os.makedirs(res_dir)
+    print(f"目录 '{res_dir}' 已创建")
+else:
+    print(f"目录 '{res_dir}' 已存在")
+
 text_files_dir = "text_files"
-outputs_dir = 'outputs'
+
+
 user_info_path = f"./{text_files_dir}/user_info.json"
 
 need_deduplication_path = f"./{text_files_dir}/similar_questions_grouped.jsonl"
@@ -155,8 +163,6 @@ def login_method_2():
     return redirect(url_for("display"))
 
 
-
-
 def load_questions_type(deduplication_file, vid_name):
     type_data_list = []
     if os.path.exists(deduplication_file):
@@ -249,7 +255,7 @@ def display():
             multiple_anno=multiple_anno,
             subscore_def=subscore_def,
             start_index=slice_start_idx,
-            question_dict=question_dict,
+            question_dict=curr_multiple_data,
             end_index=slice_end_idx,
             uuid=uuid,
             current_idx=current_idx,
@@ -315,11 +321,6 @@ def display_type():
         print("language in display_type ", language)
 
         curr_deduplication_data = datas_curr_user[current_idx]
-        question_dict = {}
-        for data in curr_deduplication_data["items"]:
-            question = data["question"]
-            uuid = data["uuid"]
-            question_dict[uuid] = question
         group_id = curr_deduplication_data["group_id"]
 
         return render_template(
@@ -330,7 +331,7 @@ def display_type():
             end_index=slice_end_idx,
             current_idx=current_idx,
             group_id=group_id,
-            question_dict=question_dict,
+            question_list=curr_deduplication_data["items"],
             answered_vid_list=answered_vid_list,
             selected_deduplications=current_answers,
             _is_val=0,
@@ -551,7 +552,7 @@ def submit():
             # 处理 question type 的提交
             current_idx = int(request.form.get("current_idx", 0))
             video_question_idx = int(request.form.get("video_question_idx", 0))
-            curr_deduplication = request.form.getlist("deduplication")
+            curr_deduplication = request.form.getlist("uuids")
             print(curr_deduplication)
             group_id = request.form.get("group_id", "")
 

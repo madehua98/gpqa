@@ -3,7 +3,8 @@
         "username": "user1",
         "s_idx": 0,
         "e_idx": 99,
-        "current_idx": 0
+        "current_idx": 1,
+        "video_question_idx": 0
     },
     "user2": {
         "username": "user2",
@@ -45,7 +46,7 @@
         "username": "user8",
         "s_idx": 700,
         "e_idx": 799,
-        "current_idx": 4
+        "current_idx": 0
     },
     "user9": {
         "username": "user9",

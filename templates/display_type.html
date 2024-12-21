@@ -41,34 +41,25 @@
                 <input type="hidden" name="source_page" value="display_type">
                 <input type="hidden" name="group_id" value="{{group_id}}">
                 <input type="hidden" name="current_idx" value="{{ current_idx }}">
-                <!-- 问题输入区域 -->
-                <div class="input-fields">
-                    <fieldset>
-                        <legend>需要检查的问题:<span class="error" id="question-type-error"></span></legend>
-                        <div class="checkbox-group">
-                            <script>
-                                window.MathJax = {
-                                  tex: {
-                                    inlineMath: [['$', '$'], ['\\(', '\\)']]
-                                  }
-                                };
-                              </script>
-                              <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-                            </head>
-                            <body>
-
-                              {% for key, value in question_dict.items() %}
-                              <div>
-                                <label>
-                                <!-- <p>{{ key }}</p> -->
-                                  <input type="checkbox" name="deduplication" value="{{ key }}" {% if key in selected_deduplications %} checked {% endif %}>
-                                  <!-- Use LaTeX syntax in your 'value' if you like: "$X_A=3347256$" -->
-                                  <span class="markdown-content">{{ value }}</span>
-                                </label>
-                              </div>
-                              {% endfor %}
-                        </div>
-                    </fieldset>
+                <div class="checkbox-group">
+                    {% for item in question_list %}
+                    <div>
+                        <label>
+                            <!-- 复选框只携带 uuid -->
+                            <input type="checkbox" name="uuids" value="{{ item.uuid }}" {% if item.uuid in selected_uuids %} checked {% endif %}>
+                            <!-- 展示完整字段 -->
+                            <span class="markdown-content">
+                                <strong>Question:</strong> {{ item.question }}<br>
+                                <strong>Options:</strong> {{ item.options | join(', ') }}<br>
+                                <strong>Answer:</strong> {{ item.answer }}<br>
+                                <strong>Difficulty:</strong> {{ item.difficulty }}<br>
+                                <strong>Category:</strong> {{ item.category }}<br>
+                                <strong>Subcategory:</strong> {{ item.subcategory }}<br>
+                                <strong>Source File:</strong> {{ item.source_file }}
+                            </span>
+                        </label>
+                    </div>
+                    {% endfor %}
                 </div>
 
                 <!-- 提交按钮和复制、删除按钮 -->

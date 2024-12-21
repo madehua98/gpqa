@@ -30,40 +30,45 @@
                     <fieldset>
                         <legend>需要检查的问题和选项:<span class="error" id="question-type-error"></span></legend>
                         
-                        <!-- 添加题目标注选项 -->
+                        <!-- 显示问题 -->
                         <div class="question-text">
                             <p>
                                 <label>
-                                    <input type="checkbox" name="mark_question" value="marked_question" {% if "marked_question" in annotations %} checked {% endif %}>
+                                    <input type="checkbox" name="mark_question" value="{{ question_dict.uuid }}" {% if question_dict.uuid in annotations %} checked {% endif %}>
                                     <span>{{ question_dict.question }}</span>
                                 </label>
                             </p>
                         </div>
-                        
+                
+
+                        <!-- 显示选项 -->
                         <div class="checkbox-group">
-                            <script>
-                                window.MathJax = {
-                                    tex: {
-                                        inlineMath: [['$', '$'], ['\\(', '\\)']]
-                                    }
-                                };
-                            </script>
-                            <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-                            
-                            <body>
-                                {% for option in question_dict.options %}
-                                <div>
-                                    <label>
-                                        <input type="checkbox" name="multiple" value="{{ option }}" {% if option in annotations %} checked {% endif %}>
-                                        <!-- Use LaTeX syntax in your 'value' if you like: "$X_A=3347256$" -->
-                                        <span class="markdown-content">{{ option }}</span>
-                                    </label>
-                                </div>
-                                {% endfor %}
-                            </body>
+                            {% for option in question_dict.options %}
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="multiple" value="{{ option }}" {% if option in annotations %} checked {% endif %}>
+                                    <span class="markdown-content">{{ option }}</span>
+                                </label>
+                            </div>
+                            {% endfor %}
                         </div>
+                        <!-- 显示其他字段 -->
+                        <div class="question-details">
+                            <p><strong>Answer:</strong> {{ question_dict.answer }}</p>
+                            <p><strong>Difficulty:</strong> {{ question_dict.difficulty or 'N/A' }}</p>
+                            <p><strong>Category:</strong> {{ question_dict.category or 'N/A' }}</p>
+                            <p><strong>Subcategory:</strong> {{ question_dict.subcategory or 'N/A' }}</p>
+                            <p><strong>Is Multiple Options:</strong></p>
+                            <ul>
+                                {% for key, value in question_dict.is_multiple_options.items() %}
+                                <li><strong>{{ key }}:</strong> {{ value }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                
                     </fieldset>
                 </div>
+                
                 <!-- 提交按钮和复制、删除按钮 -->
                 <div class="submit-button-container">
                     <!-- 提交按钮，保留验证 -->
