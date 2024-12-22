@@ -552,7 +552,7 @@ def submit():
             # 处理 question type 的提交
             current_idx = int(request.form.get("current_idx", 0))
             video_question_idx = int(request.form.get("video_question_idx", 0))
-            curr_deduplication = request.form.getlist("uuids")
+            curr_deduplication = request.form.getlist("deduplication")
             print(curr_deduplication)
             group_id = request.form.get("group_id", "")
 

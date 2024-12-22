@@ -47,7 +47,7 @@
                         <label>
                             <legend> uuid为:{{item.uuid}}<span class="error" id="question-type-error"></span></legend>
                             <!-- 复选框只携带 uuid -->
-                            <input type="checkbox" name="deduplication" value="{{ item.uuid }}" {% if item.uuid in selected_uuids %} checked {% endif %}>
+                            <input type="checkbox" name="deduplication" value="{{ item.uuid }}" {% if item.uuid in selected_deduplications %} checked {% endif %}>
                             <!-- 展示完整字段 -->
                             <span class="markdown-content">
                                 <strong>Question:</strong> {{ item.question }}<br>
