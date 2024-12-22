@@ -29,8 +29,6 @@ conda create -n gpqa1 python=3.10
 conda activate gpqa1
 pip install flask flask_login markdown
 ```
-将app_flask.py文件的第13行修改为自己的目录
-`static_root_path = "/Users/dehua/code/gpqa"`
 
 运行代码
 `python app_flask.py`

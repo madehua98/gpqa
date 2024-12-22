@@ -45,6 +45,7 @@
                     {% for item in question_list %}
                     <div>
                         <label>
+                            <legend> uuid为:{{item.uuid}}<span class="error" id="question-type-error"></span></legend>
                             <!-- 复选框只携带 uuid -->
                             <input type="checkbox" name="uuids" value="{{ item.uuid }}" {% if item.uuid in selected_uuids %} checked {% endif %}>
                             <!-- 展示完整字段 -->

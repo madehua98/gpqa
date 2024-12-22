@@ -68,8 +68,14 @@
     },
     "user12": {
         "username": "user12",
-        "s_idx": 1000,
-        "e_idx": 1099,
+        "s_idx": 1100,
+        "e_idx": 1199,
+        "current_idx": 0
+    },
+    "user13": {
+        "username": "user13",
+        "s_idx": 1200,
+        "e_idx": 1299,
         "current_idx": 0
     }
 }
