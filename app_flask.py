@@ -10,7 +10,7 @@ import os
 import markdown
 
 # ======== static and global variables ========
-static_root_path = "./"
+static_root_path = "/Users/dehua/code/gpqa"
 
 app = Flask(__name__, static_folder=static_root_path)
 app.secret_key = os.urandom(24)

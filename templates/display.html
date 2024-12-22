@@ -47,7 +47,9 @@
                                 {% set letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[i] %}
                                 <div>
                                     <label>
-                                        <input type="checkbox" name="multiple" value="{{ option }}" {% if option in annotations %} checked {% endif %}>
+                                        <input type="checkbox" name="multiple" value="{{ option }}"
+                                            {% if option == question_dict.answer %} disabled {% endif %}
+                                            {% if option in annotations %} checked {% endif %}>
                                         <span class="markdown-content">{{ letter }}. {{ option }}</span>
                                     </label>
                                 </div>
