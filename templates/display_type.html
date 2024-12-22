@@ -41,6 +41,11 @@
                 <input type="hidden" name="source_page" value="display_type">
                 <input type="hidden" name="group_id" value="{{group_id}}">
                 <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                {% if annotation_flag %}
+                    <span style="color: green;">[已标注]</span>
+                {% else %}
+                    <span style="color: red;">[未标注]</span>
+                {% endif %}
                 <div class="checkbox-group">
                     {% for item in question_list %}
                     <div>

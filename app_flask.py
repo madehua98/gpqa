@@ -200,13 +200,15 @@ def load_annotations(annotation_file, group_id):
 
 def load_multiple_annotations(annotation_file, uuid):
     annotations = []
+    annotation_flag = False
     if not os.path.exists(annotation_file):
-        return annotations
+        return annotations, annotation_flag
     with open(annotation_file, "r", encoding="utf-8") as f:
         for line in f:
             try:
                 video_annotations = json.loads(line)
                 if uuid == video_annotations["uuid"]:
+                    annotation_flag=True
                     if video_annotations["marked_question"]:
                         annotations = ['marked_question']
                     else:
@@ -214,7 +216,7 @@ def load_multiple_annotations(annotation_file, uuid):
                     break
             except json.JSONDecodeError:
                 continue
-    return annotations
+    return annotations, annotation_flag
 
 
 @app.route(f"{subpath}annotating", methods=["GET", "POST"])
@@ -236,9 +238,9 @@ def display():
         uuid = datas_curr_user[current_idx]["uuid"]
         print("data in display ", f"{uuid}")
 
-        annotations = load_multiple_annotations(multiple_file, uuid)  # 加载所有标注
+        annotations, annotation_flag = load_multiple_annotations(multiple_file, uuid)  # 加载所有标注
         print("annotations loaded: ", annotations)
-
+        print(f"annotion_flag is {annotation_flag}")
         curr_multiple_data = datas_curr_user[current_idx]
         question_dict = {}
         question = curr_multiple_data["question"]
@@ -258,6 +260,7 @@ def display():
             question_dict=curr_multiple_data,
             end_index=slice_end_idx,
             uuid=uuid,
+            annotation_flag=annotation_flag,
             current_idx=current_idx,
             annotations=annotations,  # 传递所有标注
             _is_val=0,
@@ -307,9 +310,10 @@ def display_type():
                         continue
 
         answered_vid_list = list(answer_data_dict.keys())
-
+        annotation_flag =False
         current_answers = []
         if groud_id in answered_vid_list:
+            annotation_flag = True
             current_answers = answer_data_dict[groud_id]
 
         print("current_answers (list) ", current_answers)
@@ -333,6 +337,7 @@ def display_type():
             group_id=group_id,
             question_list=curr_deduplication_data["items"],
             answered_vid_list=answered_vid_list,
+            annotation_flag=annotation_flag,
             selected_deduplications=current_answers,
             _is_val=0,
         )
@@ -496,7 +501,7 @@ def update_annotation_file(ans_file, uuid, marked_question, annotations):
             "marked_question": marked_question,
             "delete_options": 'all' if marked_question else annotations
         }
-
+    print(f"annotation_dict is {annotation_dict}")
     # 写回 ans_file
     with open(ans_file, "w", encoding="utf-8") as f:
         for uid, data in annotation_dict.items():
