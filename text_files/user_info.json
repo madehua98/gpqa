@@ -3,7 +3,7 @@
         "username": "user1",
         "s_idx": 0,
         "e_idx": 99,
-        "current_idx": 4,
+        "current_idx": 10,
         "video_question_idx": 0
     },
     "user2": {
@@ -52,7 +52,8 @@
         "username": "user9",
         "s_idx": 800,
         "e_idx": 899,
-        "current_idx": 0
+        "current_idx": 0,
+        "video_question_idx": 0
     },
     "user10": {
         "username": "user10",
@@ -70,12 +71,14 @@
         "username": "user12",
         "s_idx": 1100,
         "e_idx": 1199,
-        "current_idx": 0
+        "current_idx": 0,
+        "video_question_idx": 0
     },
     "user13": {
         "username": "user13",
         "s_idx": 1200,
         "e_idx": 1299,
-        "current_idx": 0
+        "current_idx": 0,
+        "video_question_idx": 0
     }
 }
