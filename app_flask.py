@@ -260,6 +260,7 @@ def display():
             question_dict=curr_multiple_data,
             end_index=slice_end_idx,
             uuid=uuid,
+            username=username,
             annotation_flag=annotation_flag,
             current_idx=current_idx,
             annotations=annotations,  # 传递所有标注

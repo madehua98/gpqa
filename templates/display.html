@@ -9,11 +9,13 @@
 <body>
     <div class="container">
         <!-- 左侧栏 -->
+        {% if username != "user14" %}
         <div class="left-column">
             <div class="QA-text">
                 {{ multiple_anno | safe }}
             </div>
         </div>
+        {% endif %}
 
         <!-- 右侧栏 -->
         <div class="right-column">
@@ -33,7 +35,8 @@
                 <div class="input-fields">
                     <fieldset>
                         <legend>需要检查的问题和选项:<span class="error" id="question-type-error"></span></legend>
-                        <legend> uuid为:{{uuid}}<span class="error" id="question-type-error"></span></legend>
+                        <legend> uuid为:{{ uuid }}<span class="error" id="question-type-error"></span></legend>
+                        
                         <!-- 显示问题 -->
                         <div class="question-text">
                             <p>
@@ -43,41 +46,44 @@
                                 </label>
                             </p>
                         </div>
-
-                        <!-- 显示选项，前面依次加上 A/B/C 等大写字母 -->
-                        <div class="checkbox-group">
-                            {% for i in range(question_dict.options|length) %}
-                                {% set option = question_dict.options[i] %}
-                                {% set letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[i] %}
-                                <div>
-                                    <label>
-                                        <input type="checkbox" name="multiple" value="{{ option }}"
-                                            {% if option == question_dict.answer %} disabled {% endif %}
-                                            {% if option in annotations %} checked {% endif %}>
-                                        <span class="markdown-content">{{ letter }}. {{ option }}</span>
-                                    </label>
-                                </div>
-                            {% endfor %}
-                        </div>
-
-                        <!-- 显示其他字段 -->
-                        <div class="question-details">
-                            {% set answer_letter = '' %}
-                            {% if question_dict.answer in question_dict.options %}
-                                {% set index_answer = question_dict.options.index(question_dict.answer) %}
-                                {% set answer_letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[index_answer] %}
-                            {% endif %}
-                            <p><strong>Answer: {{ answer_letter }}. {{ question_dict.answer }}</strong></p>
-                            <p><strong>Difficulty:</strong> {{ question_dict.difficulty or 'N/A' }}</p>
-                            <p><strong>Category:</strong> {{ question_dict.category or 'N/A' }}</p>
-                            <p><strong>Subcategory:</strong> {{ question_dict.subcategory or 'N/A' }}</p>
-                            <p><strong>Is Multiple Options:</strong></p>
-                            <ul>
-                                {% for key, value in question_dict.is_multiple_options.items() %}
-                                <li><strong>{{ key }}:</strong> {{ value }}</li>
+                        
+                        {% if username != "user14" %}
+                            <!-- 显示选项，前面依次加上 A/B/C 等大写字母 -->
+                            <div class="checkbox-group">
+                                {% for i in range(question_dict.options|length) %}
+                                    {% set option = question_dict.options[i] %}
+                                    {% set letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[i] %}
+                                    <div>
+                                        <label>
+                                            <input type="checkbox" name="multiple" value="{{ option }}"
+                                                {% if option == question_dict.answer %} disabled {% endif %}
+                                                {% if option in annotations %} checked {% endif %}>
+                                            <span class="markdown-content">{{ letter }}. {{ option }}</span>
+                                        </label>
+                                    </div>
                                 {% endfor %}
-                            </ul>
-                        </div>
+                            </div>
+
+                            <!-- 显示其他字段 -->
+                            <div class="question-details">
+                                {% set answer_letter = '' %}
+                                {% if question_dict.answer in question_dict.options %}
+                                    {% set index_answer = question_dict.options.index(question_dict.answer) %}
+                                    {% set answer_letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[index_answer] %}
+                                {% endif %}
+                                <p><strong>Answer: {{ answer_letter }}. {{ question_dict.answer }}</strong></p>
+                                <p><strong>Difficulty:</strong> {{ question_dict.difficulty or 'N/A' }}</p>
+                                <p><strong>Category:</strong> {{ question_dict.category or 'N/A' }}</p>
+                                <p><strong>Subcategory:</strong> {{ question_dict.subcategory or 'N/A' }}</p>
+                                <p><strong>Is Multiple Options:</strong></p>
+                                <ul>
+                                    {% for key, value in question_dict.is_multiple_options.items() %}
+                                        <li><strong>{{ key }}:</strong> {{ value }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        
                     </fieldset>
                 </div>
                 
