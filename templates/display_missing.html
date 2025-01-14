@@ -28,20 +28,12 @@
             <div class="annotation-status">
                 <p><strong>标注状态表格:</strong></p>
                 <table class="annotation-table">
-                    <!-- 表格头部：显示 1~10 作为列号 -->
-                    <thead>
-                        <tr>
-                            {% for i in range(1, 11) %}
-                                <th>{{ i }}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
                     <!-- 表格主体：每行显示 10 个，共 10 行，总共 100 格 -->
                     <tbody>
                         <!-- 先把字典的所有 (key, value) 项转成列表 -->
                         {% set items_list = status_dict.items() | list %}
                         
-                        {% for row in range(10) %}
+                        {% for row in range(15) %}
                         <tr>
                             {% for col in range(10) %}
                                 {% set index = row * 10 + col %}
@@ -110,9 +102,9 @@
                         <div class="checkbox-group">
                             <div>
                                 <label>
-                                    <input type="checkbox" name="multiple" value="无需删除，题目有其他问题，可以修改"
-                                        {% if '无需删除，题目有其他问题，可以修改' in annotations %} checked {% endif %}>
-                                    <span class="markdown-content">无需删除，题目有其他问题，可以修改</span>
+                                    <input type="checkbox" name="multiple" value="无需删除，题目除了需删除选项外还有其他问题，标记修改"
+                                        {% if '无需删除，题目除了需删除选项外还有其他问题，标记修改' in annotations %} checked {% endif %}>
+                                    <span class="markdown-content">无需删除，题目除了需删除选项外还有其他问题，标记修改</span>
                                 </label>
                             </div>
 
@@ -131,22 +123,22 @@
                         </div>
 
 
-                        <!-- 显示其他字段 -->
-                        <div class="question-details">
-                            {% set answer_letter = '' %}
-                            {% if question_dict.answer in question_dict.options %}
-                                {% set index_answer = question_dict.options.index(question_dict.answer) %}
-                                {% set answer_letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[index_answer] %}
-                            {% endif %}
-                            <p><strong>Answer: {{ answer_letter }}. {{ question_dict.answer }}</strong></p>
-                            <p><strong>Discipline_final:</strong> {{ question_dict.discipline_final or 'N/A' }}</p>
-                            <p><strong>Field_final:</strong> {{ question_dict.field_final or 'N/A' }}</p>
-                            <p><strong>Subfield_final:</strong> {{ question_dict.subfield_final or 'N/A' }}</p>
-                            <p><strong>Response:</strong> {{ question_dict.response or 'N/A' }}</p>
-                            <p><strong>Final_answer_letter:</strong> {{ question_dict.final_answer_letter or 'N/A' }}</p>
-                            <p><strong>Confidence:</strong> {{ question_dict.confidence or 'N/A' }}</p>
-                            <p><strong>Missing_info:</strong> {{ question_dict.missing_info or 'N/A' }}</p>
-                        </div>
+                    <!-- 显示其他字段 -->
+                    <div class="question-details">
+                        {% set answer_letter = '' %}
+                        {% if question_dict.answer in question_dict.options %}
+                            {% set index_answer = question_dict.options.index(question_dict.answer) %}
+                            {% set answer_letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[index_answer] %}
+                        {% endif %}
+                        <p><strong>Answer: {{ answer_letter }}. {{ question_dict.answer }}</strong></p>
+                        <p><strong>Discipline_final:</strong> {{ question_dict.discipline_final or 'N/A' }}</p>
+                        <p><strong>Field_final:</strong> {{ question_dict.field_final or 'N/A' }}</p>
+                        <p><strong>Subfield_final:</strong> {{ question_dict.subfield_final or 'N/A' }}</p>
+                        <p><strong>Response:</strong> {{ question_dict.response or 'N/A' }}</p>
+                        <p><strong>Final_answer_letter:</strong> {{ question_dict.final_answer_letter or 'N/A' }}</p>
+                        <p><strong>Confidence:</strong> {{ question_dict.get('confidence', 'N/A') }}</p>
+                        <p><strong>Missing_info:</strong> {{ question_dict.get('missing_info', 'N/A') }}</p>
+                    </div>
 
                         
                     </fieldset>
