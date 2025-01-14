@@ -1,0 +1,62 @@
+{
+    "user1": {
+        "username": "user1",
+        "s_idx": 0,
+        "e_idx": 57,
+        "current_idx": 0
+    },
+    "user2": {
+        "username": "user2",
+        "s_idx": 58,
+        "e_idx": 115,
+        "current_idx": 0
+    },
+    "user3": {
+        "username": "user3",
+        "s_idx": 116,
+        "e_idx": 173,
+        "current_idx": 0
+    },
+    "user4": {
+        "username": "user4",
+        "s_idx": 174,
+        "e_idx": 231,
+        "current_idx": 0
+    },
+    "user5": {
+        "username": "user5",
+        "s_idx": 232,
+        "e_idx": 289,
+        "current_idx": 0
+    },
+    "user6": {
+        "username": "user6",
+        "s_idx": 290,
+        "e_idx": 347,
+        "current_idx": 0
+    },
+    "user7": {
+        "username": "user7",
+        "s_idx": 348,
+        "e_idx": 405,
+        "current_idx": 0
+    },
+    "user8": {
+        "username": "user8",
+        "s_idx": 406,
+        "e_idx": 463,
+        "current_idx": 0
+    },
+    "user9": {
+        "username": "user9",
+        "s_idx": 464,
+        "e_idx": 521,
+        "current_idx": 0
+    },
+    "user10": {
+        "username": "user10",
+        "s_idx": 522,
+        "e_idx": 579,
+        "current_idx": 0
+    }
+}

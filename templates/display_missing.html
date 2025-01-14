@@ -9,13 +9,60 @@
 <body>
     <div class="container">
         <!-- 左侧栏 -->
-        {% if username != "user14" %}
         <div class="left-column">
             <div class="QA-text">
                 {{ multiple_anno | safe }}
             </div>
+            <!-- 顶部进度条显示 -->
+            <div class="progress-container">
+                <p><strong>标注进度:</strong></p>
+                <progress value="{{ status_dict.values() | select('equalto', True) | list | length }}" 
+                        max="{{ status_dict | length }}"></progress>
+                <p>
+                    {{ status_dict.values() | select('equalto', True) | list | length }}/{{ status_dict | length }} 已标注 
+                    ({{ (status_dict.values() | select('equalto', True) | list | length / status_dict | length * 100) | round(2) }}%)
+                </p>
+            </div>
+
+            <!-- 标注状态表格 -->
+            <div class="annotation-status">
+                <p><strong>标注状态表格:</strong></p>
+                <table class="annotation-table">
+                    <!-- 表格头部：显示 1~10 作为列号 -->
+                    <thead>
+                        <tr>
+                            {% for i in range(1, 11) %}
+                                <th>{{ i }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <!-- 表格主体：每行显示 10 个，共 10 行，总共 100 格 -->
+                    <tbody>
+                        <!-- 先把字典的所有 (key, value) 项转成列表 -->
+                        {% set items_list = status_dict.items() | list %}
+                        
+                        {% for row in range(10) %}
+                        <tr>
+                            {% for col in range(10) %}
+                                {% set index = row * 10 + col %}
+                                {% if index < items_list|length %}
+                                    <!-- 取出对应的 (uuid, status) 二元组 -->
+                                    {% set uuid, status = items_list[index] %}
+                                    <!-- 若 status 为 True，则使用 annotated，否则使用 not-annotated -->
+                                    <td class="{% if status %}annotated{% else %}not-annotated{% endif %}">
+                                        {{ index + 1 }}
+                                    </td>
+                                {% else %}
+                                    <!-- 如果字典长度不满 100，就留空位 -->
+                                    <td></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
-        {% endif %}
 
         <!-- 右侧栏 -->
         <div class="right-column">
@@ -58,43 +105,49 @@
                         </head>
                         <body>
 
-                        {% if username != "user14" %}
-                            <!-- 显示选项，前面依次加上 A/B/C 等大写字母 -->
-                            <div class="checkbox-group">
-                                {% for i in range(question_dict.options|length) %}
-                                    {% set option = question_dict.options[i] %}
-                                    {% set letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[i] %}
-                                    <div>
-                                        <label>
-                                            <input type="checkbox" name="multiple" value="{{ option }}"
-                                                {% if option == question_dict.answer %} disabled {% endif %}
-                                                {% if option in annotations %} checked {% endif %}>
-                                            <span class="markdown-content">{{ letter }}. {{ option }}</span>
-                                        </label>
-                                    </div>
-                                {% endfor %}
+
+                        <!-- 显示选项，前面依次加上 A/B/C 等大写字母 -->
+                        <div class="checkbox-group">
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="multiple" value="无需删除，题目有其他问题，可以修改"
+                                        {% if '无需删除，题目有其他问题，可以修改' in annotations %} checked {% endif %}>
+                                    <span class="markdown-content">无需删除，题目有其他问题，可以修改</span>
+                                </label>
                             </div>
 
+                            {% for i in range(question_dict.options|length) %}
+                                {% set option = question_dict.options[i] %}
+                                {% set letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[i] %}
+                                <div>
+                                    <label>
+                                        <input type="checkbox" name="multiple" value="{{ option }}"
+                                            {% if option == question_dict.answer %} disabled {% endif %}
+                                            {% if option in annotations %} checked {% endif %}>
+                                        <span class="markdown-content">{{ letter }}. {{ option }}</span>
+                                    </label>
+                                </div>
+                            {% endfor %}
+                        </div>
 
-                            <!-- 显示其他字段 -->
-                            <div class="question-details">
-                                {% set answer_letter = '' %}
-                                {% if question_dict.answer in question_dict.options %}
-                                    {% set index_answer = question_dict.options.index(question_dict.answer) %}
-                                    {% set answer_letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[index_answer] %}
-                                {% endif %}
-                                <p><strong>Answer: {{ answer_letter }}. {{ question_dict.answer }}</strong></p>
-                                <p><strong>Difficulty:</strong> {{ question_dict.difficulty or 'N/A' }}</p>
-                                <p><strong>Category:</strong> {{ question_dict.category or 'N/A' }}</p>
-                                <p><strong>Subcategory:</strong> {{ question_dict.subcategory or 'N/A' }}</p>
-                                <p><strong>Is Multiple Options:</strong></p>
-                                <ul>
-                                    {% for key, value in question_dict.is_multiple_options.items() %}
-                                        <li><strong>{{ key }}:</strong> {{ value }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        {% endif %}
+
+                        <!-- 显示其他字段 -->
+                        <div class="question-details">
+                            {% set answer_letter = '' %}
+                            {% if question_dict.answer in question_dict.options %}
+                                {% set index_answer = question_dict.options.index(question_dict.answer) %}
+                                {% set answer_letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[index_answer] %}
+                            {% endif %}
+                            <p><strong>Answer: {{ answer_letter }}. {{ question_dict.answer }}</strong></p>
+                            <p><strong>Discipline_final:</strong> {{ question_dict.discipline_final or 'N/A' }}</p>
+                            <p><strong>Field_final:</strong> {{ question_dict.field_final or 'N/A' }}</p>
+                            <p><strong>Subfield_final:</strong> {{ question_dict.subfield_final or 'N/A' }}</p>
+                            <p><strong>Response:</strong> {{ question_dict.response or 'N/A' }}</p>
+                            <p><strong>Final_answer_letter:</strong> {{ question_dict.final_answer_letter or 'N/A' }}</p>
+                            <p><strong>Confidence:</strong> {{ question_dict.confidence or 'N/A' }}</p>
+                            <p><strong>Missing_info:</strong> {{ question_dict.missing_info or 'N/A' }}</p>
+                        </div>
+
                         
                     </fieldset>
                 </div>

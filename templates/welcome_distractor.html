@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>stage2 welcome page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./templates/welcome.css">
+    <style>
+        .text-paragraph {
+        max-width: 65%; 
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+        line-height: 1.8;
+        }
+
+        .video_style {
+            position: fixed; 
+            top:1%; right:1%; 
+            height:40%;
+            width:30%;
+        }
+
+    </style>
+    
+</head>
+
+
+<body>
+
+    <div style="position: fixed; top: 2%; right: 2%;">
+    
+        <form action="{{ url_for('login_method_2') }}" method="post">
+            <fieldset>
+                <legend>Annotator Login</legend>
+                <br>
+                Username: <input type="text" name="username"><br><br>
+                <input type="submit" style="width: 300px; height: 40px; font-size: 18px;" value="MUltiple true options check">
+                <br>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <h1>GPQA Annotation</h1>
+    <div class="text-paragraph">
+        {{ multiple_anno | safe }}
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+

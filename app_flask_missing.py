@@ -34,7 +34,7 @@ else:
 text_files_dir = "text_files"
 
 
-user_info_path = f"./{text_files_dir}/user_info.json"
+user_info_path = f"./{text_files_dir}/user_info_missing.json"
 
 need_deduplication_path = f"./{text_files_dir}/similar_questions_grouped.jsonl"
 with open(need_deduplication_path, 'r', encoding='utf-8') as file:
@@ -57,7 +57,7 @@ with open(multiple_path, 'r', encoding='utf-8') as file:
 with open(f"./templates/html_text_en/deduplication.txt", "r", encoding="utf-8") as file:
     deduplication = file.read()
 
-with open(f"./templates/html_text_en/multiple.txt", "r", encoding="utf-8") as file:
+with open(f"./templates/html_text_en/missing_information.txt", "r", encoding="utf-8") as file:
     multiple = file.read()
 
 
@@ -115,7 +115,7 @@ def welcome():
     session["s_idx_val"] = 0
     session["e_idx_val"] = len(need_deduplication_datas) - 1
 
-    html_file = "welcome.html"
+    html_file = "welcome_missing.html"
     deduplication_anno = deduplication
     multiple_anno = multiple
 
@@ -228,17 +228,31 @@ def display():
     if not username:
         flash("请先登录。")
         return redirect(url_for("welcome"))
-    multiple_file = f"{res_dir}/multiple_{username}.jsonl"
+    multiple_file = f"{res_dir}/missing_information_{username}.jsonl"
     current_idx = int(session.get("current_idx", 0))
     print("curr_idx in display ", current_idx)
 
     slice_start_idx = 0
     slice_end_idx = len(datas_curr_user) - 1
+    all_annotations = {}
+    print(datas_curr_user)
+    for data in datas_curr_user:
+        all_annotations[data['uuid']] = False
     if current_idx <= slice_end_idx:
         uuid = datas_curr_user[current_idx]["uuid"]
         print("data in display ", f"{uuid}")
 
         annotations, annotation_flag = load_multiple_annotations(multiple_file, uuid)  # 加载所有标注
+
+        try:
+            with open(multiple_file, 'r', encoding='utf-8') as file:
+                for line in file.readlines():
+                    line = json.loads(line)
+                    if line['uuid'] in all_annotations:
+                        all_annotations[line['uuid']] = True
+        except:
+            print(1)
+
         print("annotations loaded: ", annotations)
         print(f"annotion_flag is {annotation_flag}")
         curr_multiple_data = datas_curr_user[current_idx]
@@ -248,7 +262,7 @@ def display():
         question_dict["question"] = question
         question_dict["options"] = options
 
-        html_file = "display.html"
+        html_file = "display_missing.html"
         subscore_def = subscore_def_en_list
         multiple_anno = multiple
 
@@ -257,6 +271,7 @@ def display():
             multiple_anno=multiple_anno,
             subscore_def=subscore_def,
             start_index=slice_start_idx,
+            status_dict=all_annotations,
             question_dict=curr_multiple_data,
             end_index=slice_end_idx,
             uuid=uuid,
@@ -519,7 +534,7 @@ def submit():
 
     ans_file = f"{res_dir}/ans_{username}.jsonl"
     deduplication_file = f"{res_dir}/deduplication_{username}.jsonl"
-    multiple_file = f"{res_dir}/multiple_{username}.jsonl"
+    multiple_file = f"{res_dir}/missing_information_{username}.jsonl"
 
     action = request.form.get("action", "")
     s_idx = session.get("s_idx", 0)
