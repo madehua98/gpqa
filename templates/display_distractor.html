@@ -104,40 +104,37 @@
                             </div>
                         </div>
 
-                        <!-- 显示选项 -->
-                        <div class="checkbox-group">
-                            <!-- <div>
-                                <label>
-                                    <input type="checkbox" name="multiple" value="无需删除，题目除了需删除选项外还有其他问题，标记修改"
-                                        {% if '无需删除，题目除了需删除选项外还有其他问题，标记修改' in annotations %} checked {% endif %}>
-                                    <span class="markdown-content">无需删除，题目除了需删除选项外还有其他问题，标记修改</span>
-                                </label>
-                            </div> -->
-
-                            <!-- 选项部分 -->
-                            {% for i in range(question_dict.options|length) %}
-                                {% set option = question_dict.options[i] %}
-                                {% set letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[i] %}
-                                <div>
-                                    <label>
-                                        <input type="checkbox" name="multiple" value="{{ option }}"
-                                            {% if option == question_dict.answer %} disabled {% endif %}
-                                            {% if option in annotations %} checked {% endif %}
-                                            onchange="handleCheckboxChange('option', {{ i }})">
-                                        <span class="markdown-content">{{ letter }}. {{ option }}</span>
-                                        <button type="button" class="edit-btn" onclick="showEditArea('option-{{ i }}')">修改</button>
-                                    </label>
-                                    <!-- 选项的编辑区域 -->
-                                    <div id="option-{{ i }}-edit-area" class="edit-area" style="display: none;">
-                                        <textarea id="option-{{ i }}-edit-text">{{ option }}</textarea>
-                                        <div class="edit-buttons">
-                                            <button type="button" onclick="confirmEdit('option-{{ i }}')">确认</button>
-                                            <button type="button" onclick="cancelEdit('option-{{ i }}')">取消</button>
-                                        </div>
-                                    </div>
+                        <!-- 选项部分 -->
+                        {% for i in range(question_dict.options|length) %}
+                        {% set option = question_dict.options[i] %}
+                        {% set letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[i] %}
+                        <div>
+                            <label>
+                                <input type="checkbox" name="multiple" value="{{ option }}"
+                                    {% if option == question_dict.answer %} disabled {% endif %}
+                                    {% if option in annotations %} checked {% endif %}
+                                    onchange="handleCheckboxChange('option', {{ i }})">
+                                <span class="markdown-content">{{ letter }}. {{ option }}</span>
+                                <!-- 修改按钮 -->
+                                <button type="button" class="edit-btn" onclick="showEditArea('option-{{ i }}')">
+                                    修改
+                                </button>
+                                <!-- 新增：一键添加$$的按钮 -->
+                                <button type="button" class="math-btn" 
+                                        onclick="modifyWithMathAndConfirm('option-{{ i }}')">
+                                    添加$$
+                                </button>
+                            </label>
+                            <!-- 选项的编辑区域 -->
+                            <div id="option-{{ i }}-edit-area" class="edit-area" style="display: none;">
+                                <textarea id="option-{{ i }}-edit-text">{{ option }}</textarea>
+                                <div class="edit-buttons">
+                                    <button type="button" onclick="confirmEdit('option-{{ i }}')">确认</button>
+                                    <button type="button" onclick="cancelEdit('option-{{ i }}')">取消</button>
                                 </div>
-                            {% endfor %}
+                            </div>
                         </div>
+                        {% endfor %}
                     </fieldset>
                 </div>
                 
@@ -329,5 +326,36 @@
             actionButton.click();  // 直接触发 Enter 按钮的点击事件
         }
     </script>
+
+
+    <script>
+        /**
+         * 一键完成：显示编辑框 + 给文本前后插入$$ + 直接点击确认
+         * @param {string} fieldName - 形如 'option-0', 'option-1'等
+         */
+        function modifyWithMathAndConfirm(fieldName) {
+            // 1. 打开对应的编辑区域
+            showEditArea(fieldName); 
+            
+            // 2. 选中该编辑区域里的 <textarea>
+            const textArea = document.getElementById(fieldName + '-edit-text');
+            if (!textArea) return;
+            
+            // 3. 在文本前后插入 $$
+            let text = textArea.value.trim();
+            // 如果想防止重复插入，可以先判断
+            if (!text.startsWith('$$') && !text.endsWith('$$')) {
+                textArea.value = `$$${text}$$`;
+            } else {
+                // 若想强行包裹，也可写：
+                // textArea.value = `$$${text}$$`;
+                // 或者自行做其他逻辑
+            }
+
+            // 4. 自动提交编辑结果，相当于用户点了「确认」
+            confirmEdit(fieldName);
+        }
+    </script>
+
 </body>
 </html>

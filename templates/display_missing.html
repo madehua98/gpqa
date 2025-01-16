@@ -130,6 +130,7 @@
                             {% set index_answer = question_dict.options.index(question_dict.answer) %}
                             {% set answer_letter = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')[index_answer] %}
                         {% endif %}
+
                         <p><strong>Answer: {{ answer_letter }}. {{ question_dict.answer }}</strong></p>
                         <p><strong>Discipline_final:</strong> {{ question_dict.discipline_final or 'N/A' }}</p>
                         <p><strong>Field_final:</strong> {{ question_dict.field_final or 'N/A' }}</p>
