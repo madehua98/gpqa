@@ -51,20 +51,21 @@ progress {
 /* 容器设置 */
 .container {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 100vh; /* 视口高度 */
-    box-sizing: border-box;
+    gap: 15px;
+    padding: 10px;
+    max-width: 98%;
+    margin: 0 auto;
 }
 
 
 /* 左侧栏样式 */
 .left-column {
-    flex: 1;
-    padding: 20px;
-    background-color: #ffffff;
-    border-right: 1px solid #ddd;
-    overflow-y: auto;
+    flex: 0 0 280px;
+    padding: 15px;
+    margin-left: 5px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .left-column h2 {
@@ -341,6 +342,34 @@ progress {
     opacity: 0.8;
 }
 
+.edit-btn {
+    margin-left: 10px;
+    padding: 2px 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-area {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit-area textarea {
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.edit-buttons button {
+    margin-right: 10px;
+    padding: 5px 15px;
+}
 
 /* 响应式设计 */
 @media (max-width: 1200px) {
@@ -405,4 +434,118 @@ progress {
         margin-bottom: 5px;
         border-radius: 4px;
     }
+}
+
+.modified-content {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border-left: 3px solid #4CAF50;
+    font-style: italic;
+    color: #2196F3;
+}
+
+.edit-area {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.extra-fields {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+}
+
+.field-group {
+    margin: 15px 0;
+}
+
+.field-group strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 1.1em;
+}
+
+.json-content,
+.response-content {
+    background: #fff;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.response-container {
+    position: relative;
+}
+
+.response-content.collapsed {
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.response-content.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(transparent, #fff);
+}
+
+.expand-btn {
+    display: block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #495057;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* 添加可点击单元格的样式 */
+.annotation-table td.clickable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.annotation-table td.clickable:hover {
+    background-color: #e9ecef;
+}
+
+/* 保持原有的标注状态样式 */
+.annotation-table td.annotated {
+    background-color: #d4edda;
+}
+
+.annotation-table td.not-annotated {
+    background-color: #f8d7da;
+}
+
+/* 悬停时的样式优先级 */
+.annotation-table td.clickable.annotated:hover {
+    background-color: #c3e6cb;
+}
+
+.annotation-table td.clickable.not-annotated:hover {
+    background-color: #f5c6cb;
 }

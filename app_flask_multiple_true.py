@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, session, redirect, url_for, flash
+from flask import Flask, request, render_template, session, redirect, url_for, flash, jsonify
 from flask_login import (
     LoginManager,
     UserMixin,
@@ -44,7 +44,7 @@ with open(need_deduplication_path, 'r', encoding='utf-8') as file:
         need_deduplication_datas.append(line)
 
 
-multiple_path = f"./{text_files_dir}/filtered_mmlu_pro_to_review.jsonl"
+multiple_path = f"./{text_files_dir}/all_to_final_check.jsonl"
 with open(multiple_path, 'r', encoding='utf-8') as file:
     multiple_datas = []
     for line in file.readlines():
@@ -201,69 +201,94 @@ def load_annotations(annotation_file, group_id):
 def load_multiple_annotations(annotation_file, uuid):
     annotations = []
     annotation_flag = False
+    modifications = None
+    
     if not os.path.exists(annotation_file):
-        return annotations, annotation_flag
-    with open(annotation_file, "r", encoding="utf-8") as f:
+        return annotations, annotation_flag, modifications
+        
+    with open(annotation_file, 'r', encoding='utf-8') as f:
         for line in f:
             try:
-                video_annotations = json.loads(line)
-                if uuid == video_annotations["uuid"]:
-                    annotation_flag=True
-                    if video_annotations["marked_question"]:
-                        annotations = ['marked_question']
+                annotation = json.loads(line)
+                if uuid == annotation["uuid"]:
+                    annotation_flag = True
+                    if annotation.get("marked_question", False):
+                        annotations = [uuid]  # 如果整个问题被标记删除
                     else:
-                        annotations = video_annotations["delete_options"]
+                        annotations = annotation.get("delete_options", [])  # 获取被标记删除的选项
+                    modifications = annotation.get("modifications")
                     break
             except json.JSONDecodeError:
                 continue
-    return annotations, annotation_flag
+                
+    return annotations, annotation_flag, modifications
 
 
 @app.route(f"{subpath}annotating", methods=["GET", "POST"])
 def display():
+    username = session.get("username")
+    if not username:
+        return redirect(url_for("welcome"))
+
     s_idx = session.get("s_idx", 0)
     e_idx = session.get("e_idx", len(multiple_datas) - 1)
     datas_curr_user = multiple_datas[s_idx : e_idx + 1]
-    username = session.get("username")
-    if not username:
-        flash("请先登录。")
-        return redirect(url_for("welcome"))
+    
     multiple_file = f"{res_dir}/multiple_true_options_{username}.jsonl"
-    current_idx = int(session.get("current_idx", 0))
+    html_file = "display_distractor.html"
+    
+    multiple_anno = multiple
+    subscore_def = subscore_def_en_list
+    
+    current_idx = session.get("current_idx", 0)
     print("curr_idx in display ", current_idx)
 
     slice_start_idx = 0
     slice_end_idx = len(datas_curr_user) - 1
-    all_annotations = {}
-    print(datas_curr_user)
-    for data in datas_curr_user:
-        all_annotations[data['uuid']] = False
+
     if current_idx <= slice_end_idx:
-        uuid = datas_curr_user[current_idx]["uuid"]
+        curr_multiple_data = datas_curr_user[current_idx]
+        uuid = curr_multiple_data["uuid"]
         print("data in display ", f"{uuid}")
 
-        annotations, annotation_flag = load_multiple_annotations(multiple_file, uuid)  # 加载所有标注
+        # 加载标注和修改内容
+        annotations, annotation_flag, modifications = load_multiple_annotations(multiple_file, uuid)
 
+        # 处理标注状态 - 恢复到之前的逻辑
+        all_annotations = {data["uuid"]: False for data in datas_curr_user}
         try:
             with open(multiple_file, 'r', encoding='utf-8') as file:
-                for line in file.readlines():
-                    line = json.loads(line)
-                    if line['uuid'] in all_annotations:
-                        all_annotations[line['uuid']] = True
-        except:
-            print(1)
-        print("annotations loaded: ", annotations)
-        print(f"annotion_flag is {annotation_flag}")
-        curr_multiple_data = datas_curr_user[current_idx]
-        question_dict = {}
-        question = curr_multiple_data["question"]
-        options = curr_multiple_data["options"]
-        question_dict["question"] = question
-        question_dict["options"] = options
+                for line in file:
+                    try:
+                        annotation = json.loads(line)
+                        if annotation["uuid"] in all_annotations:
+                            all_annotations[annotation["uuid"]] = True
+                    except json.JSONDecodeError:
+                        continue
+        except FileNotFoundError:
+            print("Annotation file not found")
 
-        html_file = "display_missing.html"
-        subscore_def = subscore_def_en_list
-        multiple_anno = multiple
+        # 处理额外字段
+        source_file = curr_multiple_data.get("source_file", "")
+        extra_fields = {}
+        if source_file == "filtered_miss_answers":
+            extra_fields["response"] = curr_multiple_data.get("response", "")
+        elif source_file == "filtered_consistent_errors_loose":
+            response = curr_multiple_data.get("response", {})
+            extracted_answer = curr_multiple_data.get("extracted_answer", {})
+            if isinstance(response, str):
+                try:
+                    response = json.loads(response)
+                except json.JSONDecodeError:
+                    response = {"error": "Invalid JSON"}
+            if isinstance(extracted_answer, str):
+                try:
+                    extracted_answer = json.loads(extracted_answer)
+                except json.JSONDecodeError:
+                    extracted_answer = {"error": "Invalid JSON"}
+                    
+            extra_fields["response"] = response
+            extra_fields["extracted_answer"] = extracted_answer
 
         return render_template(
             html_file,
@@ -277,9 +302,12 @@ def display():
             username=username,
             annotation_flag=annotation_flag,
             current_idx=current_idx,
-            annotations=annotations,  # 传递所有标注
+            annotations=annotations,
+            modifications=modifications,
+            source_file=source_file,
+            extra_fields=extra_fields,
             _is_val=0,
-        )  # 传递 end_index 给模板
+        )
 
     else:
         current_idx = 0
@@ -367,83 +395,26 @@ def display_type():
         return redirect(url_for("display_type"))
 
 
-@app.route(f"{subpath}navigate_main", methods=["POST"])
+@app.route("/navigate_main", methods=["POST"])
 def navigate_main():
-    s_idx = session.get("s_idx", 0)
-    e_idx = session.get("e_idx", len(need_deduplication_datas) - 1)
-    slice_end_idx = e_idx - s_idx
-    direction = request.form.get("direction", "")
+    username = session.get("username")
+    if not username:
+        return redirect(url_for("login"))
+
     current_idx = int(request.form.get("current_idx", 0))
-    source_page = request.form.get("source_page")
-    if source_page == "display_type":
-        video_question_idx = 0
-        video_question_number = 1
-        move_idx(
-            direction,
-            slice_end_idx,
-            current_idx,
-            video_question_idx,
-            video_question_number,
-        )
-        return redirect(url_for("display_type"))
+    direction = request.form.get("direction", "")
 
-    video_question_idx = int(request.form.get("video_question_idx", 0))
-    video_question_number = int(request.form.get("video_question_number", 0))
-    move_idx(
-        direction,
-        slice_end_idx,
-        current_idx,
-        video_question_idx,
-        video_question_number,
-    )
+    if direction == "next":
+        next_idx = current_idx + 1
+    elif direction == "last":
+        next_idx = current_idx - 1
+    else:
+        next_idx = current_idx
+
+    # 更新 session 中的 current_idx
+    session["current_idx"] = next_idx
+    
     return redirect(url_for("display"))
-
-
-def move_idx(
-    direction,
-    slice_end_idx,
-    current_idx,
-    video_question_idx,
-    video_question_number,
-):
-    # 修改为在当前视频的标注之间导航
-    if direction == "last":
-        if video_question_idx > 0:
-            video_question_idx -= 1
-        else:
-            # 如果当前是第一个标注，跳转到前一个视频的最后一个标注
-            if current_idx > 0:
-                current_idx -= 1
-                annotations = load_annotations(
-                    f"{res_dir}/ans_{session.get('username')}.jsonl",
-                    need_deduplication_datas[current_idx],
-                )
-                video_question_number = len(annotations)
-                video_question_idx = video_question_number - 1
-            else:
-                # 已是第一个视频的第一个标注，循环到最后一个视频的最后一个标注
-                current_idx = slice_end_idx
-                annotations = load_annotations(
-                    f"{res_dir}/ans_{session.get('username')}.jsonl",
-                    need_deduplication_datas[current_idx],
-                )
-                video_question_number = len(annotations)
-                video_question_idx = video_question_number - 1
-    elif direction == "next":
-        if video_question_idx < video_question_number - 1:
-            video_question_idx += 1
-        else:
-            # 如果当前是最后一个标注，跳转到下一个视频的第一个标注
-            if current_idx < slice_end_idx:
-                current_idx += 1
-                video_question_idx = 0
-            else:
-                # 已是最后一个视频的最后一个标注，循环到第一个视频的第一个标注
-                current_idx = 0
-                video_question_idx = 0
-
-    session["current_idx"] = current_idx
-
 
 
 def submit_success(
@@ -478,7 +449,7 @@ def submit_success(
     print("*" * 100)
 
 
-def update_annotation_file(ans_file, uuid, marked_question, annotations):
+def update_annotation_file(ans_file, uuid, marked_question, annotations, modifications=None):
     annotation_dict = {}
 
     # 读取现有的注释文件
@@ -494,34 +465,36 @@ def update_annotation_file(ans_file, uuid, marked_question, annotations):
                             if marked_question:
                                 annotation_dict[current_uuid] = {
                                     "marked_question": True,
-                                    "delete_options": 'all'
+                                    "delete_options": 'all',
+                                    "modifications": None  # 如果题目被标记删除，清空修改
                                 }
                             else:
                                 annotation_dict[current_uuid] = {
                                     "marked_question": False,
-                                    "delete_options": annotations
+                                    "delete_options": annotations,
+                                    "modifications": modifications  # 直接使用前端传来的修改内容
                                 }
                         else:
                             # 保持其他 uuid 的原有状态
-                            annotation_dict[current_uuid] = {
-                                "marked_question": annotation.get("marked_question", False),
-                                "delete_options": annotation.get("delete_options", [])
-                            }
+                            annotation_dict[current_uuid] = annotation
                 except json.JSONDecodeError:
                     continue
 
     # 如果文件不存在或 uuid 不在文件中，则添加新的注释
     if uuid not in annotation_dict:
         annotation_dict[uuid] = {
+            "uuid": uuid,
             "marked_question": marked_question,
-            "delete_options": 'all' if marked_question else annotations
+            "delete_options": 'all' if marked_question else annotations,
+            "modifications": None if marked_question else modifications
         }
-    print(f"annotation_dict is {annotation_dict}")
+
     # 写回 ans_file
     with open(ans_file, "w", encoding="utf-8") as f:
         for uid, data in annotation_dict.items():
             json.dump({"uuid": uid, **data}, f, ensure_ascii=False)
             f.write("\n")
+
 
 @app.route("/submit", methods=["POST"])
 def submit():
@@ -615,7 +588,15 @@ def submit():
         print(f"curr_multiple is {curr_multiple}")
         annotations = curr_multiple
 
-        update_annotation_file(multiple_file, uuid, marked_question, annotations)
+        # 获取修改内容
+        modifications = None
+        modified_content = request.form.get('modified_content')
+        if modified_content:
+            modifications = json.loads(modified_content)
+            print(f"modifications is {modifications}")
+
+        # 更新标注和修改
+        update_annotation_file(multiple_file, uuid, marked_question, annotations, modifications)
 
         # 更新 video_question_idx 如果需要
         submit_success(
@@ -629,9 +610,10 @@ def submit():
         return redirect(url_for("display"))
 
     else:
-        flash("未知的操作。")
+        flash("Unknown operation.")
         return redirect(url_for("display"))
-
+    
+    return redirect(url_for("display"))
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=PORT_NUM, debug=False)
