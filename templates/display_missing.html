@@ -15,18 +15,18 @@
             </div>
             <!-- 顶部进度条显示 -->
             <div class="progress-container">
-                <p><strong>标注进度:</strong></p>
+                <p><strong>Marking progress:</strong></p>
                 <progress value="{{ status_dict.values() | select('equalto', True) | list | length }}" 
                         max="{{ status_dict | length }}"></progress>
                 <p>
-                    {{ status_dict.values() | select('equalto', True) | list | length }}/{{ status_dict | length }} 已标注 
+                    {{ status_dict.values() | select('equalto', True) | list | length }}/{{ status_dict | length }} Marked 
                     ({{ (status_dict.values() | select('equalto', True) | list | length / status_dict | length * 100) | round(2) }}%)
                 </p>
             </div>
 
             <!-- 标注状态表格 -->
             <div class="annotation-status">
-                <p><strong>标注状态表格:</strong></p>
+                <p><strong>Annotation Status Table:</strong></p>
                 <table class="annotation-table">
                     <!-- 表格主体：每行显示 10 个，共 10 行，总共 100 格 -->
                     <tbody>
@@ -65,16 +65,16 @@
                 <input type="hidden" name="uuid" value="{{uuid}}">
                 <input type="hidden" name="current_idx" value="{{ current_idx }}">
                 {% if annotation_flag %}
-                    <span style="color: green;">[已标注]</span>
+                    <span style="color: green;">[Marked]</span>
                 {% else %}
-                    <span style="color: red;">[未标注]</span>
+                    <span style="color: red;">[Unmarked]</span>
                 {% endif %}
 
                 <!-- 问题输入区域 -->
                 <div class="input-fields">
                     <fieldset>
-                        <legend>需要检查的问题和选项:<span class="error" id="question-type-error"></span></legend>
-                        <legend> uuid为:{{ uuid }}<span class="error" id="question-type-error"></span></legend>
+                        <legend>Questions and options to check:<span class="error" id="question-type-error"></span></legend>
+                        <legend> uuid is:{{ uuid }}<span class="error" id="question-type-error"></span></legend>
                         
                         <!-- 显示问题 -->
                         <div class="question-text">
@@ -102,9 +102,9 @@
                         <div class="checkbox-group">
                             <div>
                                 <label>
-                                    <input type="checkbox" name="multiple" value="无需删除，题目除了需删除选项外还有其他问题，标记修改"
-                                        {% if '无需删除，题目除了需删除选项外还有其他问题，标记修改' in annotations %} checked {% endif %}>
-                                    <span class="markdown-content">无需删除，题目除了需删除选项外还有其他问题，标记修改</span>
+                                    <input type="checkbox" name="multiple" value="No need to delete. In addition to the option to be deleted, there are other problems in the question. Mark it for modification."
+                                        {% if 'No need to delete. In addition to the option to be deleted, there are other problems in the question. Mark it for modification.' in annotations %} checked {% endif %}>
+                                    <span class="markdown-content">No need to delete. In addition to the option to be deleted, there are other problems in the question. Mark it for modification.</span>
                                 </label>
                             </div>
 
@@ -148,7 +148,7 @@
                 <!-- 提交按钮和复制、删除按钮 -->
                 <div class="submit-button-container">
                     <!-- 提交按钮，保留验证 -->
-                    <button type="submit" name="action" value="submit" class="button_submit">提交</button>
+                    <button type="submit" name="action" value="submit" class="button_submit">Submit</button>
                 </div>
             </form>
 
@@ -170,14 +170,14 @@
                 <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
                     <input type="hidden" name="current_idx" value="{{ current_idx }}">
                     <input type="hidden" name="direction" value="last">
-                    <button type="submit" class="button_previous">上一个</button>
+                    <button type="submit" class="button_previous">Previous</button>
                 </form>
 
                 <!-- 下一个按钮的表单 -->
                 <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
                     <input type="hidden" name="current_idx" value="{{ current_idx }}">
                     <input type="hidden" name="direction" value="next">
-                    <button type="submit" class="button_next">下一个</button>
+                    <button type="submit" class="button_next">Next</button>
                 </form>
             </div>
 

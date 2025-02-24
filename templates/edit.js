@@ -305,11 +305,11 @@ document.getElementById('submit-form').addEventListener('submit', function(e) {
     
     if (!questionCheckbox.checked) {
         const remainingOptions = optionCheckboxes.filter(checkbox => !checkbox.checked).length;
-        if (remainingOptions < 4) {
-            e.preventDefault();
-            alert('一个题目的选项至少应为4个，请通过修改选项来补充选项至少为4个');
-            return;
-        }
+        // if (remainingOptions < 4) {
+        //     e.preventDefault();
+        //     alert('一个题目的选项至少应为4个，请通过修改选项来补充选项至少为4个');
+        //     return;
+        // }
     }
 
     // 如果有修改内容，添加到表单中

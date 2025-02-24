@@ -1,14 +1,14 @@
-<h2>1. 去重检查</h2>
+<h2>1. Duplicate Check</h2>
 <ul>
-    <li><b>同一条目中没有题目重复</b>: 无操作。</li>
-    <li><b>同一条目中有题目重复</b>: 保留一个题目，删除其余重复题目。
+    <li><b>No duplicate datas in the same entry</b>: No action required.</li>
+    <li><b>Duplicate datas in the same entry</b>: Keep one data and delete the remaining duplicates.
         <ul>
-            <li><b>操作</b>: 点击需要删除题目对应的复选框。</li>
+            <li><b>Action</b>: Select the checkbox next to the data you wish to delete.</li>
         </ul>
     </li>
-    <li><b>题目存在其他问题</b>: 直接删除。
+    <li><b>Other issues with the data</b>: Delete the data.
         <ul>
-            <li><b>操作</b>: 点击需要删除题目对应的复选框。</li>
+            <li><b>Action</b>: Select the checkbox next to the data you wish to delete.</li>
         </ul>
     </li>
 </ul>

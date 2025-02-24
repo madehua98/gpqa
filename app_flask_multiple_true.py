@@ -57,7 +57,7 @@ with open(multiple_path, 'r', encoding='utf-8') as file:
 with open(f"./templates/html_text_en/deduplication.txt", "r", encoding="utf-8") as file:
     deduplication = file.read()
 
-with open(f"./templates/html_text_en/multiple_true.txt", "r", encoding="utf-8") as file:
+with open(f"./templates/html_text_en/translation.txt", "r", encoding="utf-8") as file:
     multiple = file.read()
 
 

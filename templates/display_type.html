@@ -42,9 +42,9 @@
                 <input type="hidden" name="group_id" value="{{group_id}}">
                 <input type="hidden" name="current_idx" value="{{ current_idx }}">
                 {% if annotation_flag %}
-                    <span style="color: green;">[已标注]</span>
+                    <span style="color: green;">[Marked]</span>
                 {% else %}
-                    <span style="color: red;">[未标注]</span>
+                    <span style="color: red;">[Unmarked]</span>
                 {% endif %}
                 <div class="checkbox-group">
                     {% for item in question_list %}
@@ -71,13 +71,13 @@
                 <!-- 提交按钮和复制、删除按钮 -->
                 <div class="submit-button-container">
                     <!-- 删除按钮，跳过验证，设置为无效 -->
-                    <button type="submit" name="action" value="delete" class="button_delete" formnovalidate disabled>删除</button>
+                    <button type="submit" name="action" value="delete" class="button_delete" formnovalidate disabled>Delete</button>
                     
                     <!-- 提交按钮，保留验证 -->
-                    <button type="submit" name="action" value="submit" class="button_submit">提交</button>
+                    <button type="submit" name="action" value="submit" class="button_submit">Submit</button>
                     
                     <!-- 复制按钮，跳过验证，设置为无效 -->
-                    <button type="submit" name="action" value="copy" class="button_copy" formnovalidate disabled>复制</button>
+                    <button type="submit" name="action" value="copy" class="button_copy" formnovalidate disabled>Copy</button>
                 </div>
             </form>
 
@@ -102,7 +102,7 @@
                     <input type="hidden" name="current_idx" value="{{ current_idx }}">
                     <input type="hidden" name="direction" value="last">
                     <input type="hidden" name="source_page" value="display_type"> <!-- 添加此行 -->
-                    <button type="submit" class="button_previous">上一个</button>
+                    <button type="submit" class="button_previous">Previous</button>
                 </form>
 
                 <!-- 下一个按钮的表单 -->
@@ -110,7 +110,7 @@
                     <input type="hidden" name="current_idx" value="{{ current_idx }}">
                     <input type="hidden" name="direction" value="next">
                     <input type="hidden" name="source_page" value="display_type"> <!-- 添加此行 -->
-                    <button type="submit" class="button_next">下一个</button>
+                    <button type="submit" class="button_next">Next</button>
                 </form>
             </div>
 
