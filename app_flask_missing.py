@@ -62,7 +62,7 @@ with open(f"./templates/html_text_en/missing_information.txt", "r", encoding="ut
 
 
 subscore_def_en_list = []
-subscore_files = ["question_type.txt", "image.txt", "distractor.txt"]
+subscore_files = ["start.txt"]
 for fname in subscore_files:
     with open(f"./templates/html_text_en/{fname}", "r", encoding="utf-8") as file:
         content = file.read()

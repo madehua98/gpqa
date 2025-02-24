@@ -234,7 +234,7 @@ def display():
     e_idx = session.get("e_idx", len(multiple_datas) - 1)
     datas_curr_user = multiple_datas[s_idx : e_idx + 1]
     
-    multiple_file = f"{res_dir}/translation_options_{username}.jsonl"
+    multiple_file = f"{res_dir}/translation_{username}.jsonl"
     html_file = "display_translation.html"
     
     multiple_anno = multiple
@@ -567,13 +567,13 @@ def submit():
 
         # 获取修改内容
         modifications = None
-        modified_content = request.form.get('modified_content')
+        modified_content = request.form.get('question_english')
+        print(modified_content)
         if modified_content:
-            modifications = json.loads(modified_content)
-            print(f"modifications is {modifications}")
+            print(f"modifications is {modified_content}")
 
         # 更新标注和修改
-        update_annotation_file(multiple_file, uuid, marked_question, annotations, modifications)
+        update_annotation_file(multiple_file, uuid, marked_question, annotations, modified_content)
 
         # 更新 video_question_idx 如果需要
         submit_success(

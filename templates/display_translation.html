@@ -16,52 +16,52 @@
 
 <body>
     <div class="container">
-    <!-- 左侧栏 -->
-    <div class="left-column">
-        <div class="QA-text">
-            {{ multiple_anno | safe }}
-        </div>
-        <!-- 顶部进度条显示 -->
-        <div class="progress-container">
-            <p><strong>Marking progress:</strong></p>
-            <progress value="{{ status_dict.values() | select('equalto', True) | list | length }}" 
-                    max="{{ status_dict | length }}">
-            </progress>
-            <p>
-                {{ status_dict.values() | select('equalto', True) | list | length }}/{{ status_dict | length }} Marked 
-                ({{ (status_dict.values() | select('equalto', True) | list | length / status_dict | length * 100) | round(2) }}%)
-            </p>
-        </div>
+        <!-- 左侧栏 -->
+        <div class="left-column">
+            <div class="QA-text">
+                {{ multiple_anno | safe }}
+            </div>
+            <!-- 顶部进度条显示 -->
+            <div class="progress-container">
+                <p><strong>Marking progress:</strong></p>
+                <progress value="{{ status_dict.values() | select('equalto', True) | list | length }}" 
+                        max="{{ status_dict | length }}">
+                </progress>
+                <p>
+                    {{ status_dict.values() | select('equalto', True) | list | length }}/{{ status_dict | length }} Marked 
+                    ({{ (status_dict.values() | select('equalto', True) | list | length / status_dict | length * 100) | round(2) }}%)
+                </p>
+            </div>
 
-        <!-- 标注状态表格 -->
-        <div class="annotation-status">
-            <p><strong>Annotation status table:</strong></p>
-            <table class="annotation-table">
-                <tbody>
-                    {% set items_list = status_dict.items() | list %}
-                    {% set row_count = ((items_list|length + 9) // 10) %}
-                    
-                    {% for row in range(row_count) %}
-                    <tr>
-                        {% for col in range(10) %}
-                            {% set index = row * 10 + col %}
-                            {% if index < items_list|length %}
-                                {% set uuid, status = items_list[index] %}
-                                <td class="{% if status %}annotated{% else %}not-annotated{% endif %} clickable" 
-                                    onclick="navigateToQuestion({{ index + 1 }});"
-                                    title="点击跳转到第 {{ index + 1 }} 题">
-                                    {{ index + 1 }}
-                                </td>
-                            {% else %}
-                                <td></td>
-                            {% endif %}
+            <!-- 标注状态表格 -->
+            <div class="annotation-status">
+                <p><strong>Annotation status table:</strong></p>
+                <table class="annotation-table">
+                    <tbody>
+                        {% set items_list = status_dict.items() | list %}
+                        {% set row_count = ((items_list|length + 9) // 10) %}
+                        
+                        {% for row in range(row_count) %}
+                        <tr>
+                            {% for col in range(10) %}
+                                {% set index = row * 10 + col %}
+                                {% if index < items_list|length %}
+                                    {% set uuid, status = items_list[index] %}
+                                    <td class="{% if status %}annotated{% else %}not-annotated{% endif %} clickable" 
+                                        onclick="navigateToQuestion({{ index + 1 }});"
+                                        title="点击跳转到第 {{ index + 1 }} 题">
+                                        {{ index + 1 }}
+                                    </td>
+                                {% else %}
+                                    <td></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
                         {% endfor %}
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
         <!-- 右侧栏 -->
         <div class="right-column">
@@ -83,60 +83,56 @@
                         <legend>Data to check:<span class="error" id="question-type-error"></span></legend>
                         <legend> uuid is:{{ uuid }}<span class="error" id="question-type-error"></span></legend>
                         
-                        <!-- 显示问题 -->
+                        <!-- 显示问题 (Chinese) -->
                         <div class="question-text">
                             <p>
                                 <label>
-                                    <!-- <input type="checkbox" name="mark_question" value="{{ question_dict.uuid }}" 
-                                        {% if question_dict.uuid in annotations %} checked {% endif %}
-                                        onchange="handleCheckboxChange('question')"> -->
                                     <span>{{ question_dict.Chinese }}</span>
-                                    <button type="button" class="edit-btn" onclick="showEditArea('question')">Revise</button>
+                                    <!-- 中文部分不再有Revise按钮 -->
                                 </label>
                             </p>
-                            <!-- 问题的编辑区域 -->
-                            <div id="question-edit-area" class="edit-area" style="display: none;">
-                                <textarea id="question-edit-text">{{ question_dict.Chinese }}</textarea>
+                            <!-- 问题的编辑区域 (Chinese) -->
+                            <div id="question-edit-area-chinese" class="edit-area" style="display: none;">
+                                <textarea id="question-edit-text-chinese">{{ question_dict.Chinese }}</textarea>
                                 <div class="edit-buttons">
-                                    <button type="button" onclick="confirmEdit('question')">Confirm</button>
-                                    <button type="button" onclick="cancelEdit('question')">Cancel</button>
+                                    <button type="button" onclick="confirmEdit('question', 'Chinese')">Confirm</button>
+                                    <button type="button" onclick="cancelEdit('question', 'Chinese')">Cancel</button>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 显示问题 -->
+                        <!-- 显示问题 (English) -->
                         <div class="question-text">
                             <p>
                                 <label>
-                                    <!-- <input type="checkbox" name="mark_question" value="{{ question_dict.uuid }}" 
-                                        {% if question_dict.uuid in annotations %} checked {% endif %}
-                                        onchange="handleCheckboxChange('question')"> -->
                                     <span>{{ question_dict.English }}</span>
-                                    <button type="button" class="edit-btn" onclick="showEditArea('question')">Revise</button>
+                                    <button type="button" class="edit-btn" onclick="showEditArea('question', 'English')">Revise</button>
                                 </label>
                             </p>
-                            <!-- 问题的编辑区域 -->
-                            <div id="question-edit-area" class="edit-area" style="display: none;">
-                                <textarea id="question-edit-text">{{ question_dict.English }}</textarea>
+                            <!-- 问题的编辑区域 (English) -->
+                            <div id="question-edit-area-english" class="edit-area" style="display: none;">
+                                <textarea id="question-edit-text-english">{{ question_dict.English }}</textarea>
                                 <div class="edit-buttons">
-                                    <button type="button" onclick="confirmEdit('question')">Confirm</button>
-                                    <button type="button" onclick="cancelEdit('question')">Cancel</button>
+                                    <button type="button" onclick="confirmEdit('question', 'English')">Confirm</button>
+                                    <button type="button" onclick="cancelEdit('question', 'English')">Cancel</button>
                                 </div>
                             </div>
                         </div>
+
                     </fieldset>
                 </div>
-                
+
+                <!-- 隐藏字段用于提交修改后的英文内容 -->
+                <input type="hidden" name="question_english" id="hidden-english" value="{{ question_dict.English }}">
+
                 <!-- 提交按钮和复制、删除按钮 -->
                 <div class="submit-button-container">
-                    <!-- 提交按钮，保留验证 -->
                     <button type="submit" name="action" value="submit" class="button_submit">submit</button>
                 </div>
             </form>
 
             <!-- 跳转表单 -->
             <form id="navigate-form" action="{{ url_for('submit') }}"  method="post" class="navigate-form">
-                <!-- 隐藏字段 -->
                 <input type="hidden" name="current_idx" value="{{ current_idx }}">
                 <input type="hidden" name="source_page" value="display">
 
@@ -146,16 +142,16 @@
                 <button type="submit" name="action" value="navigate" class="navigate-button">Enter</button>
             </form>
 
-            <!-- 按钮组，紧跟着干扰项下方 -->
+            <!-- 按钮组 -->
             <div class="button-group">
-                <!-- 上一个按钮的表单 -->
+                <!-- 上一个按钮 -->
                 <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
                     <input type="hidden" name="current_idx" value="{{ current_idx }}">
                     <input type="hidden" name="direction" value="last">
                     <button type="submit" class="button_previous">Previous</button>
                 </form>
 
-                <!-- 下一个按钮的表单 -->
+                <!-- 下一个按钮 -->
                 <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
                     <input type="hidden" name="current_idx" value="{{ current_idx }}">
                     <input type="hidden" name="direction" value="next">
@@ -177,138 +173,44 @@
     </div>
 
     <script>
-        // 处理图片上传的预览
-        const imageInput = document.getElementById('image-upload');
-        const imagePreview = document.getElementById('image-preview');
-        const uploadContainer = document.getElementById('image-upload-container');
-
-        // Function to display the image preview
-        function displayImage(file) {
-            if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    // 清除之前的预览
-                    imagePreview.innerHTML = '';
-                    const img = document.createElement('img');
-                    img.src = e.target.result;  // 设置图片的 data URL
-                    img.alt = "Image Preview";
-                    img.classList.add('preview-image');
-                    imagePreview.appendChild(img);  // 添加新的预览
-                };
-                reader.readAsDataURL(file);  // 读取图片文件
-            } else {
-                alert('请上传有效的图片文件。');
+        // 编辑区域切换逻辑
+        function showEditArea(field, language) {
+            const editAreaChinese = document.getElementById('question-edit-area-chinese');
+            const editAreaEnglish = document.getElementById('question-edit-area-english');
+            if (language === 'Chinese') {
+                editAreaChinese.style.display = 'block';
+                editAreaEnglish.style.display = 'none';
+            } else if (language === 'English') {
+                editAreaEnglish.style.display = 'block';
+                editAreaChinese.style.display = 'none';
             }
         }
 
-        // Event listener for file input change
-        imageInput.addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            displayImage(file);
-        });
-
-        // Event listener for paste events
-        uploadContainer.addEventListener('paste', function(event) {
-            const items = (event.clipboardData || event.originalEvent.clipboardData).items;
-            for (let index in items) {
-                const item = items[index];
-                if (item.kind === 'file' && item.type.startsWith('image/')) {
-                    const blob = item.getAsFile();
-                    displayImage(blob);
-                    // 设置文件输入的值为粘贴的图片
-                    const dataTransfer = new DataTransfer();
-                    // 添加新的文件
-                    dataTransfer.items.add(blob);
-                    imageInput.files = dataTransfer.files;
-                    break; // 只处理第一个图片
+        // 确认修改后的文本
+        function confirmEdit(field, language) {
+            const textArea = document.getElementById(`question-edit-text-${language.toLowerCase()}`);
+            if (textArea) {
+                // 获取修改后的内容
+                const updatedText = textArea.value.trim();
+                
+                // 将修改后的内容更新到隐藏字段（这里的name要与后端接收的字段名一致）
+                const hiddenField = document.getElementById(`hidden-${language.toLowerCase()}`);
+                if (hiddenField) {
+                    hiddenField.value = updatedText;  // 更新隐藏字段的值
                 }
+                
+                // 输出确认信息，便于调试
+                console.log(`Confirm edit for ${language}: ${updatedText}`);
             }
-        });
-
-        // 点击上传容器时聚焦，以便接收粘贴事件
-        uploadContainer.addEventListener('click', function() {
-            uploadContainer.focus();
-        });
-
-        // 焦点样式变化
-        uploadContainer.addEventListener('focus', function() {
-            uploadContainer.classList.add('focused');
-        });
-        uploadContainer.addEventListener('blur', function() {
-            uploadContainer.classList.remove('focused');
-        });
-    </script>
-
-    <script src="./templates/edit.js"></script>
-
-    <script>
-        // 将后端传递的修改内容保存到全局变量
-        window.modifications = {{ modifications|tojson|safe if modifications else 'null' }};
-    </script>
-
-    <script>
-        // 将问题数据传递给前端
-        window.questionData = {{ question_dict | tojson | safe }};
-    </script>
-
-    <script>
-        // 修改展开/折叠响应的函数
-        function toggleResponse(button) {
-            // 阻止默认事件
-            event.preventDefault();
             
-            const container = button.closest('.response-container');
-            const content = container.querySelector('.response-content');
-            
-            if (content.classList.contains('collapsed')) {
-                content.classList.remove('collapsed');
-                button.textContent = '折叠';
-            } else {
-                content.classList.add('collapsed');
-                button.textContent = '展开';
-            }
+            // 隐藏编辑区域
+            document.getElementById(`question-edit-area-${language.toLowerCase()}`).style.display = 'none';
         }
-    </script>
 
-    <script>
-        // 添加跳转函数
-        function navigateToQuestion(index) {
-            const form = document.getElementById('navigate-form');
-            const nextIdxInput = form.querySelector('input[name="next_idx"]');
-            const actionButton = form.querySelector('button[name="action"]');
-            
-            nextIdxInput.value = index;
-            actionButton.click();  // 直接触发 Enter 按钮的点击事件
-        }
-    </script>
-
-
-    <script>
-        /**
-         * 一键完成：显示编辑框 + 给文本前后插入$$ + 直接点击确认
-         * @param {string} fieldName - 形如 'option-0', 'option-1'等
-         */
-        function modifyWithMathAndConfirm(fieldName) {
-            // 1. 打开对应的编辑区域
-            showEditArea(fieldName); 
-            
-            // 2. 选中该编辑区域里的 <textarea>
-            const textArea = document.getElementById(fieldName + '-edit-text');
-            if (!textArea) return;
-            
-            // 3. 在文本前后插入 $$
-            let text = textArea.value.trim();
-            // 如果想防止重复插入，可以先判断
-            if (!text.startsWith('$$') && !text.endsWith('$$')) {
-                textArea.value = `$$${text}$$`;
-            } else {
-                // 若想强行包裹，也可写：
-                // textArea.value = `$$${text}$$`;
-                // 或者自行做其他逻辑
-            }
-
-            // 4. 自动提交编辑结果，相当于用户点了「确认」
-            confirmEdit(fieldName);
+        // 取消修改，隐藏编辑区域
+        function cancelEdit(field, language) {
+            // 隐藏编辑区域
+            document.getElementById(`question-edit-area-${language.toLowerCase()}`).style.display = 'none';
         }
     </script>
 
