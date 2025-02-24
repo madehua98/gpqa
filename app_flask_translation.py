@@ -483,7 +483,7 @@ def submit():
 
     ans_file = f"{res_dir}/ans_{username}.jsonl"
     deduplication_file = f"{res_dir}/deduplication_{username}.jsonl"
-    multiple_file = f"{res_dir}/multiple_true_options_{username}.jsonl"
+    multiple_file = f"{res_dir}/translation_{username}.jsonl"
 
     action = request.form.get("action", "")
     s_idx = session.get("s_idx", 0)
