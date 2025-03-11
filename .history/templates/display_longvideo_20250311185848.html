@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Annotating Videos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./templates/display.css"> <!-- 引入外部CSS文件 -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左侧栏 -->
+        <div class="left-column">
+            <div class="QA-text">
+                {{ multiple_anno | safe }}
+            </div>
+            <!-- 顶部进度条显示 -->
+            <div class="progress-container">
+                <p><strong>Marking progress:</strong></p>
+                <progress value="{{ status_dict.values() | select('equalto', True) | list | length }}" 
+                        max="{{ status_dict | length }}">
+                </progress>
+                <p>
+                    {{ status_dict.values() | select('equalto', True) | list | length }}/{{ status_dict | length }} Marked 
+                    ({{ (status_dict.values() | select('equalto', True) | list | length / status_dict | length * 100) | round(2) }}%)
+                </p>
+            </div>
+
+            <!-- 标注状态表格 -->
+            <div class="annotation-status">
+                <p><strong>Annotation status table:</strong></p>
+                <table class="annotation-table">
+                    <tbody>
+                        {% set items_list = status_dict.items() | list %}
+                        {% set row_count = ((items_list|length + 9) // 10) %}
+                        
+                        {% for row in range(row_count) %}
+                        <tr>
+                            {% for col in range(10) %}
+                                {% set index = row * 10 + col %}
+                                {% if index < items_list|length %}
+                                    {% set uuid, status = items_list[index] %}
+                                    <td class="{% if status %}annotated{% else %}not-annotated{% endif %} clickable" 
+                                        onclick="navigateToQuestion({{ index + 1 }});"
+                                        title="点击跳转到第 {{ index + 1 }} 题">
+                                        {{ index + 1 }}
+                                    </td>
+                                {% else %}
+                                    <td></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 右侧栏 -->
+        <div class="right-column">
+            <!-- 提交表单 -->
+            <form id="submit-form" action="{{ url_for('submit') }}" method="post" enctype="multipart/form-data" class="main-form">
+                <!-- 隐藏字段 -->
+                <input type="hidden" name="source_page" value="display">
+                <input type="hidden" name="uuid" value="{{uuid}}">
+                <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                {% if annotation_flag %}
+                    <span style="color: green;">[Marked]</span>
+                {% else %}
+                    <span style="color: red;">[Unmarked]</span>
+                {% endif %}
+                <div class="data-container">
+                    <h2>Question Data</h2>
+                    
+                    <!-- Video and UUID Information -->
+                    <div class="metadata-section">
+                        <div class="metadata-item">
+                            <strong>UUID:</strong> {{ uuid }}
+                        </div>
+                        <div class="metadata-item">
+                            <strong>Video Key:</strong> {{ video_key }}
+                        </div>
+                    </div>
+                    
+                    <!-- Questions List Display -->
+                    <div class="questions-list">
+                        <h3>Questions</h3>
+                        
+                        <!-- Loop through all questions in the data array -->
+                        {% for question in data %}
+                        <div class="question-card" id="question-{{ loop.index }}">
+                            <div class="question-index">Question {{ loop.index }}</div>
+                            
+                            <!-- Title Section -->
+                            <div class="question-title">
+                                <div class="field-label">Title:</div>
+                                <div class="field-content">{{ question.title }}</div>
+                                <button type="button" class="edit-btn" onclick="showEditArea('title', {{ loop.index }})">Revise</button>
+                                
+                                <!-- Title Edit Area -->
+                                <div id="title-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                    <textarea id="title-edit-text-{{ loop.index }}">{{ question.title }}</textarea>
+                                    <div class="edit-buttons">
+                                        <button type="button" onclick="confirmEdit('title', {{ loop.index }})">Confirm</button>
+                                        <button type="button" onclick="cancelEdit('title', {{ loop.index }})">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Choices Section -->
+                            <div class="question-choices">
+                                <div class="field-label">Choices:</div>
+                                <div class="choices-list">
+                                    <div class="choice-item">A: {{ question.choices.A }}</div>
+                                    <div class="choice-item">B: {{ question.choices.B }}</div>
+                                    <div class="choice-item">C: {{ question.choices.C }}</div>
+                                    <div class="choice-item">D: {{ question.choices.D }}</div>
+                                </div>
+                                <button type="button" class="edit-btn" onclick="showEditArea('choices', {{ loop.index }})">Revise</button>
+                                
+                                <!-- Choices Edit Area -->
+                                <div id="choices-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                    <div class="choice-edit">
+                                        <label>A: <input type="text" id="choice-a-edit-{{ loop.index }}" value="{{ question.choices.A }}"></label>
+                                    </div>
+                                    <div class="choice-edit">
+                                        <label>B: <input type="text" id="choice-b-edit-{{ loop.index }}" value="{{ question.choices.B }}"></label>
+                                    </div>
+                                    <div class="choice-edit">
+                                        <label>C: <input type="text" id="choice-c-edit-{{ loop.index }}" value="{{ question.choices.C }}"></label>
+                                    </div>
+                                    <div class="choice-edit">
+                                        <label>D: <input type="text" id="choice-d-edit-{{ loop.index }}" value="{{ question.choices.D }}"></label>
+                                    </div>
+                                    <div class="edit-buttons">
+                                        <button type="button" onclick="confirmEdit('choices', {{ loop.index }})">Confirm</button>
+                                        <button type="button" onclick="cancelEdit('choices', {{ loop.index }})">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Metadata Fields -->
+                            <div class="question-metadata">
+                                <div class="metadata-row">
+                                    <div class="metadata-field">
+                                        <strong>Correct Answer:</strong> {{ question.correct_answer }}
+                                    </div>
+                                    <div class="metadata-field">
+                                        <strong>Hierarchy:</strong> {{ question.hierarchy }}
+                                    </div>
+                                </div>
+                                
+                                <div class="metadata-row">
+                                    <div class="metadata-field">
+                                        <strong>Time Reference:</strong> {{ question.time_reference }}
+                                    </div>
+                                    <div class="metadata-field">
+                                        <strong>Video Type:</strong> {{ question.video_type }}
+                                    </div>
+                                </div>
+                                
+                                <div class="metadata-row">
+                                    <div class="metadata-field">
+                                        <strong>Question Type:</strong> {{ question.question_type }}
+                                    </div>
+                                    <div class="metadata-field">
+                                        <strong>Wrong Choice Design:</strong> {{ question.wrong_choice_design }}
+                                    </div>
+                                </div>
+                                
+                                <div class="metadata-row">
+                                    <div class="metadata-field">
+                                        <strong>Data ID:</strong> {{ question.data_id }}
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Hidden fields for this question -->
+                            <input type="hidden" name="title_{{ loop.index }}" id="hidden-title-{{ loop.index }}" value="{{ question.title }}">
+                            <input type="hidden" name="choice_a_{{ loop.index }}" id="hidden-choice-a-{{ loop.index }}" value="{{ question.choices.A }}">
+                            <input type="hidden" name="choice_b_{{ loop.index }}" id="hidden-choice-b-{{ loop.index }}" value="{{ question.choices.B }}">
+                            <input type="hidden" name="choice_c_{{ loop.index }}" id="hidden-choice-c-{{ loop.index }}" value="{{ question.choices.C }}">
+                            <input type="hidden" name="choice_d_{{ loop.index }}" id="hidden-choice-d-{{ loop.index }}" value="{{ question.choices.D }}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- Form for submission -->
+                    <form id="questions-form" method="post">
+                        <!-- The hidden inputs are already inside each question card -->
+                        
+                        <!-- Submit button -->
+                        <div class="submit-button-container">
+                            <button type="submit" name="action" value="submit" class="button_submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 隐藏字段用于提交修改后的英文内容 -->
+                <input type="hidden" name="question_english" id="hidden-english" value="{{ question_dict.English }}">
+
+                <!-- 提交按钮和复制、删除按钮 -->
+                <div class="submit-button-container">
+                    <button type="submit" name="action" value="submit" class="button_submit">submit</button>
+                </div>
+            </form>
+
+            <!-- 跳转表单 -->
+            <form id="navigate-form" action="{{ url_for('submit') }}"  method="post" class="navigate-form">
+                <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                <input type="hidden" name="source_page" value="display">
+
+                <p><b>Current progress</b>: <br>{{ current_idx + 1 }}/{{ end_index + 1 }}</p>
+                <label for="next_idx">Turn to:</label>
+                <input type="number" name="next_idx" placeholder="123" class="idx_input_box" min="1" max="{{ end_index + 1 }}" required>
+                <button type="submit" name="action" value="navigate" class="navigate-button">Enter</button>
+            </form>
+
+            <!-- 按钮组 -->
+            <div class="button-group">
+                <!-- 上一个按钮 -->
+                <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
+                    <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                    <input type="hidden" name="direction" value="last">
+                    <button type="submit" class="button_previous">Previous</button>
+                </form>
+
+                <!-- 下一个按钮 -->
+                <form action="{{ url_for('navigate_main') }}" method="post" class="button-form">
+                    <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                    <input type="hidden" name="direction" value="next">
+                    <button type="submit" class="button_next">Next</button>
+                </form>
+            </div>
+
+            <!-- 显示Flash消息 -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="flashes">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <script>
+        // 编辑区域切换逻辑
+        function showEditArea(field, language) {
+            const editAreaChinese = document.getElementById('question-edit-area-chinese');
+            const editAreaEnglish = document.getElementById('question-edit-area-english');
+            if (language === 'Chinese') {
+                editAreaChinese.style.display = 'block';
+                editAreaEnglish.style.display = 'none';
+            } else if (language === 'English') {
+                editAreaEnglish.style.display = 'block';
+                editAreaChinese.style.display = 'none';
+            }
+        }
+
+        // 确认修改后的文本
+        function confirmEdit(field, language) {
+            const textArea = document.getElementById(`question-edit-text-${language.toLowerCase()}`);
+            if (textArea) {
+                // 获取修改后的内容
+                const updatedText = textArea.value.trim();
+                
+                // 将修改后的内容更新到隐藏字段（这里的name要与后端接收的字段名一致）
+                const hiddenField = document.getElementById(`hidden-${language.toLowerCase()}`);
+                if (hiddenField) {
+                    hiddenField.value = updatedText;  // 更新隐藏字段的值
+                }
+                
+                // 输出确认信息，便于调试
+                console.log(`Confirm edit for ${language}: ${updatedText}`);
+            }
+            
+            // 隐藏编辑区域
+            document.getElementById(`question-edit-area-${language.toLowerCase()}`).style.display = 'none';
+        }
+
+        // 取消修改，隐藏编辑区域
+        function cancelEdit(field, language) {
+            // 隐藏编辑区域
+            document.getElementById(`question-edit-area-${language.toLowerCase()}`).style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

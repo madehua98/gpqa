@@ -1,0 +1,93 @@
+{
+    "user1": {
+        "username": "user1",
+        "s_idx": 0,
+        "e_idx": 99,
+        "current_idx": 9,
+        "video_question_idx": 0
+    },
+    "user2": {
+        "username": "user2",
+        "s_idx": 100,
+        "e_idx": 199,
+        "current_idx": 1,
+        "video_question_idx": 0
+    },
+    "user3": {
+        "username": "user3",
+        "s_idx": 200,
+        "e_idx": 299,
+        "current_idx": 0
+    },
+    "user4": {
+        "username": "user4",
+        "s_idx": 300,
+        "e_idx": 399,
+        "current_idx": 0
+    },
+    "user5": {
+        "username": "user5",
+        "s_idx": 400,
+        "e_idx": 499,
+        "current_idx": 0
+    },
+    "user6": {
+        "username": "user6",
+        "s_idx": 500,
+        "e_idx": 599,
+        "current_idx": 0
+    },
+    "user7": {
+        "username": "user7",
+        "s_idx": 600,
+        "e_idx": 699,
+        "current_idx": 0
+    },
+    "user8": {
+        "username": "user8",
+        "s_idx": 700,
+        "e_idx": 799,
+        "current_idx": 0,
+        "video_question_idx": 0
+    },
+    "user9": {
+        "username": "user9",
+        "s_idx": 800,
+        "e_idx": 899,
+        "current_idx": 0,
+        "video_question_idx": 0
+    },
+    "user10": {
+        "username": "user10",
+        "s_idx": 900,
+        "e_idx": 999,
+        "current_idx": 0
+    },
+    "user11": {
+        "username": "user11",
+        "s_idx": 1000,
+        "e_idx": 1099,
+        "current_idx": 0
+    },
+    "user12": {
+        "username": "user12",
+        "s_idx": 1100,
+        "e_idx": 1199,
+        "current_idx": 0,
+        "video_question_idx": 0
+    },
+    "user13": {
+        "username": "user13",
+        "s_idx": 1200,
+        "e_idx": 1281,
+        "current_idx": 0,
+        "video_question_idx": 0
+    },
+    "user14": {
+        "username": "user14",
+        "s_idx": 1282,
+        "e_idx": 1607,
+        "current_idx": 3,
+        "video_question_idx": 0
+    }
+}

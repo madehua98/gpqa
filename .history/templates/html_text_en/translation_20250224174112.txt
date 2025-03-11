@@ -1,0 +1,5 @@
+<h2>Translation Check</h2>
+<ul>
+  <li><b>The translation is correct</b>: No action required, simply click Submit.</li>
+  <li><b>The translation is incorrect</b>: Click Modify, then insert the correct translation.</li>
+</ul>

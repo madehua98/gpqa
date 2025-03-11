@@ -1,0 +1,2562 @@
+[
+    {
+        "title": "What type of aircraft is seen in the sky when BENJI first appears?",
+        "choices": {
+            "A": "Airplane",
+            "B": "Helicopter",
+            "C": " Drone",
+            "D": "Balloon"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "1:37-1:38",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many fish did BENJI catch the first time he went fishing?",
+        "choices": {
+            "A": "10",
+            "B": "11",
+            "C": "12",
+            "D": "13"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "11:45-11:47",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What did Terry do after waking up on the sixth day?\r\n",
+        "choices": {
+            "A": " Make a fire and take a sip of water",
+            "B": "Build a shelter and eat food",
+            "C": "Cook a meal and clean up",
+            "D": " Gather wood and start a journal"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "15:10-15:20",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What did Tom plan to do on the twenty-ninth day?\r\n",
+        "choices": {
+            "A": " Fish in the river",
+            "B": "Build a raft",
+            "C": " Gather berries",
+            "D": "Hunt beavers"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "55:22-55:31",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many failed attempts did Kelly make before hitting the grouse on her first shot?",
+        "choices": {
+            "A": "Zero",
+            "B": "Three",
+            "C": "One",
+            "D": "Two"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "5:46-6:27",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many beavers did Terry catch on the twenty-first day?",
+        "choices": {
+            "A": " None",
+            "B": "One",
+            "C": " Two",
+            "D": "Three"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "41:00-41:56",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many participants are there in the competition?\r\n",
+        "choices": {
+            "A": "Eight",
+            "B": "Nine",
+            "C": " Ten",
+            "D": " Twelve"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:47:12",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Who won the competition?",
+        "choices": {
+            "A": "Juan",
+            "B": "Maria",
+            "C": "Terry",
+            "D": "Kelly"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:47:12",
+        "video_key": "3ZBosVynFW0",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": " How many lobsters did they cook with the blue bucket?",
+        "choices": {
+            "A": "Two",
+            "B": "Three",
+            "C": "Four",
+            "D": "Five"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "39:15-39:17",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many fish did they catch with the net on the boat for the first time?",
+        "choices": {
+            "A": "One",
+            "B": "Two",
+            "C": "Three",
+            "D": " Four"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "41:03-41:05",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color is the shirt the driver is wearing under his coat?\r\n",
+        "choices": {
+            "A": " Blue",
+            "B": "Red",
+            "C": "Black",
+            "D": "Green"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "2:10-2:20",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What color is their boat?",
+        "choices": {
+            "A": " Red",
+            "B": "Blue",
+            "C": "Yellow",
+            "D": "Green"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "2:40-2:50",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What did they do after picking up the bottle?\r\n",
+        "choices": {
+            "A": " Threw it away",
+            "B": "Took a sip of the liquid inside",
+            "C": "Opened it and smelled it",
+            "D": " Filled it with water"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "3:00-4:00",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many fish did they catch the first time they went fishing?",
+        "choices": {
+            "A": "1",
+            "B": "3",
+            "C": "2",
+            "D": "5"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "4:30-6:00",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": " How many large animals did they see while rowing the boat?\r\n",
+        "choices": {
+            "A": "TWo",
+            "B": "One",
+            "C": "Three",
+            "D": "Zero"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:30:00",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many times did it rain in total?",
+        "choices": {
+            "A": " Four",
+            "B": "One",
+            "C": "Three",
+            "D": "Two"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:30:00",
+        "video_key": "K2yzdArVNSU",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What was Reindeer Island like on the fiftieth day?\r\n",
+        "choices": {
+            "A": " Covered in heavy snow",
+            "B": "Covered in flowers",
+            "C": "Sunny and warm",
+            "D": "Completely flooded"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "55:45-55:46",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What color was the rope Taz used to make the canoe?",
+        "choices": {
+            "A": "Blue",
+            "B": "Green",
+            "C": "Yellow",
+            "D": "Red"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "4:26-4:27",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What did Alan's trap catch?\r\n",
+        "choices": {
+            "A": "Rabbit",
+            "B": "Deer",
+            "C": "Fox",
+            "D": "Bird"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "14:06-14:13",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Why is white smoke coming from Mikey's feet?\r\n",
+        "choices": {
+            "A": "Because of  dermatophytosis",
+            "B": "Because of cold weather",
+            "C": "Because of a fever",
+            "D": " Because of dust"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "14:34-14:44",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What happened to the two fish Wyatt caught?",
+        "choices": {
+            "A": "They got eaten",
+            "B": "They disappeared",
+            "C": "They escaped",
+            "D": " They were released"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "17:51-18:42",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Why didn't Code shoot the deer?",
+        "choices": {
+            "A": "Because it was too far away",
+            "B": "Because he ran out of ammunition",
+            "C": "Because it was too small",
+            "D": " Because it is a protected species"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "10:31-11:26",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Who was the last to quit the competition?\r\n",
+        "choices": {
+            "A": "Code",
+            "B": "WYATT",
+            "C": "White",
+            "D": "Taz"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:01:32",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "Who was the first to quit the competition?",
+        "choices": {
+            "A": "Lee",
+            "B": "Code",
+            "C": "WYATT",
+            "D": "MIKEY"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-17:50",
+        "video_key": "dP-n-2d1pNM",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "How did the first person to get the toolbox carry it?",
+        "choices": {
+            "A": " On their head",
+            "B": "In their hands",
+            "C": " On their back",
+            "D": "Under their arm"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "00:00:45-00:00:48",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": " How many colors were on the tail of the arrows carried by the first person with the bow?\r\n",
+        "choices": {
+            "A": "Two",
+            "B": "Four",
+            "C": "Three",
+            "D": "One"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "00:00:48-00:00:50",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What method did the first person to catch the squirrel use?",
+        "choices": {
+            "A": " Hit it with a stone",
+            "B": "Chased it",
+            "C": "Trapped it",
+            "D": " Scared it into a corner"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "1:51-2:05",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Where did the person who picked the berries transfer them from their boots?",
+        "choices": {
+            "A": " To a basket",
+            "B": "To their pocket",
+            "C": "To the tree trunk",
+            "D": "To the ground"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "6:12-6:22",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "What color jacket was the first person who made the emergency call wearing?",
+        "choices": {
+            "A": "Blue",
+            "B": "Red",
+            "C": " Black",
+            "D": "Green"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "22:00-23:20",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "What medical device did the person with something in their ear use?\r\n\r\n",
+        "choices": {
+            "A": " Forceps",
+            "B": "Syringe",
+            "C": "Tweezers",
+            "D": "Cotton swab"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "21:40-22:00",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many days were between the first contestant to leave and the last contestant to leave?",
+        "choices": {
+            "A": "54 days",
+            "B": "45 days",
+            "C": "60 days",
+            "D": "30 days"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:59:45",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Who was the last contestant to leave?",
+        "choices": {
+            "A": "Billy",
+            "B": " John",
+            "C": "Sarah",
+            "D": "Mike"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "1:30:00-1:59:45",
+        "video_key": "xDMkYz8fFzw",
+        "video_type": "live",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "Why did Jake use a bandage?",
+        "choices": {
+            "A": "Because his left hand was injured",
+            "B": "Because his leg was injured",
+            "C": " Because he had a cut on his forehead",
+            "D": "Because his finger was broken"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "49:54-49:56",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What did Craig place on top of his shelter?",
+        "choices": {
+            "A": " A tarp",
+            "B": "A tree branch",
+            "C": "Deer antlers",
+            "D": "A stone"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "1:33:23-1:33:25",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": " How did Peter catch a fish on day six?",
+        "choices": {
+            "A": " With a fishing rod",
+            "B": "With his hands",
+            "C": "With a spear",
+            "D": " With a fishing net"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "36:01-36:08",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What prey was placed in the tree hollow?",
+        "choices": {
+            "A": " A squirrel",
+            "B": " A rabbit",
+            "C": "A bird",
+            "D": "A fox"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "37:06-37:16",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What bait did Tucker use to catch his first fish?\r\n",
+        "choices": {
+            "A": "Worms",
+            "B": "Cheese",
+            "C": "Squirrel meat",
+            "D": "Corn"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "35:04-35:45",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What prey did Gleg catch on day forty-five?",
+        "choices": {
+            "A": "A rabbit",
+            "B": "A deer",
+            "C": "A bird",
+            "D": "A fox"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "1:57:14-1:58:24",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "How are the participants' abilities to build shelters?\r\n",
+        "choices": {
+            "A": " None of them can build a proper shelter.",
+            "B": "Only a few can build shelters that keep them warm.",
+            "C": "Most of them can build sturdy shelters that can withstand the cold.",
+            "D": " All participants struggle to build any shelter at all."
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-2:49:05",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What did the winner primarily rely on to win the competition?\r\n",
+        "choices": {
+            "A": "Venison",
+            "B": "Fish",
+            "C": "Squirrel meat",
+            "D": "Bird eggs"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-2:49:05",
+        "video_key": "cMZuvlMJXgA",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is the protagonist doing when they first appear?",
+        "choices": {
+            "A": " Hunting",
+            "B": "Fishing",
+            "C": "Building a shelter",
+            "D": "Chopping bamboo"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "00:00-00:02",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What color is the dog's fur?",
+        "choices": {
+            "A": "Black",
+            "B": "White",
+            "C": "Brownish yellow",
+            "D": "Grey"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "00:52-00:53",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What is he pouring water from into the cup?\r\n",
+        "choices": {
+            "A": "A stone jar",
+            "B": "Bamboo",
+            "C": "A plastic bottle",
+            "D": "A clay pot"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "4:20-4:33",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many \"X\"-shaped railings did he make on the balcony?",
+        "choices": {
+            "A": "Nine",
+            "B": "Seven",
+            "C": "Ten",
+            "D": "Five"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "37:10-37:21",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many windows did he make with bamboo?\r\n",
+        "choices": {
+            "A": "Three",
+            "B": "Two",
+            "C": "Four",
+            "D": "One"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "54:32-59:48",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How did he catch the chicken and how did he cook it?",
+        "choices": {
+            "A": "Caught it by hand and cooked it by boiling",
+            "B": "Caught it with a net and cooked it by frying",
+            "C": "Caught it with a stick and cooked it by steaming",
+            "D": "Caught it with a trap and cooked it by grilling"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "1:00:34-1:04:09",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What material did he use the most?\r\n",
+        "choices": {
+            "A": "Wood",
+            "B": "Stone",
+            "C": "Metal",
+            "D": "Bamboo"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "00:00-2:15:45",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "After fishing, what did he make with bamboo to catch fish?",
+        "choices": {
+            "A": "Fishing net",
+            "B": "Fishing rod",
+            "C": "Trap",
+            "D": "Basket"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "1:59:00-2:15:45",
+        "video_key": "7Ez0HHnSXdA",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many female participants are there in total?\r\n",
+        "choices": {
+            "A": "Five",
+            "B": "Three",
+            "C": "Seven",
+            "D": "Four"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "00:06-00:09",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color is the signal flare?",
+        "choices": {
+            "A": "Orange",
+            "B": "Red",
+            "C": "Yellow",
+            "D": "Orange"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "1:46-1:49",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many types of survival items did the first team present?",
+        "choices": {
+            "A": "Eight",
+            "B": "Twelve",
+            "C": "Eleven",
+            "D": "Ten"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "1:35-1:49",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "tv",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color are the feathers at the end of the arrows in the second team's set?",
+        "choices": {
+            "A": "White and red",
+            "B": "White and red",
+            "C": "Blue and green",
+            "D": "Red and orange"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "2:05-2:19",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "Why did the first person leave the competition?\r\n",
+        "choices": {
+            "A": "Vomiting",
+            "B": "Injury",
+            "C": "Injury",
+            "D": "Disqualification"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "12:00-14:30",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "After how many people left the competition was the first supply drop by helicopter?\r\n",
+        "choices": {
+            "A": "Three",
+            "B": "Five",
+            "C": "Two",
+            "D": "Four"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "10:00-22:00",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many contestants left during the first seven days?\r\n",
+        "choices": {
+            "A": "Five",
+            "B": "Four",
+            "C": "Three",
+            "D": "Six"
+        },
+        "correct_answer": "B",
+        "hierarchy": "story",
+        "time_reference": "00:00-25:00",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many degrees Celsius was the temperature difference between the morning of day 27 and the morning of day 36?\r\n",
+        "choices": {
+            "A": " Eleven degrees Celsius",
+            "B": "Ten degrees Celsius",
+            "C": "Fifteen degrees Celsius",
+            "D": "Eight degrees Celsius"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "25:00-1:50-42",
+        "video_key": "GzQoJGHCOxY",
+        "video_type": "live",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color was the fletching of the arrow that the man used to shoot the first bird?\r\n",
+        "choices": {
+            "A": "Red",
+            "B": "Blue",
+            "C": "Green",
+            "D": "Yellow"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "3:38-3:40",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many fish did the man catch on his first fishing attempt?",
+        "choices": {
+            "A": "Two",
+            "B": "One",
+            "C": "Three",
+            "D": "Four"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "15:10-15:13",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color were the berries that the man collected?",
+        "choices": {
+            "A": "Blue",
+            "B": "Green",
+            "C": "Red",
+            "D": " Yellow"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "22:50-23:05",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "After building the cabin, what did the man use to clear the snow inside the cabin?\r\n",
+        "choices": {
+            "A": "Wooden broom",
+            "B": " Metal shovel",
+            "C": "White plastic bucket",
+            "D": "Red basket"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "59:15-59:29",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many trees did the man cut down before catching the birds?",
+        "choices": {
+            "A": "Seven",
+            "B": "Nine",
+            "C": "Ten",
+            "D": "Five"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "00:00-3:30",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many pieces of wood did the man saw to make the door?",
+        "choices": {
+            "A": "Five",
+            "B": "Eight",
+            "C": "Ten",
+            "D": "Seven"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "43:00-45:30",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": " How many snowfalls occurred in total?\r\n\r\n",
+        "choices": {
+            "A": "Five",
+            "B": "Three",
+            "C": "Four",
+            "D": "Six"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "25:00-1:06:34",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many fish did the man catch in total?",
+        "choices": {
+            "A": "Three",
+            "B": "Five",
+            "C": "Seven",
+            "D": "Six"
+        },
+        "correct_answer": "B",
+        "hierarchy": "story",
+        "time_reference": "14:00-1:00:02",
+        "video_key": "NThAo9PLyjc",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color are the sandals the man is wearing?\r\n",
+        "choices": {
+            "A": "Blue",
+            "B": "Red",
+            "C": " Green",
+            "D": "Black"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "31:43-31:45",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many vertical bamboo poles are used as support for his boat?",
+        "choices": {
+            "A": "Four",
+            "B": "Five",
+            "C": " Six",
+            "D": "Three"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "50:16-50:18",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How did he start the fire for the first time?",
+        "choices": {
+            "A": "Using a knife to strike a flint",
+            "B": "Rubbing two sticks together",
+            "C": " Using a match",
+            "D": " Using a lighter"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "26:00-26:13",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Where did he put the lantern after taking it off the boat?",
+        "choices": {
+            "A": "On the ground",
+            "B": "On the boat",
+            "C": "In the water",
+            "D": "Inside the backpack"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "1:20:10-1:20:20",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "Why did he place the stones around the boat?",
+        "choices": {
+            "A": "To mark the boat's position",
+            "B": "To start a fire",
+            "C": "To protect the boat from animals",
+            "D": "To keep the boat from drifting"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "1:02:57-1:06:53",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What method did he use to catch the second fish?\r\n",
+        "choices": {
+            "A": "Using his bare hands",
+            "B": " Using a bamboo fishing trap",
+            "C": " Using a bamboo fishing trap",
+            "D": "Using a net"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "1:50:30-1:55:19",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What did he use the red fruits he gathered for?\r\n\r\n",
+        "choices": {
+            "A": "Medicine",
+            "B": "Food",
+            "C": " Decoration",
+            "D": "Fish bait"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "00:46-23:36",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many times did he start a fire?",
+        "choices": {
+            "A": "How many times did he start a fire?",
+            "B": "Two times",
+            "C": "Four times",
+            "D": "Once"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-2:00:47",
+        "video_key": "gjBdbybiUVU",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color is the man's hat?\r\n",
+        "choices": {
+            "A": "Black",
+            "B": "Blue",
+            "C": "Red",
+            "D": "White"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "00:00-00:03",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What color is the bottle the man found?",
+        "choices": {
+            "A": "Blue",
+            "B": "Green",
+            "C": "Red-brown",
+            "D": "Transparent"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "5:29-5:32",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What did the man use the knife for the first time?",
+        "choices": {
+            "A": "To cut food",
+            "B": " To defend himself",
+            "C": "To carve a pattern",
+            "D": "To split the wood in half"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "9:30-9:40",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What did the man use as a pillow on the first night?",
+        "choices": {
+            "A": " A rock",
+            "B": "A backpack",
+            "C": "A jacket",
+            "D": "A log"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "18:35-18:45",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Where did the man stay on the first night?",
+        "choices": {
+            "A": "In a cave",
+            "B": "In a tent",
+            "C": " By a campfire",
+            "D": "Under a rock"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "16:50-19:00",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "On which day did the man successfully start a fire?",
+        "choices": {
+            "A": "The third day",
+            "B": " The first day",
+            "C": "The second day",
+            "D": "The fourth day"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "24:00-25:30",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "What fire-starting method did the man attempt?\r\n",
+        "choices": {
+            "A": "Fire by rubbing stones",
+            "B": " Fire by using flint",
+            "C": "Fire by using a magnifying glass",
+            "D": "Friction fire starting"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:00:00",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many fish did the man catch in total?",
+        "choices": {
+            "A": "Six",
+            "B": "Four ",
+            "C": "Eight",
+            "D": "Two"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "30:00-1:00:00",
+        "video_key": "v1HJ3lqxe4w",
+        "video_type": "live",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color were the chili peppers that the woman picked?\r\n",
+        "choices": {
+            "A": "Green",
+            "B": "Yellow",
+            "C": "Red",
+            "D": "Orange"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "00:00-00:03",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What did the woman put the chili peppers into to crush them?",
+        "choices": {
+            "A": " A stone mortar",
+            "B": "A wooden barrel",
+            "C": "A metal bowl",
+            "D": "A plastic container"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "00:53-00:56",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What did the woman use to pound the meat?\r\n",
+        "choices": {
+            "A": "An iron rod",
+            "B": "A wooden mallet",
+            "C": "A stone pestle",
+            "D": " A plastic hammer"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "3:50-4:00",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many people were on the boat when the woman went fishing?\r\n",
+        "choices": {
+            "A": "Three",
+            "B": "Four",
+            "C": "Two",
+            "D": "One"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "1:12:00-1:12:14",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What fruit did the woman put in the egg roll?",
+        "choices": {
+            "A": "Apple",
+            "B": "Banana",
+            "C": "Orange",
+            "D": " Dragon fruit"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "58:00-59:30",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What did the woman do with the pumpkin?",
+        "choices": {
+            "A": " Make soup and bake pie",
+            "B": "Feed the pigs and collect pumpkin seeds",
+            "C": " Carve a lantern and make juice",
+            "D": " Plant it in the garden"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "1:09:30-1:10:30",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many dogs does the woman have at home?",
+        "choices": {
+            "A": "One",
+            "B": "TWo",
+            "C": "Three",
+            "D": "Four"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:32:59",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is the woman mainly demonstrating in the video?",
+        "choices": {
+            "A": "Exercise routine",
+            "B": "Gardening tips",
+            "C": "Cooking methods",
+            "D": "Cleaning techniques"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:32:59",
+        "video_key": "9nTozLFJVa8",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many buns are there in the steamer?",
+        "choices": {
+            "A": "Six",
+            "B": "Eight",
+            "C": "Five",
+            "D": "Seven"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "9:47-9:50",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color is the lid of the rice container?\r\n",
+        "choices": {
+            "A": "Yellow",
+            "B": "Blue",
+            "C": "Red",
+            "D": "Green"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "33:55-33:58",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "Which vegetables are added to the mixed noodles?",
+        "choices": {
+            "A": " Lettuce and tomato",
+            "B": " Spinach and bell pepper",
+            "C": "Onion and cabbage",
+            "D": "Cucumber and carrot"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "18:25-18:35",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Which vegetables and fruits are added to the salad?",
+        "choices": {
+            "A": "Pineapple, tomato, onion, and greens",
+            "B": " Apple, cucumber, lettuce, and carrot",
+            "C": "Mango, spinach, bell pepper, and avocado",
+            "D": " Banana, corn, zucchini, and kale"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "46:08-48:00",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many eggs are added to the noodles with marinated eggs?",
+        "choices": {
+            "A": "One egg",
+            "B": "Two eggs",
+            "C": "Half an egg",
+            "D": "Three eggs"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "18:15-18:30",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is the snail meat picked with a toothpick used for?",
+        "choices": {
+            "A": " Snail soup",
+            "B": "Snail noodles",
+            "C": " Snail stir-fry",
+            "D": "Snail salad"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "1:34:00-1:39:00",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many ways can tofu be prepared?",
+        "choices": {
+            "A": "Three",
+            "B": "Four",
+            "C": "Five",
+            "D": "Two"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:50:00",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What can you learn through videos?\r\n",
+        "choices": {
+            "A": " Cooking methods",
+            "B": " Language skills",
+            "C": " Music composition",
+            "D": " Painting techniques"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-2:17:21",
+        "video_key": "TTwxkUeTW3c",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What color was the clothing a woman wore when she first picked vegetables?",
+        "choices": {
+            "A": "Red",
+            "B": "Blue",
+            "C": "Green",
+            "D": "Yellow"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "00:00-00:03",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many people used glue to fix the broken pot?",
+        "choices": {
+            "A": "Three",
+            "B": "One",
+            "C": "Four",
+            "D": "Two"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "5:03-5:06",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "When is soy sauce added while making pickled ginger?\r\n",
+        "choices": {
+            "A": "Last",
+            "B": "At the beginning",
+            "C": "In the middle",
+            "D": "After boiling"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "33:35-33:45",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "What color is the floral water that was made?",
+        "choices": {
+            "A": "Blue",
+            "B": "Yellow",
+            "C": "Green",
+            "D": "Pink"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "1:41:35-1:41:45",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What did the person do at the lotus pond?",
+        "choices": {
+            "A": "Went swimming and fishing",
+            "B": " Caught small crayfish, picked lotus leaves and flowers",
+            "C": "Took photographs of the scenery",
+            "D": "Picked watermelons from the field"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "48:50-51:20",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many people were there the last time you had a meal?",
+        "choices": {
+            "A": "Seven",
+            "B": "Ten ",
+            "C": "Eight",
+            "D": "Nine"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "1:36:00-1:40:30",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many people were there the most during a meal?",
+        "choices": {
+            "A": "Eight",
+            "B": "Nine",
+            "C": "Ten",
+            "D": "Seven"
+        },
+        "correct_answer": "B",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:42:56",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is the main content presented in the video?",
+        "choices": {
+            "A": "The process of cooking",
+            "B": " A travel journey",
+            "C": "A dance performance",
+            "D": "A sports match"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:42:56",
+        "video_key": "SeaiInbr92k",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "Action Replacement"
+    },
+    {
+        "title": "What was being cut the first time?\r\n",
+        "choices": {
+            "A": "Carrot",
+            "B": "Eggplant",
+            "C": "Onion",
+            "D": "Potato"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "0:53-00:56",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many people were there the first time eating at the dining table?",
+        "choices": {
+            "A": "Three",
+            "B": "One",
+            "C": "Four",
+            "D": "Two"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "2:15-2:18",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many types of ingredients are there in the sushi rice?\r\n",
+        "choices": {
+            "A": "Five",
+            "B": "Four",
+            "C": "Three",
+            "D": "Six"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "11:10-11:20",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many slices of bread are on the plate?",
+        "choices": {
+            "A": "Two",
+            "B": "Four",
+            "C": "Three",
+            "D": "One"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "17:08-17:18",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many types of side dishes are there in the avocado mixed rice?",
+        "choices": {
+            "A": "Four",
+            "B": "Three",
+            "C": "Two",
+            "D": "Five"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "17:40-19:00",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many types of fruits are on the waffle?",
+        "choices": {
+            "A": "One",
+            "B": "Four",
+            "C": "Three",
+            "D": "Two"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "44:10-45:40",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is the main content presented in the video?\r\n",
+        "choices": {
+            "A": "The cooking process",
+            "B": "A recipe review",
+            "C": "A cooking competition",
+            "D": " A kitchen tour"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:04:12",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many people are involved in the cooking process in the video?",
+        "choices": {
+            "A": "Two",
+            "B": "Four",
+            "C": "One",
+            "D": "Three"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:04:12",
+        "video_key": "B2K9x-zhrgc",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": " What process was initially done to the slices of bread?",
+        "choices": {
+            "A": "Toasted",
+            "B": "Fried",
+            "C": "Baked",
+            "D": "Grilled"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "9:04-9:06",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many different flavors of cream did the blender mix?",
+        "choices": {
+            "A": "Two",
+            "B": "Four",
+            "C": "One",
+            "D": "Three"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "14:15-14:16",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many shrimp were fried in the oil?",
+        "choices": {
+            "A": "Six",
+            "B": "Four",
+            "C": "Eight",
+            "D": "Five"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "56:50-57:00",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What shape was created by the egg mixture on the iron plate?\r\n",
+        "choices": {
+            "A": "Heart shape",
+            "B": "Star shape",
+            "C": "Bear paw print",
+            "D": "Flower shape"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "34:01-34:09",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many different types of desserts were made with the white cream?",
+        "choices": {
+            "A": "Seven",
+            "B": "Nine",
+            "C": "Five",
+            "D": "Ten"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "15:41-17:32",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many small meatballs did the boss flip for the first time?",
+        "choices": {
+            "A": "One hundred",
+            "B": "One hundred and twenty",
+            "C": "Ninety",
+            "D": "One hundred and eight"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "22:53-23:38",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many types of food are there in total?",
+        "choices": {
+            "A": "Seven",
+            "B": "Five",
+            "C": "Eight",
+            "D": "Ten"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:12:26",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many types of dessert foods are there in total?",
+        "choices": {
+            "A": "Four",
+            "B": "Three",
+            "C": "Two",
+            "D": "One"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:12:26",
+        "video_key": "NbFEgxve8bQ",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": " How many bowls of fried rice were served from the first pot?",
+        "choices": {
+            "A": "Three",
+            "B": "Two",
+            "C": "One",
+            "D": "Four"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "1:11-1:14",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color chopsticks did the person wearing white gloves use when making wontons?\r\n",
+        "choices": {
+            "A": "Red",
+            "B": "Blue",
+            "C": "Yellow",
+            "D": "Green"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "30:48-30:49",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What color was the wrapper used for the fried wontons?",
+        "choices": {
+            "A": "Yellow",
+            "B": "White",
+            "C": "Green",
+            "D": "Red"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "11:24-11:33",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "When making chicken noodle soup, which part of the chicken is cut first?",
+        "choices": {
+            "A": " Chicken legs",
+            "B": "Chicken breast",
+            "C": " Chicken wings",
+            "D": "Chicken neck"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "36:53-37:00",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "sequential replacement"
+    },
+    {
+        "title": "What are the steps to make chicken noodle soup?",
+        "choices": {
+            "A": "Cut chicken, boil noodles, add vegetables, and broth",
+            "B": "Cut chicken, blanch noodles, add chicken, green onions, and broth",
+            "C": "Fry chicken, cook noodles, add soy sauce and broth",
+            "D": "Cut chicken, steam noodles, add salt, and broth"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "37:17-37:50",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "Where is the pigeon taken out from?",
+        "choices": {
+            "A": "A basket",
+            "B": "A box",
+            "C": "A cage",
+            "D": " A can"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "41:32-42:06",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "How many stores are involved in total, including street vendors?\r\n",
+        "choices": {
+            "A": "Thirteen",
+            "B": "Ten",
+            "C": "Fifteen",
+            "D": "Twelve"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:19:12",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Between two different steak houses, which one makes the more visually appealing steak?",
+        "choices": {
+            "A": "The first one",
+            "B": " Both are equally visually appealing",
+            "C": "The second one",
+            "D": "Neither are visually appealing"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "1:07:56-1:09:12",
+        "video_key": "9cDo_JdiCPM",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": " What was cut with a knife for the first time?",
+        "choices": {
+            "A": "Carrot",
+            "B": "Onion",
+            "C": "Tomato",
+            "D": "Potato"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "00:33-00:38",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is the color of the top of the device used to slice green onions into strips?\r\n",
+        "choices": {
+            "A": "Red",
+            "B": "Green",
+            "C": "Yellow",
+            "D": "Blue"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "00:20-00:23",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": " How many buckets of ribs were cooked for the second dish?",
+        "choices": {
+            "A": "Two buckets",
+            "B": " Three buckets",
+            "C": "One bucket",
+            "D": " Four buckets"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "18:14-18:24",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What was added last to the second dish?\r\n",
+        "choices": {
+            "A": "Chopped onions",
+            "B": "Garlic",
+            "C": "Black sesame",
+            "D": "Soy sauce"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "31:30-31:40",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many colors of gloves were changed while making the first dish, and what were they?",
+        "choices": {
+            "A": "Two, black and white",
+            "B": "One, black",
+            "C": "Three, black, white, and blue",
+            "D": "One, red"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "5:00-15:00",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color gloves was the person wearing while making the last dish?",
+        "choices": {
+            "A": "Blue",
+            "B": "Black",
+            "C": "Red",
+            "D": "White"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "1:03:00-1:13:00",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many dishes were made in total?",
+        "choices": {
+            "A": "Ten",
+            "B": "Eight",
+            "C": "Twelve",
+            "D": "Nine"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:18:27",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many colors of gloves appeared in total?",
+        "choices": {
+            "A": "Two",
+            "B": "Four",
+            "C": "Three",
+            "D": "Five"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:18:27",
+        "video_key": "Rk9d5RRIj08",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": " What color was the handle of the knife used by the person wearing black gloves to sharpen?\r\n",
+        "choices": {
+            "A": "Red",
+            "B": "Blue",
+            "C": "Green",
+            "D": "Black"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "0:23-0:25",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Object Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": " How many ribs are there in the first piece of meat?",
+        "choices": {
+            "A": "Five",
+            "B": "Six",
+            "C": "Eight",
+            "D": "Seven"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "0:47-0:49",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many prawns were placed on the grill pan with the steak?",
+        "choices": {
+            "A": "Four",
+            "B": "Three",
+            "C": "Five",
+            "D": "Two"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "7:54-8:01",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is the strainer doing while the butter is being melted?",
+        "choices": {
+            "A": "Stirring the butter",
+            "B": "Heating the butter",
+            "C": "Removing the foam from the surface",
+            "D": "Straining the butter"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "13:20-13:30",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Why put wood in the bowl and light it?",
+        "choices": {
+            "A": "To add flavor to the soup",
+            "B": " To smoke the steak",
+            "C": "To create a fire for cooking",
+            "D": " To heat the bowl"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "17:42-18:25",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": " How is the lobster cooked after being taken out of the tank?",
+        "choices": {
+            "A": "Boiled with herbs",
+            "B": " Grilled with spices",
+            "C": "Steamed with butter",
+            "D": "First pan-fried, then stir-fried with other ingredients"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "51:24-54:27",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many steak pairings were introduced in total?",
+        "choices": {
+            "A": "Seven",
+            "B": "Five",
+            "C": "Four",
+            "D": "Eight"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:27:49",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is the common feature of the first three steaks?",
+        "choices": {
+            "A": "They were all grilled",
+            "B": "They all included garlic",
+            "C": "They all used rosemary",
+            "D": " They were all served with sauce"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-44:42",
+        "video_key": "68mfUX5pOLU",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is the person wearing blue gloves peeling with a peeler?",
+        "choices": {
+            "A": "Carrot",
+            "B": "Sweet potato",
+            "C": "Cucumber",
+            "D": "Apple"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "4:31-4:33",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is being poured from the black plastic bag into the red basket?",
+        "choices": {
+            "A": "Rice",
+            "B": "Potatoes",
+            "C": "Lettuce",
+            "D": "Bean sprouts"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "19:39-19:41",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What was added to the fried sauce noodles in a stone pot after shrimp, in addition to corn kernels?",
+        "choices": {
+            "A": "Corn kernels",
+            "B": " Mushrooms",
+            "C": "Tofu",
+            "D": " Carrots"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "47:30-47:40",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many types of items were there in the final buffet?",
+        "choices": {
+            "A": "Ten types",
+            "B": "Fifteen types",
+            "C": "Thirteen types",
+            "D": " Twelve types"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "1:07:57-1:08:02",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many types of seasonings were added to the fried sauce, besides flour?",
+        "choices": {
+            "A": " Three types",
+            "B": "Five types",
+            "C": "Seven types",
+            "D": "Four types"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "32:34-33:56",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How are the noodles made?",
+        "choices": {
+            "A": "Made by hand",
+            "B": "Made in an oven",
+            "C": "Made by boiling",
+            "D": "Made with a machine"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "26:23-28:03",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": " How many restaurants were mentioned in total?",
+        "choices": {
+            "A": "Four restaurants",
+            "B": "Three restaurants",
+            "C": "Five restaurants",
+            "D": "Two restaurants"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:09:43",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What does the video present?",
+        "choices": {
+            "A": " A review of various noodle types",
+            "B": "A documentary about noodle history",
+            "C": " The methods of making fried sauce noodles at different shops",
+            "D": "A cooking tutorial for dumplings"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:09:43",
+        "video_key": "AXiDQHHRujY",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What ingredient is used for the petals?\r\n",
+        "choices": {
+            "A": "Cucumber",
+            "B": "Tomato",
+            "C": "Carrot",
+            "D": "Lettuce"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "0:22-0:23",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What fruits were placed on half of the watermelon?",
+        "choices": {
+            "A": " Apple, orange, grapes, pineapple",
+            "B": "Mango, watermelon, pear, peach",
+            "C": "Peach, strawberry, apple, kiwi",
+            "D": "Strawberry, blueberry, banana, kiwi"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "3:35-3:36",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How many cats were drawn on the coffee?",
+        "choices": {
+            "A": "Seven  cats",
+            "B": "One cat",
+            "C": " Two cats",
+            "D": " Three cats"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "12:30-12:39",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What edible item was used as lipstick?",
+        "choices": {
+            "A": "Strawberry jam",
+            "B": "Honey",
+            "C": "Chocolate",
+            "D": "Vanilla cream"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "18:17-18:29",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "The child couldn't fall asleep while listening to the man tell a story. How was the problem eventually solved?",
+        "choices": {
+            "A": "Changed the room's lighting",
+            "B": "Played a woman's recording",
+            "C": "Gave the child a glass of water",
+            "D": "Played a lullaby"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "27:49-28:25",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "The child wearing yellow clothes was making noise in the car. How was the issue resolved?\r\n",
+        "choices": {
+            "A": "Played calming music",
+            "B": "Turned on a cartoon on the screen",
+            "C": "Gave him a snack to eat",
+            "D": "Made a drawing board for him to play with"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "33:50-34:27",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What content does the video present?",
+        "choices": {
+            "A": "Tips for dealing with children",
+            "B": " Cooking recipes",
+            "C": "Fitness routines",
+            "D": " Gardening techniques"
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "00:00-1:00:31",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Which gender of child appears more frequently in the video?\r\n\r\n",
+        "choices": {
+            "A": "Both equally",
+            "B": "Boy",
+            "C": "Girl",
+            "D": "None"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00:00-1\uff1b00:31",
+        "video_key": "N4PJ4tV23PA",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+]

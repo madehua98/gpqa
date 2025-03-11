@@ -1,0 +1,770 @@
+[
+    {
+        "title": "There was a soldier leaning on his bed reading a book, what color was the cover?",
+        "choices": {
+            "A": "Red cover.",
+            "B": "Green cover.",
+            "C": "Blue cover.",
+            "D": "Black cover."
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "6:30-6:33",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How do detonators fit in a box?",
+        "choices": {
+            "A": "Horizontally in the box",
+            "B": "Vertically in the box",
+            "C": "Haphazardly placed in the box",
+            "D": "Slanted in the box"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "15:57-16:00",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "What unforeseen event occurred while the soldiers were carrying the supplies?",
+        "choices": {
+            "A": "The jar with the blood plasma slipped from the soldier's hands and hit the ground, causing the glass vials inside to shatter.",
+            "B": "The jar containing the plasma was kicked over by the soldier, causing the glass vials inside to break.",
+            "C": "The plasma jar was pushed over by the soldier's arm, causing the glass jar inside to break.",
+            "D": "Plasma tank was not placed properly, tilted, and fell from a height, causing the glass jar inside to break."
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "30:15-30:30",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many bombs did the b-17 bomber drop at once?",
+        "choices": {
+            "A": "Seven.",
+            "B": "Six.",
+            "C": "Eight.",
+            "D": "Five."
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "23:24-23:38",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What did women accomplish in World War II?",
+        "choices": {
+            "A": "Women's participation in wartime production supplied the war effort with weapons and equipment, and they used the high wages they received for their work to stimulate consumption and drive economic growth.",
+            "B": "Women were active on the military front, supplying fighting forces and using the high pay they received for their work to stimulate consumption and drive economic growth.",
+            "C": "Women's participation in agricultural and light industrial production ensured the supply of resources and used the high wages they received for their work to stimulate consumption and drive economic growth.",
+            "D": "Women's participation in wartime production provided logistical support for the war effort and used the sale of equipment to fuel economic growth."
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "12:05-15:30",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What were the soldiers doing on the beach?",
+        "choices": {
+            "A": "They're running slowly forward on the beach, and there's a lot of dead and wounded.",
+            "B": "They retreated quickly on the beach, but there were still a lot of dead and wounded.",
+            "C": "They're running fast forward on the beach and they're getting killed and wounded.",
+            "D": "They were crawling on the beach, and they were killed and wounded."
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "33:25-37:20",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many interviewees appear throughout the video?",
+        "choices": {
+            "A": "Ten.",
+            "B": "Fifteen.",
+            "C": "Nine.",
+            "D": "Thirteen."
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "0:00-44:02",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Why did the soldiers die and be wounded on the beaches?",
+        "choices": {
+            "A": "Because the enemy used a lot of heavy weapons.",
+            "B": "Because the soldiers lacked adequate equipment and training.",
+            "C": "Because the soldiers fought hard on the beaches and were met with heavy counterattacks.",
+            "D": "Because the soldiers lacked supplies during the war, which made them physically exhausted."
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "18:02-37:20",
+        "video_key": "xP-z7Cs8RgE",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What color hat did the tall kid wear?",
+        "choices": {
+            "A": "Black with white edges",
+            "B": "Overall white with black edges",
+            "C": "Black overall",
+            "D": "White overall"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "1:52-1:55",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many cars are in the train featured in the video?",
+        "choices": {
+            "A": "Three.",
+            "B": "Four.",
+            "C": "Six.",
+            "D": "Five."
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "5:54-5:57",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What do people build on a large scale when they settle down?",
+        "choices": {
+            "A": "Building factories.",
+            "B": "Building bridges.",
+            "C": "Building houses.",
+            "D": "Building warehouses."
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "12:24-12:30",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "What did a man in white with a glass of water do on the farm?",
+        "choices": {
+            "A": "He carries the glass, walks over to the man in the hat and hands him the glass of water.",
+            "B": "He stands still and hands the glass of water to the man in the hat.",
+            "C": "He carries the glass, walks over to the man in the hat, and places the glass on the table.",
+            "D": "He takes the glass, walks over to the man in the hat, and drinks from the glass himself."
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "28:03-28:10",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "39:07-39:23, what were the consequences of this confrontation?",
+        "choices": {
+            "A": "The man standing on the ground was shot in the chest.",
+            "B": "The man on horseback was shot in the head.",
+            "C": "The man on horseback was shot in the leg.",
+            "D": "The man on horseback was shot in the chest."
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "39:07-39:23",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "The video shows the transportation of two important rivers and the changes in the cities along the way, what are the reasons for urban sprawl?",
+        "choices": {
+            "A": "Because the ease of transportation along the rivers facilitated economic development.",
+            "B": "Because large ships transported goods requiring a large workforce .",
+            "C": "Because of the dispersal of people, cities are becoming more distant from each other.",
+            "D": "Because rising river levels facilitated irrigation of farmland."
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "3:25-4:25",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Why is there a large amount of suburban housing?",
+        "choices": {
+            "A": "Because the popularity of air conditioning made people more likely to live in the suburbs.",
+            "B": "Because of the increase in steel production, it became cheaper to build taller buildings.",
+            "C": "Because of rapid population growth and the need for more housing.",
+            "D": "Because the construction of skyscrapers concentrated the population of cities."
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "10-46-27:20",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Why did Obama's election become an important symbol?",
+        "choices": {
+            "A": "Because he represents the result of a long struggle and conflict for equal rights .",
+            "B": "Because his election ended slavery in America .",
+            "C": "Because his election was the result of massive civil rights marches and violent conflicts.",
+            "D": "Because he reformed the education system and solved the problem of school segregation."
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "27:20-37:46",
+        "video_key": "xispGtJGhQg",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "What are the women doing by the river?",
+        "choices": {
+            "A": "They are washing clothes.",
+            "B": "They are fishing.",
+            "C": "They are gathering plants.",
+            "D": "They are swimming."
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "15:56-15:59",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What did the Americans do after their victory?",
+        "choices": {
+            "A": "They celebrated with a parade.",
+            "B": "They raised the American flag.",
+            "C": "They gave a speech to the soldiers.",
+            "D": "They set up camp and rested."
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "43:04-43:07",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What did the Americans do in the forest to block the British army's advance?",
+        "choices": {
+            "A": "The Americans cut down trees to create a roadblock.",
+            "B": "The Americans set up traps to capture the British soldiers.",
+            "C": "The Americans built a fence to block the British army's path.",
+            "D": "The Americans use shrubs on the ground as roadblocks."
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "28:15-18:27",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What signal was used to start the battle?",
+        "choices": {
+            "A": "A horn was blown to signal the start of the battle.",
+            "B": "The soldiers raised their weapons as a signal to start fighting.",
+            "C": "Fireworks were launched as a signal to start the battle.",
+            "D": "A flag was waved to indicate the battle had begun."
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "40:54-41:09",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What did the general use to look at the ships in the distance?",
+        "choices": {
+            "A": "He used binoculars to look at the ships.",
+            "B": "He used a spyglass to look at the ships.",
+            "C": "He used a magnifying glass to look at the ships.",
+            "D": "He used a telescope to look at the ships."
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "9:03-9:22",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What did the soldiers do after the general read the contract?",
+        "choices": {
+            "A": "The soldiers raised their hands and cheered.",
+            "B": "The soldiers sat down and listened quietly.",
+            "C": "The soldiers stood at attention and saluted.",
+            "D": "The soldiers started digging trenches."
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "1\uff1a45-7\uff1a49",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How did the U.S. military turn the situation around after suffering a major setback?",
+        "choices": {
+            "A": "They called for air support and launched a full-scale counterattack to push the British forces back.",
+            "B": "They brought the British forces inland, used new weapons and guerrilla tactics, and used the forest for cover to block the British advance.",
+            "C": "They dug trenches and waited for reinforcements, hoping to outlast the British.",
+            "D": "They retreated further inland, abandoning the use of new weapons and relying solely on traditional battle tactics."
+        },
+        "correct_answer": "B",
+        "hierarchy": "story",
+        "time_reference": "9:43-24:22",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What difficulties did Washington's army face before Fon Stoven arrived?",
+        "choices": {
+            "A": "They were under constant attack from the British army and lacked enough weapons.",
+            "B": "They were demoralized due to poor leadership and were unable to form a solid defense.",
+            "C": "They suffered from cold weather, lack of water, no shelter, and a morale crisis due to diseases like smallpox.",
+            "D": "They were starving and had no supplies to continue the fight."
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "24:00-34:53",
+        "video_key": "uzupP4GWWCA",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What event occurs inside the tunnel at the beginning of the video?",
+        "choices": {
+            "A": "There was an explosion in the tunnel.",
+            "B": "There was a collapse in the tunnel.",
+            "C": "There was a fire in the tunnel.",
+            "D": "There was a flood in the tunnel."
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "0:00-0:03",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How many men were on the whaling ship at sea?",
+        "choices": {
+            "A": "Six.",
+            "B": "Five.",
+            "C": "Seven.",
+            "D": "Eight."
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "17:51-17:54",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What do workers do to protect themselves after a dynamite explosion?",
+        "choices": {
+            "A": "Put your head down and protect your head with your arms.",
+            "B": "Raise the shovel above his head to protect himself.",
+            "C": "Duck behind a nearby wall to avoid the explosion.",
+            "D": "Jump into a nearby puddle to minimize damage."
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "5:27-5:32",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What did the workers use to light the fuse for the explosives?",
+        "choices": {
+            "A": "The worker used a lighter to light the fuse.",
+            "B": "The worker used a match to light the fuse.",
+            "C": "The worker used a cigarette to light the fuse.",
+            "D": "The worker uses a torch to light the fuse."
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "4:27-4:37",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "People use explosives to blast through rock to solve what problem?",
+        "choices": {
+            "A": "To conquer natural disasters and reduce the threat of earthquakes.",
+            "B": "To build railroads to facilitate the transportation of goods.",
+            "C": "To open up access to the upper rivers and promote economic development.",
+            "D": "In order to establish military bases and enhance defense capabilities."
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "1:10-6:45",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What do whalers use to hunt whales?",
+        "choices": {
+            "A": "Harpoons.",
+            "B": "Nets.",
+            "C": "Whaling knives.",
+            "D": "Bows and arrows."
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "19:21-19:54",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "How were slaves selected and auctioned off in the video?",
+        "choices": {
+            "A": "Buyers would select slaves by asking them about their work experience.",
+            "B": "Buyers would look at a slave's physical appearance, such as height and weight, to decide whether to buy.",
+            "C": "Buyers would assess a slave's loyalty by talking to him or her.",
+            "D": "Buyers would inspect the slave's head, ears, teeth, etc."
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "19:57-29:57",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What do people fight for?",
+        "choices": {
+            "A": "For the abolition of slavery, for equality and freedom.",
+            "B": "To regain lost territory and strengthen the nation.",
+            "C": "To protect slavery and maintain social order.",
+            "D": "To expand colonies and compete for resources."
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "29:54-43:56",
+        "video_key": "UiJhJ-8JX2Q",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "What percentage of voters are indecisive?",
+        "choices": {
+            "A": "84percent",
+            "B": "83percent",
+            "C": "32percent",
+            "D": "40percent"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "33:29-33:32",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "In a poll of Trump and Clinton, what is Trump's score?",
+        "choices": {
+            "A": "50percent",
+            "B": "38percent",
+            "C": "34percent",
+            "D": "32percent"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "34:12-34:14",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What color hat did Trump wear during his speech?",
+        "choices": {
+            "A": "Blue",
+            "B": "Black",
+            "C": "Red.",
+            "D": "Green"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "10:16-10:26",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What did Trump do when he got on the elevator?",
+        "choices": {
+            "A": "He raised one arm, then the other and gave a thumbs up.",
+            "B": "He stands still and looks at the camera with a smile.",
+            "C": "He points forward with one finger and gives a victory sign.",
+            "D": "He crosses his arms over his chest and makes a nodding motion."
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "7:42-7:51",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What is Trump's conspiracy theory mostly about?",
+        "choices": {
+            "A": "Questioning that the U.S. election system is rigged by a foreign power.",
+            "B": "Thinks global warming is a hoax, created by scientists.",
+            "C": "The belief that certain large corporations are manipulating the global economic crisis.",
+            "D": "Questioning that Barack Obama was not born in the United States and therefore could not legally serve as president."
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "4:39-5:50",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "Why is there a man lying in the back of an ambulance, covered in blood?",
+        "choices": {
+            "A": "Because Trump protesters clashed with police.",
+            "B": "Because forceful clashes broke out between Trump supporters and protesters",
+            "C": "Because Trump supporters clashed with police.",
+            "D": "Trump supporters and opponents clashed verbally."
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "21:20-24:11",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "Why did Trump bounce back against Clinton in the last part of the campaign?",
+        "choices": {
+            "A": "Because Clinton was re-investigated by the FBI, leading to a trust deficit.",
+            "B": "Because Trump managed to attract more white working class voters in the final stretch.",
+            "C": "Because Trump changed his policy direction in the final stretch of the campaign to cater to voters.",
+            "D": "Because the Clinton campaign failed to respond effectively to Trump's attacks in the final stretch."
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "40:09-56:30",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is the subject of this video?",
+        "choices": {
+            "A": "Documents the process of an important presidential campaign in American history.",
+            "B": "Tells about the policies Trump has adopted since becoming president.",
+            "C": "Documenting Trump's campaign for president of the United States",
+            "D": "Documents Trump's personal biography and his success in the business world."
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "0:00-1:18:09",
+        "video_key": "bVbet03pe1E",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "What color are the words \u201cTAJ MAHAL\u201d on the building?",
+        "choices": {
+            "A": "Red",
+            "B": "Blue",
+            "C": "Green",
+            "D": "Black"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "53\uff1a48-53\uff1a50",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What is Biden's grade point rank at Syracuse University?",
+        "choices": {
+            "A": "85",
+            "B": "76",
+            "C": "88",
+            "D": "30"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "52:20-52:23",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What school did Trump attend when he was 13?",
+        "choices": {
+            "A": "Public school",
+            "B": "Boarding school",
+            "C": "military school",
+            "D": "Private school"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "6:26-6:36",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "What is Biden's number on the soccer team?",
+        "choices": {
+            "A": "21",
+            "B": "45",
+            "C": "30",
+            "D": "20"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "13:47-13:54",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "Why did Trump change many wives?",
+        "choices": {
+            "A": "Because Trump has always sought career support and marriage brings a stable family environment.",
+            "B": "Because Trump places a high value on physical appearance and social status and prefers to choose wives that match his status.",
+            "C": "Because Trump is unable to sustain long-term relationships and is always looking for new emotional excitement.",
+            "D": "Because the experience of being abandoned in childhood prevented him from developing deep intimate relationships."
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "2:59-3:53",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "In what year did the host of a program interview Trump's parents?",
+        "choices": {
+            "A": "1993",
+            "B": "1992",
+            "C": "1991",
+            "D": "2020"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "2:27-2:48",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "What national crisis occurs in the second half of the video?",
+        "choices": {
+            "A": "During Trump's presidency, the world has seen an outbreak of epidemics and a resurgence of racial conflict in the country.",
+            "B": "During Trump's presidency, the U.S. suffered a massive natural disaster.",
+            "C": "During Trump's presidency, there was a severe economic depression.",
+            "D": "During Trump's presidency, the U.S. has experienced serious military conflicts."
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "1:43:15-1:53:16",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is the topic of this video?",
+        "choices": {
+            "A": "About Trump and Biden's experiences running for president.",
+            "B": "About Trump's business successes and challenges.",
+            "C": "Biden's foreign policy during his presidency.",
+            "D": "Trump's family background and upbringing."
+        },
+        "correct_answer": "A",
+        "hierarchy": "story",
+        "time_reference": "0:00-59:16",
+        "video_key": "7Icu6qupf40",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    }
+]

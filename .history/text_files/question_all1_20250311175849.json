@@ -1,0 +1,1537 @@
+[
+    {
+        "title": "What is the theme of this video? ",
+        "choices": {
+            "A": "Chinese history",
+            "B": "American history",
+            "C": "British history",
+            "D": "German history"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "0\uff1a49 - 0\uff1a51",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What were the necessary conditions for large-scale immigration to the Great Plains?",
+        "choices": {
+            "A": "The completion of railroads",
+            "B": "The construction of highways",
+            "C": "The construction of airports on the Great Plains",
+            "D": "People becoming strong enough to walk there"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "9\uff1a58 - 10\uff1a43",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What percentage of land in the United States was given away?",
+        "choices": {
+            "A": " 20%",
+            "B": "30%",
+            "C": "10%",
+            "D": "50%"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "12\uff1a03 - 12\uff1a10",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What difficulty mentioned in the video was not part of the westward migration?",
+        "choices": {
+            "A": " Thunderstorms",
+            "B": "bLocust plagues",
+            "C": " Dangerous buffalo herds",
+            "D": "dVolcanic eruptions"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "12\uff1a50 - 23\uff1a11",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What was the use of buffalo bones?",
+        "choices": {
+            "A": "To make tools",
+            "B": "To make fertilizer",
+            "C": "To eat",
+            "D": "As decorations"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "24\uff1a48 - 25\uff1a00",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How many cattle approximately roam the wild in Texas?",
+        "choices": {
+            "A": "Over 7 million",
+            "B": " Over 6 million",
+            "C": "Over 8 million",
+            "D": "Over 5 million"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "26\uff1a44 - 26\uff1a48",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What one-third of cowboys were of which descent?",
+        "choices": {
+            "A": " Hispanic",
+            "B": "African American",
+            "C": "Hispanic or African American",
+            "D": "Portuguese"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "30\uff1a24 - 30\uff1a27",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "Why were cowboys considered the last great pioneers?",
+        "choices": {
+            "A": "Because they were core workers in the construction of American railroads.",
+            "B": "Because they were important soldiers in the American Revolutionary War.",
+            "C": "Because they were responsible for surveying and dividing western lands.",
+            "D": "Because they drove westward expansion in the U.S. and were key figures in ranching and agriculture."
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "26\uff1a10 - 36\uff1a35",
+        "video_key": "oV8np9i-6F8",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is this video likely about?",
+        "choices": {
+            "A": "The Great Depression in the U.S.",
+            "B": "The American Revolutionary War",
+            "C": "Technological development in the U.S.",
+            "D": "he cultural industry in the U.S."
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "00\uff1a06 - 00\uff1a09",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "The American spirit was forged in what event?",
+        "choices": {
+            "A": "The Great Depression",
+            "B": "The American Revolutionary War",
+            "C": "The Civil War",
+            "D": " The American Industrial Revolution"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "43\uff1a19 - 43\uff1a22",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What important measures did the U.S. government take in response to the economic crisis?",
+        "choices": {
+            "A": "The U.S. government's response to the Great Depression: strengthening agricultural subsidy policies",
+            "B": " Roosevelt's economic recovery through capital market reforms",
+            "C": "Herbert Hoover's early response measures and Franklin D. Roosevelt's \"New Deal\" after taking office",
+            "D": "Herbert Hoover's public works construction projects and Roosevelt's military industrial policies"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "05\uff1a00 - 32\uff1a05",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "How did the documentary showcase the impact of the Great Depression on American society, especially in the context of increasing poverty and unemployment?",
+        "choices": {
+            "A": "By showing interviews and historical photos of Americans' daily lives, and mentioning how many migrated west in search of work.",
+            "B": "By highlighting the affluent lifestyles of American urban families, emphasizing the widening gap between the rich and poor.",
+            "C": "By showcasing the reforms taken by the U.S. government, demonstrating a rapid social recovery.",
+            "D": " By highlighting efficient agricultural production, stressing the stabilizing role of agriculture in society."
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "33\uff1a56 - 44\uff1a02",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "The construction of the Hoover Dam was comparable to what?",
+        "choices": {
+            "A": "The development of nuclear weapons in the 1940s",
+            "B": "The construction of railroads in the 1910s",
+            "C": "The innovation of the automobile industry in the 1920s",
+            "D": "Sending a person to the moon in the 1930s"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "13\uff1a39 - 13\uff1a59",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "Why did the woman rush into the dust storm?",
+        "choices": {
+            "A": "To find out the reason her husband went missing",
+            "B": " To seek revenge for the persecution she faced from society",
+            "C": "To find her son Jimmy",
+            "D": "To seek social justice"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "24\uff1a17 - 24\uff1a40",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Why did the woman hold onto the young boy?",
+        "choices": {
+            "A": "To help him escape danger",
+            "B": " To find his lost family",
+            "C": "To protect him from being captured",
+            "D": "To protect him from harm"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "24\uff1a53 - 24\uff1a60",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Who was added to the sculpture on Mount Rushmore?",
+        "choices": {
+            "A": "James",
+            "B": "Pete",
+            "C": "George",
+            "D": "Henry"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "32\uff1a58 - 33\uff1a62",
+        "video_key": "PoV7GGN-u7Q",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "The first dish Michael asked the chef to make between 1:17 and 1:20 is:",
+        "choices": {
+            "A": "Tomato soup, Caesar salad, risotto",
+            "B": "Cake, fried chicken, French fries",
+            "C": " Steak, roasted fish, hot dog",
+            "D": "Sushi, ramen, fried rice"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "1\uff1a17 - 1\uff1a20",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Why does Paul dislike Tommy while cooking?",
+        "choices": {
+            "A": "Because Tommy always criticizes him",
+            "B": "Because Tommy hardly talks",
+            "C": "Because Tommy likes to play on his phone in the kitchen",
+            "D": "Because Tommy gives him advice on ingredients"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "1\uff1a14\uff1a44 - 1\uff1a14\uff1a45",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What object is burning in the middle of the video\u2019s ending?",
+        "choices": {
+            "A": "Wood",
+            "B": "Flames",
+            "C": "Seeds",
+            "D": " Food"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "1\uff1a35\uff1a44 - 1\uff1a35\uff1a47",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What does JEN think she needs in the kitchen?",
+        "choices": {
+            "A": "To show a sense of humor",
+            "B": "To communicate clearly",
+            "C": "To display creativity",
+            "D": "To perform excellently"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "15\uff1a46 - 15\uff1a49",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What is Kevin's job?",
+        "choices": {
+            "A": "Operations services",
+            "B": "Financial management",
+            "C": "Customer support",
+            "D": "Marketing"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "40\uff1a45 - 41\uff1a02",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What color is Jay's hair?",
+        "choices": {
+            "A": " Red",
+            "B": "Blue",
+            "C": "Black",
+            "D": "Blonde"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "40\uff1a45 - 41\uff1a02",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What is the main focus of this video?",
+        "choices": {
+            "A": "How Chef Ramsay interacts with customers",
+            "B": "Chef Ramsay teaching chefs cooking techniques",
+            "C": "How Chef Ramsay tests the chefs in his Hell's Kitchen",
+            "D": "How Chef Ramsay manages restaurant operations"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "00\uff1a0 1 - 1\uff1b34\uff1b00",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is Chef Paul's weakness at work?",
+        "choices": {
+            "A": "Lacks creativity with food",
+            "B": "Struggles with teamwork",
+            "C": "Likes to shift responsibility onto others",
+            "D": "Lacks patience with others and easily complains about them"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "1\uff1a14\uff1a22 - 1\uff1a25\uff1a22",
+        "video_key": "hmsX9t2VWHE",
+        "video_type": "tv",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "How many people are there in the video at 0:32?",
+        "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "2"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "0:31-0\uff1a32",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is the woman cooking between 1:21:53 and 1:21:55?",
+        "choices": {
+            "A": "Pasta",
+            "B": " Crab cakes",
+            "C": "Roasted chicken",
+            "D": "Hamburgers"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "1\uff1a21\uff1a53 - 1\uff1a21\uff1a55",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Who did Chef invite to dine at the red kitchen's chef's table?",
+        "choices": {
+            "A": "His colleagues",
+            "B": "Restaurant customers",
+            "C": "Christina's girlfriend and her family",
+            "D": "Other famous chefs"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "14\uff1a56 - 15\uff1a13",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "The man Christina complains about says he will stare at her like what?",
+        "choices": {
+            "A": "A dog",
+            "B": " A cat",
+            "C": "A lion",
+            "D": "An eagle"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "1\uff1a09\uff1a05 - 1\uff1a09\uff1a22",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What did 3K table 53 order?",
+        "choices": {
+            "A": "One scholet, one spaghetti, one Roto entree, one tuna, one salmon, one lamb",
+            "B": "One spaghetti, one tuna, one lamb",
+            "C": "One scholet, one salmon",
+            "D": "One Roto entree, one tuna"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "1\uff1a42\uff1a21 - 1\uff1a42\uff1a37",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "After the chef says the kitchen isn't running properly, who will be the first to face the consequences?",
+        "choices": {
+            "A": "Ramsay",
+            "B": "Jean Philip",
+            "C": "Paul",
+            "D": "Christina"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "47\uff1a24 - 47\uff1a41",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What problem did the red team encounter with one of their dishes?",
+        "choices": {
+            "A": "Expired ingredients",
+            "B": "Incorrect ingredients",
+            "C": "Raw chicken",
+            "D": "Bad seasoning"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "1\uff1a37\uff1a50 - 1\uff1a47\uff1a50",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "What is described in the first fifteen minutes of the video?",
+        "choices": {
+            "A": "The chefs preparing ingredients for the main course",
+            "B": "The chefs discussing the restaurant menu",
+            "C": "The chefs interacting with customers",
+            "D": "The chefs working together to ensure appetizers reach the table"
+        },
+        "correct_answer": "D",
+        "hierarchy": "clip",
+        "time_reference": "0\uff1a00 - 15\uff1a10",
+        "video_key": "Kvj-LCqeloc",
+        "video_type": "tv",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What is the blogger about to do?",
+        "choices": {
+            "A": "Conduct a marathon unboxing",
+            "B": "Provide a fast product introduction",
+            "C": " Perform a slow-motion product breakdown",
+            "D": "Demonstrate quick unboxing"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "0\uff1a12 - 0\uff1a14",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Which primer does the blogger say would be disappointing if it doesn't have a cotton candy scent?",
+        "choices": {
+            "A": "Fenty Beauty",
+            "B": "NYX",
+            "C": "Maybelline",
+            "D": "Too Faced"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "1:03:12 - 1.03:23",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What color is the packaging of the first blind box, and what brand is it?",
+        "choices": {
+            "A": " Red, Urban Decay",
+            "B": " Gold, Too Faced",
+            "C": "Black, Norvina",
+            "D": " Purple, Anastasia Beverly Hills"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "1\uff1a02 - 1:25",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is the order of items in the December 2021 blind box?",
+        "choices": {
+            "A": "Body Cream - Small Brush - Palette - Vodom Teas - Dry Shampoo - Moisturizer",
+            "B": "Dry Shampoo - Palette - Small Brush - Body Cream - Vodom Teas - Moisturizer",
+            "C": "Moisturizer - Palette - Small Brush - Dry Shampoo - Body Cream - Vodom Teas",
+            "D": "Vodom Teas - Dry Shampoo - Body Cream - Moisturizer - Small Brush - Palette"
+        },
+        "correct_answer": "D",
+        "hierarchy": "event",
+        "time_reference": "13\uff1a05 - 15\uff1a48",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "sequential replacement"
+    },
+    {
+        "title": "Why should these blind boxes be processed?",
+        "choices": {
+            "A": " If not processed, they will be moved along with it.",
+            "B": " If not processed, it will cause an incomplete unboxing.",
+            "C": "If not processed, it may damage the products.",
+            "D": " If not processed, you will miss the fun of unboxing."
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "1\uff1a05\uff1a27 - 1\uff1a05\uff1a29",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Where did the blogger shoot the video?",
+        "choices": {
+            "A": " Study room makeover shooting room",
+            "B": " Bedroom makeover shooting room",
+            "C": "Living room makeover shooting room",
+            "D": "Garage makeover shooting room"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "35\uff1a15 - 35\uff1a18",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "sequential replacement"
+    },
+    {
+        "title": "How many boxes were unboxed in total?\r\nA. 15",
+        "choices": {
+            "A": "15",
+            "B": "13",
+            "C": "24",
+            "D": "16"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "0\uff1a00 - 56\uff1a00",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Why is the blogger's blind box unboxing video so long?",
+        "choices": {
+            "A": " Because these blind boxes need to be featured in next month's video",
+            "B": " Because they have enough time to share the details of each blind box",
+            "C": " Because the video content needs to be prepared in advance for release",
+            "D": " To process these boxes before moving"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "0\uff1a00 - 10\uff1a00",
+        "video_key": "RliMxB7t3XY",
+        "video_type": "tv",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "At 0:13 in the video, how many cardboard boxes are there?",
+        "choices": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "0:13 - 0\uff1a14",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "What is the serial number on the small ball at 32:47?",
+        "choices": {
+            "A": "DG20210918",
+            "B": "DG20210922",
+            "C": " DG20210920",
+            "D": "DG20210925"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": " 32:47 - 32\uff1a49",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What is inside the small ball opened between 48:59 - 49:30?",
+        "choices": {
+            "A": " Glasses, unknown small box, pink bag",
+            "B": "Lipstick, glasses, pink bag",
+            "C": "Bookmark guide, lipstick, glasses, unknown small box, pink bag",
+            "D": "Lipstick, pink bag"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "48:59 - 49:30",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "What is inside the first mini toy ball between 20:25 - 20:40?",
+        "choices": {
+            "A": "Golden shot, rabbit, rainbow corn",
+            "B": "Ninja Turtles mask, rabbit, slime",
+            "C": "Rainbow corn, Ninja Turtles mask, slime",
+            "D": "Golden shot, Ninja Turtles mask, rabbit, rainbow corn, slime"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "20:25 - 20:40",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "What is the blogger doing?",
+        "choices": {
+            "A": "Opening a ball containing a mini series in the shooting room",
+            "B": "Opening a ball containing a mini series in the kitchen",
+            "C": "Opening a ball containing a mini series in the bedroom",
+            "D": "Opening a ball containing a mini series in the living room 29\uff1a22 - 39\uff1a22 "
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "0\uff1a00 - 0\uff1a21",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "sequential replacement"
+    },
+    {
+        "title": "How many Dora balls did the blogger unbox?",
+        "choices": {
+            "A": "3",
+            "B": "2",
+            "C": "4",
+            "D": "1"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "29\uff1a22 - 39\uff1a22 ",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many series of small balls are there in total?",
+        "choices": {
+            "A": "3",
+            "B": "2",
+            "C": "8",
+            "D": "7"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "0\uff1a21 - 54\uff1a20",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many balls did the blogger open in total?",
+        "choices": {
+            "A": "35",
+            "B": "45",
+            "C": "30",
+            "D": "40"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "0:21 - 1:01:08",
+        "video_key": "uGdXc15eqZk",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many squishy toys can be seen in the image?",
+        "choices": {
+            "A": "14",
+            "B": "13",
+            "C": "12",
+            "D": "15"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "53:19 - 53:21",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What was the action of the little boy on the packaging from 20:26 to 20:27?",
+        "choices": {
+            "A": "Pulling the red blanket",
+            "B": "Pulling the red toy",
+            "C": "Pulling the green toy",
+            "D": "Dragging the blue toy"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "20:26 - 20:27",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "Where did the items the host opened come from?",
+        "choices": {
+            "A": "Target",
+            "B": "Walmart",
+            "C": "Five Below",
+            "D": "Amazon"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "0:29 - 0:33",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "Which two products did the host introduce in the Science and Craft series?",
+        "choices": {
+            "A": " Slime dissected tree frog, glowing slime ball",
+            "B": "Glowing slime tube, slime dissected lizard",
+            "C": "Slime dissected frog, glowing slime stick",
+            "D": "Slime dissected tree frog, glowing slime tube"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "54:43 - 55:00",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What are the steps to assemble the slime dissected frog?",
+        "choices": {
+            "A": "Assemble the skeleton and organs, make the slime, pour the slime into the mold, and refrigerate.",
+            "B": "Assemble the organs and skeleton, pour the slime into the mold, refrigerate",
+            "C": "Make the slime, refrigerate, then assemble the skeleton and organs",
+            "D": "Refrigerate the slime, pour it into the mold, and assemble the organs and skeleton"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "1:00:32 - 1:02:45",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "sequential replacement"
+    },
+    {
+        "title": "What was the host's evaluation of the first Fidget toy?",
+        "choices": {
+            "A": "Very boring and meaningless",
+            "B": "Garbage and very stupid",
+            "C": "Hated it and thought it was unremarkable",
+            "D": "Boring and impractical"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "17:38 - 19:10",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What is the host doing?",
+        "choices": {
+            "A": "Opening a gift box",
+            "B": " Fiddling with a toy",
+            "C": "Opening a blind bag",
+            "D": "Unpacking a box"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "0:00 - 1:06:00",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What toys did the host assemble at the end of the video?",
+        "choices": {
+            "A": "Slime dissected frog, glowing slime ball",
+            "B": "Glowing slime tube, plastic dinosaur",
+            "C": "Slime dissected frog, glowing plastic tube",
+            "D": "Slime dissected frog, glowing slime tube"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "54:00 - 1:06\uff1a00",
+        "video_key": "w9PYlVU7VEE",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What color is the woman wearing from 0:08 to 0:10?",
+        "choices": {
+            "A": "Blue",
+            "B": "Red",
+            "C": "Green",
+            "D": " Black"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "0:08 - 0:10 ",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "How much do the On Track headphones cost",
+        "choices": {
+            "A": "$350",
+            "B": "$500",
+            "C": "$200",
+            "D": " $100"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "1:00:36 to 1:00:38",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Which categories of Dyson products will the host introduce?",
+        "choices": {
+            "A": "Beauty, air, cleaning, headphones, lights",
+            "B": "Beauty, air, cleaning, lights",
+            "C": "Cleaning, beauty, air",
+            "D": "Headphones, cleaning, lights"
+        },
+        "correct_answer": "A",
+        "hierarchy": "shot",
+        "time_reference": "0:12 - 0:17",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "What is the host\u2019s favorite feature of the On Track headphones?",
+        "choices": {
+            "A": "The sound quality is exceptional",
+            "B": "The button setup is very simple",
+            "C": " The design is very stylish",
+            "D": "They are very lightweight"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "1:01:18 - 1:01:24",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "How much air can the Dyson 8 fan pump per second, and how many degrees can it rotate",
+        "choices": {
+            "A": "132 gallons, 70 degrees",
+            "B": "100 gallons, 90 degrees",
+            "C": "150 gallons, 45 degrees",
+            "D": "200 gallons, 180 degrees"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "27:10 to 28:01",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How much does it cost to replace the filter for the TP07 per year",
+        "choices": {
+            "A": "$120",
+            "B": "$80",
+            "C": "$50",
+            "D": "$100"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "30:32 to 30:48",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How much more expensive is the BP04 compared to the Dyson 8",
+        "choices": {
+            "A": "$500",
+            "B": "$300",
+            "C": "$730",
+            "D": "$450"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "27:00 - 37:00",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many air purifiers did the host introduce?",
+        "choices": {
+            "A": "4",
+            "B": "3",
+            "C": "24",
+            "D": "5"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "0:00 - 1:00:00",
+        "video_key": "YY4WKNKD9Ho",
+        "video_type": "selfmedia",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Which companies are accused in the documentary of exposing the world to toxic chemicals for profit?",
+        "choices": {
+            "A": "3M and DuPont",
+            "B": "3M and Colgate",
+            "C": "DuPont and Johnson & Johnson",
+            "D": "Coca-Cola and 3M"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "00:00 - 05:00",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Which groups of people are most severely affected by chemical pollution, according to the documentary?",
+        "choices": {
+            "A": "Factory workers",
+            "B": "Children and pregnant women",
+            "C": " Company executives",
+            "D": "Retired people"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "25:00 - 35:00",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "How did DuPont respond when they learned about the dangers of these chemicals?",
+        "choices": {
+            "A": "Immediately stopped production",
+            "B": "Reported to the government",
+            "C": "Continued production and covered up the facts",
+            "D": "Offered compensation"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "35:00 - 45:00",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Which action in the documentary is considered key to exposing DuPont's pollution?",
+        "choices": {
+            "A": "Citizen reports and legal lawsuits",
+            "B": "Media coverage",
+            "C": " Corporate self-disclosure",
+            "D": "Government intervention"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "45:00 - 55:00",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What is happening in the scene at 1:20:18 in the video?",
+        "choices": {
+            "A": "Port",
+            "B": "Factory",
+            "C": " Laboratory",
+            "D": "Courtroom"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "1:20:18 - 1:20:19",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "sequential replacement"
+    },
+    {
+        "title": "How many colors are there in the pillow on the woman\u2019s bed at 59:55?",
+        "choices": {
+            "A": "2",
+            "B": "4",
+            "C": "3",
+            "D": "5"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "59:55 - 59:56",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "How many babies are shown in the video from 21:44 to 21:56?",
+        "choices": {
+            "A": "3",
+            "B": "2",
+            "C": "4",
+            "D": "6"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "21\uff1a44 - 21\uff1a56",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What are the people doing in the video from 46:19 to 46:32?",
+        "choices": {
+            "A": " Talking in a meeting",
+            "B": "Working in a factory",
+            "C": "Writing a report",
+            "D": " Brewing coffee and handing it to a man"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "46:19 - 46:32",
+        "video_key": "6veeTrdEyek",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What are the main environmental issues faced by farmed salmon?",
+        "choices": {
+            "A": "Water pollution and chemical accumulation",
+            "B": "Air pollution and greenhouse gas emissions",
+            "C": "Land degradation and loss of biodiversity",
+            "D": "Garbage pollution and plastic waste accumulation"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "00:00 - 05:00",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "What type of expert is Kurt Odal?",
+        "choices": {
+            "A": "Medical expert",
+            "B": "Environmental protection expert",
+            "C": "Fisheries expert",
+            "D": "Economist"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "00:00 - 05:00",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What toxic substances are found in farmed salmon?",
+        "choices": {
+            "A": "Hormones and pesticides",
+            "B": "Methane and carbon dioxide",
+            "C": "Heavy metals and antibiotics",
+            "D": "Sulfides and lead"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "10:00 - 20:00",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "According to Kurt Odal, what is the main source of pollution from farmed salmon?",
+        "choices": {
+            "A": "Emissions from fishing boats",
+            "B": " Emissions from food processing plants",
+            "C": "Pollution from household garbage",
+            "D": "Chemicals released from the farms"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "40:00 - 50:00",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "Where is the opening scene filmed?",
+        "choices": {
+            "A": "A rural road in western Norway",
+            "B": "A fishing village in Japan",
+            "C": "A supermarket in the UK",
+            "D": "A chemical factory in Sweden"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "0:10 - 0:12",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "How many times more toxic is farmed fish compared to other products in supermarkets?",
+        "choices": {
+            "A": "2 times",
+            "B": "5 times",
+            "C": "10 times",
+            "D": "3 times"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "24:01 - 24:04",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "Why does the man suggest not to eat too much fish at the end of the video?",
+        "choices": {
+            "A": "The fish contain too many hormones",
+            "B": "The fish are overfished and not sustainable",
+            "C": " The fish are full of pesticides and mercury, which can lead to cancer",
+            "D": "The fish are unhealthy for cardiovascular health"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "52:55 - 54:00",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "missing information"
+    },
+    {
+        "title": "How many main characters appear in the scene from 14:44 to 15:03?",
+        "choices": {
+            "A": "2",
+            "B": "5",
+            "C": "4",
+            "D": "3"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "14:44 - 15:03",
+        "video_key": "RYYf8cLUV5E",
+        "video_type": "tv",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "quantitative replacement"
+    },{
+        "title": "What was the duration of the discussion about the bankruptcy of Bear Stearns in the documentary?",
+        "choices": {
+            "A": "3 minutes",
+            "B": "1 minute",
+            "C": "5 minutes",
+            "D": "15 minutes"
+        },
+        "correct_answer": "A",
+        "hierarchy": "event",
+        "time_reference": "2:05 - 5:10",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "What was the direct cause of Lehman Brothers' bankruptcy?",
+        "choices": {
+            "A": " Insufficient assets after acquisition",
+            "B": " Failed to receive government bailout and relied on high-risk investments",
+            "C": "Failed investments due to decreased market demand",
+            "D": "Other companies manipulated the market"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "20:20 - 25:20",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "What actions did the U.S. government take to stabilize the financial market in the documentary?",
+        "choices": {
+            "A": "Increase taxes and reduce spending",
+            "B": "Close all unstable financial institutions",
+            "C": "Provide financial assistance to banks and implement financial regulations",
+            "D": "Allow banks to solve the issues on their own"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "32:20 - 45:52",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "action replacement"
+    },
+    {
+        "title": "Which bank became the focal point during the Bank of America's acquisition in the documentary?",
+        "choices": {
+            "A": "JPMorgan Chase",
+            "B": "Goldman Sachs",
+            "C": "Bank of America",
+            "D": "Merrill Lynch"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": " 10:17 - 20:05",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What did Bernanke say?",
+        "choices": {
+            "A": "If we don't do this tomorrow, our economy won\u2019t recover by Monday",
+            "B": "If we don't act now, tomorrow it will be too late to fix things",
+            "C": "We can only wait for the market to recover by itself",
+            "D": "We don\u2019t need more government intervention"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "26:42 - 26:45",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "documentary",
+        "question_type": "Action Understanding",
+        "wrong_choice_design": "detail replacement"
+    },
+    {
+        "title": "Which bank is the most ambitious on Earth?",
+        "choices": {
+            "A": "JPMorgan Chase",
+            "B": "Bank of America",
+            "C": "Citigroup",
+            "D": " Goldman Sachs"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "10:30 - 10:32",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "What is the dominant color of the screen at the beginning of the video?",
+        "choices": {
+            "A": " Blue - Red",
+            "B": "Green - Yellow",
+            "C": " Purple - White",
+            "D": "Black - White"
+        },
+        "correct_answer": "A",
+        "hierarchy": "clip",
+        "time_reference": "0:00 - 0:05",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "visual replacement"
+    },
+    {
+        "title": "After Hank Paulson resigned from which position, did the new government take control in the White House?",
+        "choices": {
+            "A": "President",
+            "B": "Secretary of the Treasury",
+            "C": "National Security Advisor",
+            "D": "Senate Leader"
+        },
+        "correct_answer": "B",
+        "hierarchy": "shot",
+        "time_reference": "46:28 - 46:33",
+        "video_key": "sYmGNetu-UU",
+        "video_type": "tv",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "Where did the Mayflower ship land in the documentary?",
+        "choices": {
+            "A": "Georgia",
+            "B": "Virginia",
+            "C": "New England",
+            "D": " South Carolina"
+        },
+        "correct_answer": "C",
+        "hierarchy": "event",
+        "time_reference": "0:00 - 3:00",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "When did the Mayflower land in the U.S.?",
+        "choices": {
+            "A": "1621",
+            "B": "1620",
+            "C": "1655",
+            "D": "1629"
+        },
+        "correct_answer": "B",
+        "hierarchy": "event",
+        "time_reference": "5:00 - 7:00",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "What was the first large-scale colony mentioned in the documentary?",
+        "choices": {
+            "A": "New York",
+            "B": "Virginia",
+            "C": " Virginia",
+            "D": "Massachusetts"
+        },
+        "correct_answer": "C",
+        "hierarchy": "story",
+        "time_reference": "10:00 - 20:00",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "spatial replacement"
+    },
+    {
+        "title": "When did the first group of British settlers arrive in America?",
+        "choices": {
+            "A": "1621",
+            "B": "1622",
+            "C": "1623",
+            "D": "1620"
+        },
+        "correct_answer": "D",
+        "hierarchy": "story",
+        "time_reference": "42:00 - 56:00",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "temporal replacement"
+    },
+    {
+        "title": "How many stars were in the video at 21:38?",
+        "choices": {
+            "A": "40",
+            "B": "39",
+            "C": "38",
+            "D": "38"
+        },
+        "correct_answer": "C",
+        "hierarchy": "clip",
+        "time_reference": "21:38 - 21:39",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Counting Problem",
+        "wrong_choice_design": "quantitative replacement"
+    },
+    {
+        "title": "What word appeared in the video at 39:17?",
+        "choices": {
+            "A": "freedom",
+            "B": "independence",
+            "C": "democracy",
+            "D": "liberty"
+        },
+        "correct_answer": "B",
+        "hierarchy": "clip",
+        "time_reference": "21:38",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Objective Recognition",
+        "wrong_choice_design": "frequency replacement"
+    },
+    {
+        "title": "What appeared in the wilderness to alert the people?",
+        "choices": {
+            "A": "Animals",
+            "B": "Fire",
+            "C": "Wild men",
+            "D": "Snowstorm"
+        },
+        "correct_answer": "C",
+        "hierarchy": "shot",
+        "time_reference": "3:51 - 3:56",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Causal Reasoning",
+        "wrong_choice_design": "character replacement"
+    },
+    {
+        "title": "At which meeting was the first president of the new republic elected?\r\n\r\n",
+        "choices": {
+            "A": "First Congress",
+            "B": "New York Convention",
+            "C": "Philadelphia Convention",
+            "D": " Constitutional Convention"
+        },
+        "correct_answer": "D",
+        "hierarchy": "shot",
+        "time_reference": "54:03 - 54:09",
+        "video_key": "U9E4fLu9rqs",
+        "video_type": "documentary",
+        "question_type": "Information Summary",
+        "wrong_choice_design": "detail replacement"
+    }
+]

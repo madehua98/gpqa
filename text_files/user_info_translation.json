@@ -3,20 +3,22 @@
         "username": "user1",
         "s_idx": 0,
         "e_idx": 700,
-        "current_idx": 1,
+        "current_idx": 0,
         "video_question_idx": 0
     },
     "user2": {
         "username": "user2",
         "s_idx": 701,
         "e_idx": 1400,
-        "current_idx": 0
+        "current_idx": 9,
+        "video_question_idx": 0
     },
     "user3": {
         "username": "user3",
         "s_idx": 1401,
         "e_idx": 2100,
-        "current_idx": 0
+        "current_idx": 0,
+        "video_question_idx": 0
     },
     "user4": {
         "username": "user4",

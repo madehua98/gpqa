@@ -1,0 +1,861 @@
+/* 全局样式 */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.progress-container {
+    margin-bottom: 20px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+}
+
+.annotation-status {
+    margin-top: 20px;
+}
+
+.annotation-status ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.annotation-status li {
+    margin: 5px 0;
+}
+
+.annotation-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.annotation-table th, .annotation-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.annotated {
+    background-color: #d4edda;
+    color: #155724;
+}
+.not-annotated {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+/* 容器设置 */
+.container {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+
+/* 左侧栏样式 */
+.left-column {
+    flex: 0 0 280px;
+    padding: 15px;
+    margin-left: 5px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-column h2 {
+    text-align: center;
+    color: #333;
+}
+
+.QA-text {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.required {
+    color: red;
+    font-weight: bold; /* 可选：使星号更明显 */
+}
+
+/* 中间栏样式 */
+.center-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.video_style {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section {
+    width: 100%;
+    max-width: 400px;
+}
+
+#image-upload-container {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#image-upload-container.focused {
+    border-color: #007BFF;
+}
+
+#image-upload-container:hover {
+    border-color: #007BFF;
+}
+
+#image-upload {
+    display: none;
+}
+
+#image-upload-label {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+#image-upload-label:hover {
+    background-color: #0056b3;
+}
+
+#image-preview img.preview-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* 右侧栏样式 */
+.right-column {
+    flex: 3;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.submit-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+/* 禁用按钮的样式 */
+.button_submit:disabled,
+.button_delete:disabled,
+.button_copy:disabled {
+    background-color: #cccccc; /* 灰色背景 */
+    color: #666666; /* 灰色文本 */
+    cursor: not-allowed; /* 禁用状态的鼠标指针 */
+}
+
+.button_submit {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button_submit:hover {
+    background-color: #218838;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-fields label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-fields input[type="text"],
+.input-fields textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input-fields textarea {
+    resize: vertical;
+}
+
+.distractors {
+    display: flex;
+    flex-direction: column;
+}
+
+.distractors label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.distractors input[type="text"] {
+    margin-top: 5px;
+}
+
+/* 按钮组样式 */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.button-group .button-form {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.button-group .button-form button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 按钮具体样式 */
+.button_previous {
+    background-color: #6c757d;
+}
+
+.button_previous:hover {
+    background-color: #5a6268;
+}
+
+.button_next {
+    background-color: #007bff;
+}
+
+.button_next:hover {
+    background-color: #0069d9;
+}
+
+/* 当前进度样式 */
+.current_progress {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.navigate-form {
+    margin-top: 10px;
+}
+
+.idx_input_box {
+    padding: 5px;
+    width: 60px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Add this to make required options bold */
+.required {
+    font-weight: bold;
+    color: green
+}
+
+/* Optional: Style the '*' to make it more noticeable */
+.required::after {
+    content: "*";
+    color: red; /* Optional: Change color as needed */
+    margin-left: 4px; /* Optional: Add some spacing */
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button_delete, .button_copy {
+    background-color: #f44336; /* 红色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button_copy {
+    background-color: #4CAF50; /* 绿色 */
+}
+
+.button_submit {
+    background-color: #008CBA; /* 蓝色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button_delete:hover, .button_copy:hover, .button_submit:hover {
+    opacity: 0.8;
+}
+
+.edit-btn {
+    margin-left: 10px;
+    padding: 2px 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-area {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit-area textarea {
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.edit-buttons button {
+    margin-right: 10px;
+    padding: 5px 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .center-column,
+    .right-column {
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .button-form {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #image-upload-label {
+        font-size: 14px;
+    }
+
+    .input_prompt {
+        font-size: 14px;
+    }
+
+    .current_progress {
+        font-size: 14px;
+    }
+
+    .QA-text {
+        font-size: 14px;
+    }
+
+    .button-group .button-form button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .button_submit {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .flashes {
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .flashes li {
+        background-color: #f0f8ff;
+        border: 1px solid #add8e6;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+    }
+}
+
+.modified-content {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border-left: 3px solid #4CAF50;
+    font-style: italic;
+    color: #2196F3;
+}
+
+.edit-area {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.extra-fields {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+}
+
+.field-group {
+    margin: 15px 0;
+}
+
+.field-group strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 1.1em;
+}
+
+.json-content,
+.response-content {
+    background: #fff;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.response-container {
+    position: relative;
+}
+
+.response-content.collapsed {
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.response-content.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(transparent, #fff);
+}
+
+.expand-btn {
+    display: block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #495057;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* 添加可点击单元格的样式 */
+.annotation-table td.clickable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.annotation-table td.clickable:hover {
+    background-color: #e9ecef;
+}
+
+/* 保持原有的标注状态样式 */
+.annotation-table td.annotated {
+    background-color: #d4edda;
+}
+
+.annotation-table td.not-annotated {
+    background-color: #f8d7da;
+}
+
+/* 悬停时的样式优先级 */
+.annotation-table td.clickable.annotated:hover {
+    background-color: #c3e6cb;
+}
+
+.annotation-table td.clickable.not-annotated:hover {
+    background-color: #f5c6cb;
+}
+<style>
+    /* 整体布局样式 */
+    .right-column {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* 标记状态显示 */
+    .annotation-status {
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    
+    .marked {
+        color: green;
+    }
+    
+    .unmarked {
+        color: red;
+    }
+    
+    /* 数据容器样式 */
+    .data-container {
+        margin-bottom: 30px;
+    }
+    
+    /* 元数据标题部分 */
+    .metadata-header {
+        margin-bottom: 20px;
+    }
+    
+    .metadata-header h2 {
+        margin-bottom: 10px;
+    }
+    
+    .global-metadata {
+        display: flex;
+        gap: 20px;
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    /* 问题卡片样式 */
+    .question-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    
+    .question-header {
+        background-color: #f0f0f0;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .question-index {
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .question-content {
+        padding: 15px;
+    }
+    
+    /* 章节样式 */
+    .section {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .field-label {
+        font-weight: bold;
+        font-size: 16px;
+        color: #444;
+    }
+    
+    .field-content {
+        line-height: 1.5;
+    }
+    
+    /* 选项列表样式 */
+    .choices-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    
+    .choice-item {
+        padding: 8px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+    }
+    
+    /* 元数据网格样式 */
+    .metadata-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .metadata-item {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .metadata-label {
+        font-weight: bold;
+        color: #555;
+        margin-bottom: 3px;
+    }
+    
+    .metadata-value {
+        color: #333;
+    }
+    
+    /* 编辑按钮样式 */
+    .edit-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .edit-btn:hover {
+        background-color: #388E3C;
+    }
+    
+    /* 编辑区域样式 */
+    .edit-area {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+    }
+    
+    .edit-area textarea {
+        width: 100%;
+        min-height: 100px;
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    .choice-edit {
+        margin-bottom: 8px;
+    }
+    
+    .choice-edit input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    .edit-buttons {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .edit-buttons button {
+        padding: 6px 12px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        color: white;
+    }
+    
+    .edit-buttons button:first-child {
+        background-color: #4CAF50;
+    }
+    
+    .edit-buttons button:first-child:hover {
+        background-color: #388E3C;
+    }
+    
+    .edit-buttons button:last-child {
+        background-color: #f44336;
+    }
+    
+    .edit-buttons button:last-child:hover {
+        background-color: #d32f2f;
+    }
+    
+    /* 表单提交按钮样式 */
+    .submit-button-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .button_submit {
+        background-color: #008CBA;
+        color: white;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .button_submit:hover {
+        background-color: #005f73;
+    }
+    
+    /* 导航区域样式 */
+    .navigation-container {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    
+    .navigate-form {
+        margin-bottom: 15px;
+    }
+    
+    .progress-indicator {
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .jump-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .idx_input_box {
+        width: 70px;
+        padding: 6px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    .navigate-button {
+        background-color: #555;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
+    .button-form {
+        flex: 1;
+    }
+    
+    .button_previous, .button_next {
+        width: 100%;
+        padding: 10px;
+        background-color: #607D8B;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .button_previous:hover, .button_next:hover {
+        background-color: #455A64;
+    }
+    
+    /* Flash消息样式 */
+    .flashes {
+        list-style-type: none;
+        padding: 0;
+        margin: 15px 0;
+    }
+    
+    .flashes li {
+        padding: 10px;
+        background-color: #FFF3CD;
+        color: #856404;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }

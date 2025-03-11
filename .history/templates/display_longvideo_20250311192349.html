@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Annotating Videos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./templates/display.css"> <!-- 引入外部CSS文件 -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左侧栏 -->
+        <div class="left-column">
+            <div class="QA-text">
+                {{ multiple_anno | safe }}
+            </div>
+            <!-- 顶部进度条显示 -->
+            <div class="progress-container">
+                <p><strong>Marking progress:</strong></p>
+                <progress value="{{ status_dict.values() | select('equalto', True) | list | length }}" 
+                        max="{{ status_dict | length }}">
+                </progress>
+                <p>
+                    {{ status_dict.values() | select('equalto', True) | list | length }}/{{ status_dict | length }} Marked 
+                    ({{ (status_dict.values() | select('equalto', True) | list | length / status_dict | length * 100) | round(2) }}%)
+                </p>
+            </div>
+
+            <!-- 标注状态表格 -->
+            <div class="annotation-status">
+                <p><strong>Annotation status table:</strong></p>
+                <table class="annotation-table">
+                    <tbody>
+                        {% set items_list = status_dict.items() | list %}
+                        {% set row_count = ((items_list|length + 9) // 10) %}
+                        
+                        {% for row in range(row_count) %}
+                        <tr>
+                            {% for col in range(10) %}
+                                {% set index = row * 10 + col %}
+                                {% if index < items_list|length %}
+                                    {% set uuid, status = items_list[index] %}
+                                    <td class="{% if status %}annotated{% else %}not-annotated{% endif %} clickable" 
+                                        onclick="navigateToQuestion({{ index + 1 }});"
+                                        title="点击跳转到第 {{ index + 1 }} 题">
+                                        {{ index + 1 }}
+                                    </td>
+                                {% else %}
+                                    <td></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 右侧栏 -->
+        <div class="right-column">
+            <!-- 提交表单 -->
+            <form id="submit-form" action="{{ url_for('submit') }}" method="post" enctype="multipart/form-data" class="main-form">
+                <!-- 隐藏字段 -->
+                <input type="hidden" name="source_page" value="display">
+                <input type="hidden" name="uuid" value="{{uuid}}">
+                <input type="hidden" name="current_idx" value="{{ current_idx }}">
+                
+                <!-- 标记状态显示 -->
+                <div class="annotation-status">
+                    {% if annotation_flag %}
+                        <span class="marked">✓ [Marked]</span>
+                    {% else %}
+                        <span class="unmarked">✗ [Unmarked]</span>
+                    {% endif %}
+                </div>
+                
+                <div class="data-container">
+                    <!-- Video and UUID Information -->
+                    <div class="metadata-header">
+                        <h2>Question Data</h2>
+                        <div class="global-metadata">
+                            <div class="metadata-item">
+                                <strong>UUID:</strong> {{ question_dict.uuid }}
+                            </div>
+                            <div class="metadata-item">
+                                <strong>Video Key:</strong> {{ question_dict.video_key }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Questions List Display -->
+                    <div class="questions-list">
+                        {% for question in question_dict.data %}
+                        <div class="question-card" id="question-{{ loop.index }}">
+                            <div class="question-header">
+                                <div class="question-index">Question {{ loop.index }}</div>
+                            </div>
+                            
+                            <div class="question-content">
+                                <!-- Title Section -->
+                                <div class="question-title section">
+                                    <div class="section-header">
+                                        <div class="field-label">Title</div>
+                                        <button type="button" class="edit-btn" onclick="showEditArea('title', {{ loop.index }})">Revise</button>
+                                    </div>
+                                    <div class="field-content" id="title-content-{{ loop.index }}">{{ question.title }}</div>
+                                    
+                                    <!-- Title Edit Area -->
+                                    <div id="title-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                        <textarea id="title-edit-text-{{ loop.index }}">{{ question.title }}</textarea>
+                                        <div class="edit-buttons">
+                                            <button type="button" onclick="confirmEdit('title', {{ loop.index }})">Confirm</button>
+                                            <button type="button" onclick="cancelEdit('title', {{ loop.index }})">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Choices Section -->
+                                <div class="question-choices section">
+                                    <div class="section-header">
+                                        <div class="field-label">Choices</div>
+                                        <button type="button" class="edit-btn" onclick="showEditArea('choices', {{ loop.index }})">Revise</button>
+                                    </div>
+                                    <div class="choices-list">
+                                        <div class="choice-item" id="choice-a-{{ loop.index }}">A: {{ question.choices.A }}</div>
+                                        <div class="choice-item" id="choice-b-{{ loop.index }}">B: {{ question.choices.B }}</div>
+                                        <div class="choice-item" id="choice-c-{{ loop.index }}">C: {{ question.choices.C }}</div>
+                                        <div class="choice-item" id="choice-d-{{ loop.index }}">D: {{ question.choices.D }}</div>
+                                    </div>
+                                    
+                                    <!-- Choices Edit Area -->
+                                    <div id="choices-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                        <div class="choice-edit">
+                                            <label>A: <input type="text" id="choice-a-edit-{{ loop.index }}" value="{{ question.choices.A }}"></label>
+                                        </div>
+                                        <div class="choice-edit">
+                                            <label>B: <input type="text" id="choice-b-edit-{{ loop.index }}" value="{{ question.choices.B }}"></label>
+                                        </div>
+                                        <div class="choice-edit">
+                                            <label>C: <input type="text" id="choice-c-edit-{{ loop.index }}" value="{{ question.choices.C }}"></label>
+                                        </div>
+                                        <div class="choice-edit">
+                                            <label>D: <input type="text" id="choice-d-edit-{{ loop.index }}" value="{{ question.choices.D }}"></label>
+                                        </div>
+                                        <div class="edit-buttons">
+                                            <button type="button" onclick="confirmEdit('choices', {{ loop.index }})">Confirm</button>
+                                            <button type="button" onclick="cancelEdit('choices', {{ loop.index }})">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Metadata Fields with Revise Buttons -->
+                                <div class="question-metadata section">
+                                    <div class="section-header">
+                                        <div class="field-label">Metadata</div>
+                                    </div>
+                                    
+                                    <div class="metadata-grid">
+                                        <!-- Correct Answer -->
+                                        <div class="metadata-item editable">
+                                            <div class="metadata-header">
+                                                <span class="metadata-label">Correct Answer:</span>
+                                                <button type="button" class="edit-btn small" onclick="showEditArea('correct-answer', {{ loop.index }})">Revise</button>
+                                            </div>
+                                            <span class="metadata-value" id="correct-answer-content-{{ loop.index }}">{{ question.correct_answer }}</span>
+                                                <!-- This is the added element to show revised content -->
+                                            <div class="revised-content" id="correct-answer-revised-{{ loop.index }}" style="display: none;">
+                                                <span class="revised-label">Revised to:</span>
+                                                <span class="revised-value"></span>
+                                            </div>
+
+                                            <!-- Correct Answer Edit Area -->
+                                            <div id="correct-answer-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                                <input type="text" id="correct-answer-edit-text-{{ loop.index }}" value="{{ question.correct_answer }}">
+                                                <div class="edit-buttons">
+                                                    <button type="button" onclick="confirmEdit('correct-answer', {{ loop.index }})">Confirm</button>
+                                                    <button type="button" onclick="cancelEdit('correct-answer', {{ loop.index }})">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Hierarchy -->
+                                        <div class="metadata-item editable">
+                                            <div class="metadata-header">
+                                                <span class="metadata-label">Hierarchy:</span>
+                                                <button type="button" class="edit-btn small" onclick="showEditArea('hierarchy', {{ loop.index }})">Revise</button>
+                                            </div>
+                                            <span class="metadata-value" id="hierarchy-content-{{ loop.index }}">{{ question.hierarchy }}</span>
+                                            
+                                            <!-- Hierarchy Edit Area -->
+                                            <div id="hierarchy-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                                <input type="text" id="hierarchy-edit-text-{{ loop.index }}" value="{{ question.hierarchy }}">
+                                                <div class="edit-buttons">
+                                                    <button type="button" onclick="confirmEdit('hierarchy', {{ loop.index }})">Confirm</button>
+                                                    <button type="button" onclick="cancelEdit('hierarchy', {{ loop.index }})">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Time Reference -->
+                                        <div class="metadata-item editable">
+                                            <div class="metadata-header">
+                                                <span class="metadata-label">Time Reference:</span>
+                                                <button type="button" class="edit-btn small" onclick="showEditArea('time-reference', {{ loop.index }})">Revise</button>
+                                            </div>
+                                            <span class="metadata-value" id="time-reference-content-{{ loop.index }}">{{ question.time_reference }}</span>
+                                            
+                                            <!-- Time Reference Edit Area -->
+                                            <div id="time-reference-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                                <input type="text" id="time-reference-edit-text-{{ loop.index }}" value="{{ question.time_reference }}">
+                                                <div class="edit-buttons">
+                                                    <button type="button" onclick="confirmEdit('time-reference', {{ loop.index }})">Confirm</button>
+                                                    <button type="button" onclick="cancelEdit('time-reference', {{ loop.index }})">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Video Type -->
+                                        <div class="metadata-item editable">
+                                            <div class="metadata-header">
+                                                <span class="metadata-label">Video Type:</span>
+                                                <button type="button" class="edit-btn small" onclick="showEditArea('video-type', {{ loop.index }})">Revise</button>
+                                            </div>
+                                            <span class="metadata-value" id="video-type-content-{{ loop.index }}">{{ question.video_type }}</span>
+                                            
+                                            <!-- Video Type Edit Area -->
+                                            <div id="video-type-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                                <input type="text" id="video-type-edit-text-{{ loop.index }}" value="{{ question.video_type }}">
+                                                <div class="edit-buttons">
+                                                    <button type="button" onclick="confirmEdit('video-type', {{ loop.index }})">Confirm</button>
+                                                    <button type="button" onclick="cancelEdit('video-type', {{ loop.index }})">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Question Type -->
+                                        <div class="metadata-item editable">
+                                            <div class="metadata-header">
+                                                <span class="metadata-label">Question Type:</span>
+                                                <button type="button" class="edit-btn small" onclick="showEditArea('question-type', {{ loop.index }})">Revise</button>
+                                            </div>
+                                            <span class="metadata-value" id="question-type-content-{{ loop.index }}">{{ question.question_type }}</span>
+                                            
+                                            <!-- Question Type Edit Area -->
+                                            <div id="question-type-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                                <input type="text" id="question-type-edit-text-{{ loop.index }}" value="{{ question.question_type }}">
+                                                <div class="edit-buttons">
+                                                    <button type="button" onclick="confirmEdit('question-type', {{ loop.index }})">Confirm</button>
+                                                    <button type="button" onclick="cancelEdit('question-type', {{ loop.index }})">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Wrong Choice Design -->
+                                        <div class="metadata-item editable">
+                                            <div class="metadata-header">
+                                                <span class="metadata-label">Wrong Choice Design:</span>
+                                                <button type="button" class="edit-btn small" onclick="showEditArea('wrong-choice-design', {{ loop.index }})">Revise</button>
+                                            </div>
+                                            <span class="metadata-value" id="wrong-choice-design-content-{{ loop.index }}">{{ question.wrong_choice_design }}</span>
+                                            
+                                            <!-- Wrong Choice Design Edit Area -->
+                                            <div id="wrong-choice-design-edit-area-{{ loop.index }}" class="edit-area" style="display: none;">
+                                                <input type="text" id="wrong-choice-design-edit-text-{{ loop.index }}" value="{{ question.wrong_choice_design }}">
+                                                <div class="edit-buttons">
+                                                    <button type="button" onclick="confirmEdit('wrong-choice-design', {{ loop.index }})">Confirm</button>
+                                                    <button type="button" onclick="cancelEdit('wrong-choice-design', {{ loop.index }})">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Data ID -->
+                                        <div class="metadata-item editable">
+                                            <div class="metadata-header">
+                                                <span class="metadata-label">Data ID:</span>
+                                            </div>
+                                            <span class="metadata-value" id="data-id-content-{{ loop.index }}">{{ question.data_id }}</span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Hidden fields for this question -->
+                            <input type="hidden" name="title_{{ loop.index }}" id="hidden-title-{{ loop.index }}" value="{{ question.title }}">
+                            <input type="hidden" name="choice_a_{{ loop.index }}" id="hidden-choice-a-{{ loop.index }}" value="{{ question.choices.A }}">
+                            <input type="hidden" name="choice_b_{{ loop.index }}" id="hidden-choice-b-{{ loop.index }}" value="{{ question.choices.B }}">
+                            <input type="hidden" name="choice_c_{{ loop.index }}" id="hidden-choice-c-{{ loop.index }}" value="{{ question.choices.C }}">
+                            <input type="hidden" name="choice_d_{{ loop.index }}" id="hidden-choice-d-{{ loop.index }}" value="{{ question.choices.D }}">
+                            <input type="hidden" name="correct_answer_{{ loop.index }}" id="hidden-correct-answer-{{ loop.index }}" value="{{ question.correct_answer }}">
+                            <input type="hidden" name="hierarchy_{{ loop.index }}" id="hidden-hierarchy-{{ loop.index }}" value="{{ question.hierarchy }}">
+                            <input type="hidden" name="time_reference_{{ loop.index }}" id="hidden-time-reference-{{ loop.index }}" value="{{ question.time_reference }}">
+                            <input type="hidden" name="video_type_{{ loop.index }}" id="hidden-video-type-{{ loop.index }}" value="{{ question.video_type }}">
+                            <input type="hidden" name="question_type_{{ loop.index }}" id="hidden-question-type-{{ loop.index }}" value="{{ question.question_type }}">
+                            <input type="hidden" name="wrong_choice_design_{{ loop.index }}" id="hidden-wrong-choice-design-{{ loop.index }}" value="{{ question.wrong_choice_design }}">
+                            <input type="hidden" name="data_id_{{ loop.index }}" id="hidden-data-id-{{ loop.index }}" value="{{ question.data_id }}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 隐藏字段用于提交修改后的英文内容 -->
+                <input type="hidden" name="question_english" id="hidden-english" value="{{ question_dict.English }}">
+
+                <!-- 提交按钮 -->
+                <div class="submit-button-container">
+                    <button type="submit" name="action" value="submit" class="button_submit">Submit</button>
+                </div>
+            </form>
+
+
+    <script>
+        // Function to show edit area
+        function showEditArea(field, index) {
+            console.log(`Showing edit area for ${field} #${index}`);
+            const editArea = document.getElementById(`${field}-edit-area-${index}`);
+            if (editArea) {
+                editArea.style.display = 'block';
+            } else {
+                console.error(`Edit area element not found: ${field}-edit-area-${index}`);
+            }
+        }
+        
+        function confirmEdit(field, index) {
+            console.log(`Confirming edit for ${field} #${index}`);
+            
+            let newValue = '';
+            
+            if (field === 'title') {
+                newValue = document.getElementById(`title-edit-text-${index}`).value;
+                const titleContent = document.getElementById(`title-content-${index}`);
+                if (titleContent) {
+                    // Don't replace original content, show it below
+                    document.getElementById(`hidden-title-${index}`).value = newValue;
+                    
+                    // Update the revised content display
+                    const revisedElement = document.getElementById(`title-revised-${index}`);
+                    if (revisedElement) {
+                        revisedElement.querySelector('.revised-value').textContent = newValue;
+                        revisedElement.style.display = 'block';
+                    }
+                }
+            } else if (field === 'choices') {
+                // Similar logic for choices
+                // ...
+            } else {
+                // Handle metadata fields
+                newValue = document.getElementById(`${field}-edit-text-${index}`).value;
+                
+                // Update the hidden field
+                document.getElementById(`hidden-${field}-${index}`).value = newValue;
+                
+                // Update the revised content display
+                const revisedElement = document.getElementById(`${field}-revised-${index}`);
+                if (revisedElement) {
+                    revisedElement.querySelector('.revised-value').textContent = newValue;
+                    revisedElement.style.display = 'block';
+                }
+            }
+            
+            // Hide the edit area
+            const editArea = document.getElementById(`${field}-edit-area-${index}`);
+            if (editArea) {
+                editArea.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
