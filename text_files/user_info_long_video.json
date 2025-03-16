@@ -34,7 +34,19 @@
     "user6": {
         "username": "user6",
         "s_idx": 250,
-        "e_idx": 300,
+        "e_idx": 319,
+        "current_idx": 0
+    },
+    "user7": {
+        "username": "user6",
+        "s_idx": 320,
+        "e_idx": 369,
+        "current_idx": 0
+    },
+    "user8": {
+        "username": "user6",
+        "s_idx": 370,
+        "e_idx": 416,
         "current_idx": 0
     }
 }
