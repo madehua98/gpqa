@@ -44,7 +44,7 @@ with open(need_deduplication_path, 'r', encoding='utf-8') as file:
         need_deduplication_datas.append(line)
 
 
-multiple_path = f"./{text_files_dir}/long_video_all_new.jsonl"
+multiple_path = f"./{text_files_dir}/long_video_all_new_v1.jsonl"
 with open(multiple_path, 'r', encoding='utf-8') as file:
     multiple_datas = []
     for line in file.readlines():
