@@ -343,7 +343,7 @@ res_dir = "./outputs"
 if not os.path.exists(res_dir):
     os.makedirs(res_dir)
 
-multiple_path = "./text_files/long_video_all_new_4.jsonl"
+multiple_path = "./text_files/long_video_all_new_v4.jsonl"
 with open(multiple_path, 'r', encoding='utf-8') as file:
     multiple_datas = [json.loads(line) for line in file.readlines()]
 
